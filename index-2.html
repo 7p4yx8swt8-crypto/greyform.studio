@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Studio Greyform — Digital experiences for design-driven brands. In Vorbereitung. Berlin." />
+<meta name="author" content="Studio Greyform" />
+<title>Studio Greyform — In Vorbereitung</title>
+
+<meta property="og:title" content="Studio Greyform" />
+<meta property="og:description" content="Digital experiences for design-driven brands. In Vorbereitung." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500&display=swap" />
+
+<style>
+  :root {
+    --black: #0D0D0D;
+    --white: #F5F3EF;
+    --grey: #B8B3AC;
+    --stone: #8D877F;
+    --sand: #D6CFC7;
+
+    --bg: var(--white);
+    --fg: var(--black);
+    --muted: var(--stone);
+
+    --font: "Satoshi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --gutter: clamp(20px, 4vw, 56px);
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    /* Hard cap on content width so it stays readable on ultra-wide screens */
+    --content-max: 1280px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--fg);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+    overflow: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  ::selection { background: var(--black); color: var(--white); }
+
+  .page {
+    min-height: 100vh; min-height: 100dvh;
+    display: flex; flex-direction: column;
+    padding: clamp(24px, 4vw, 40px) var(--gutter);
+  }
+
+  .inner {
+    width: 100%;
+    max-width: var(--content-max);
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ---------- Header ---------- */
+  .top {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .brand {
+    font-weight: 500; letter-spacing: 0.22em; font-size: 13px; text-transform: uppercase;
+  }
+  .brand .slash { opacity: 0.4; margin-inline: 6px; }
+  .lang {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  }
+  .lang button { padding: 4px 6px; transition: color 0.3s var(--ease); }
+  .lang button[aria-pressed="true"] { color: var(--black); font-weight: 500; }
+  .lang .sep { opacity: 0.5; }
+
+  /* ---------- Main ---------- */
+  main {
+    flex: 1;
+    display: flex; flex-direction: column; justify-content: center;
+    padding-block: clamp(40px, 6vw, 80px);
+  }
+
+  .status {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: clamp(28px, 4vw, 44px);
+    display: flex; gap: 14px; align-items: center;
+  }
+  .status .dot {
+    width: 6px; height: 6px; background: var(--black); border-radius: 50%;
+    animation: pulse 2.6s var(--ease) infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.35; transform: scale(0.85); }
+  }
+
+  h1 {
+    font-size: clamp(36px, 7.2vw, 116px);
+    line-height: 0.98;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    max-width: 16ch;
+    margin-bottom: clamp(28px, 4vw, 44px);
+  }
+  h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--stone);
+  }
+
+  /* The big email CTA — this is the point of the page */
+  .cta {
+    display: inline-flex; flex-direction: column; gap: 6px;
+    margin-bottom: clamp(32px, 5vw, 52px);
+  }
+  .cta .label {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+  }
+  .cta a {
+    font-size: clamp(22px, 3.4vw, 44px);
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    line-height: 1.1;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 4px;
+    transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+    align-self: flex-start;
+  }
+  .cta a:hover {
+    color: var(--stone);
+    border-color: var(--stone);
+  }
+
+  .lead {
+    max-width: 56ch;
+    font-size: clamp(15px, 1.2vw, 17px);
+    line-height: 1.55;
+    color: #2a2a28;
+  }
+
+  /* Subtle scroll marquee */
+  .marquee {
+    overflow: hidden;
+    border-top: 1px solid rgba(13,13,13,0.10);
+    border-bottom: 1px solid rgba(13,13,13,0.10);
+    padding-block: 18px;
+    margin-block: clamp(32px, 5vw, 44px) 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+  .marquee-track {
+    display: flex; gap: 56px;
+    width: max-content;
+    animation: scroll 50s linear infinite;
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .marquee-track span { display: inline-flex; align-items: center; gap: 56px; }
+  .marquee-track .sep { color: var(--black); opacity: 0.4; }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ---------- Footer ---------- */
+  .bottom {
+    display: flex; justify-content: space-between; align-items: end;
+    flex-wrap: wrap; gap: 24px;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+    padding-top: clamp(24px, 3vw, 32px);
+  }
+  .bottom .col { display: flex; flex-direction: column; gap: 6px; }
+  .bottom .col.right { text-align: right; }
+
+  /* ---------- Reveal ---------- */
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 1.2s var(--ease), transform 1.2s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+  .d1 { transition-delay: 0.08s; }
+  .d2 { transition-delay: 0.18s; }
+  .d3 { transition-delay: 0.30s; }
+  .d4 { transition-delay: 0.42s; }
+  .d5 { transition-delay: 0.54s; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 720px) {
+    body { overflow-y: auto; }
+    .bottom { flex-direction: column; align-items: flex-start; }
+    .bottom .col.right { text-align: left; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .marquee-track { animation: none; }
+    .status .dot { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="inner">
+
+    <header class="top">
+      <span class="brand reveal">
+        <span data-i18n="brand">Greyform</span><span class="slash">/</span><span data-i18n="brand-sub">Studio</span>
+      </span>
+      <div class="lang reveal">
+        <button data-lang="de" aria-pressed="true">DE</button>
+        <span class="sep">/</span>
+        <button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="status reveal d1">
+        <span class="dot"></span>
+        <span data-i18n="status">In Vorbereitung · Berlin · 2026</span>
+      </div>
+
+      <h1 class="reveal d2">
+        <span data-i18n="h1-1">Ein neues Studio.</span><br />
+        <em data-i18n="h1-2">Wenig Lärm, viel Form.</em>
+      </h1>
+
+      <div class="cta reveal d3">
+        <span class="label" data-i18n="cta-label">Anfragen</span>
+        <a href="mailto:hello@greyform.studio">hello@greyform.studio</a>
+      </div>
+
+      <p class="lead reveal d4" data-i18n="lead">
+        Greyform ist ein digitales Studio für Interior-, Architektur- und Lifestyle-Marken. Editorial-Websites, visuelle Systeme, präzise umgesetzt. Die Site ist in Arbeit — bei Anfragen schreiben Sie uns gerne direkt.
+      </p>
+
+      <div class="marquee reveal d5" aria-hidden="true">
+        <div class="marquee-track">
+          <span>
+            <span data-i18n="m1">Digital experiences for design-driven brands</span>
+            <span class="sep">·</span>
+            <span data-i18n="m2">Editorial Websites</span>
+            <span class="sep">·</span>
+            <span data-i18n="m3">Visual Systems</span>
+            <span class="sep">·</span>
+            <span data-i18n="m4">Creative Direction</span>
+            <span class="sep">·</span>
+            <span data-i18n="m5">Berlin · Worldwide</span>
+            <span class="sep">·</span>
+          </span>
+          <span>
+            <span data-i18n="m1">Digital experiences for design-driven brands</span>
+            <span class="sep">·</span>
+            <span data-i18n="m2">Editorial Websites</span>
+            <span class="sep">·</span>
+            <span data-i18n="m3">Visual Systems</span>
+            <span class="sep">·</span>
+            <span data-i18n="m4">Creative Direction</span>
+            <span class="sep">·</span>
+            <span data-i18n="m5">Berlin · Worldwide</span>
+            <span class="sep">·</span>
+          </span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bottom">
+      <div class="col reveal d5">
+        <span>© 2026 Studio Greyform</span>
+        <span data-i18n="foot-tag">Digital experiences for design-driven brands</span>
+      </div>
+      <div class="col right reveal d5">
+        <span data-i18n="foot-loc">Berlin · 52.5200° N</span>
+        <span data-i18n="foot-launch">Launch in Kürze</span>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  const dict = {
+    de: {
+      "brand": "Greyform", "brand-sub": "Studio",
+      "status": "In Vorbereitung · Berlin · 2026",
+      "h1-1": "Ein neues Studio.",
+      "h1-2": "Wenig Lärm, viel Form.",
+      "cta-label": "Anfragen",
+      "lead": "Greyform ist ein digitales Studio für Interior-, Architektur- und Lifestyle-Marken. Editorial-Websites, visuelle Systeme, präzise umgesetzt. Die Site ist in Arbeit — bei Anfragen schreiben Sie uns gerne direkt.",
+      "m1": "Digitale Auftritte für gestalterische Marken",
+      "m2": "Editorial Websites",
+      "m3": "Visuelle Systeme",
+      "m4": "Creative Direction",
+      "m5": "Berlin · Worldwide",
+      "foot-tag": "Digital experiences for design-driven brands",
+      "foot-loc": "Berlin · 52.5200° N",
+      "foot-launch": "Launch in Kürze"
+    },
+    en: {
+      "brand": "Greyform", "brand-sub": "Studio",
+      "status": "In preparation · Berlin · 2026",
+      "h1-1": "A new studio.",
+      "h1-2": "Less noise, more form.",
+      "cta-label": "Enquiries",
+      "lead": "Greyform is a digital studio for interior, architecture and lifestyle brands. Editorial websites and visual systems, built with care. The site is in progress — for enquiries, please write directly.",
+      "m1": "Digital experiences for design-driven brands",
+      "m2": "Editorial websites",
+      "m3": "Visual systems",
+      "m4": "Creative direction",
+      "m5": "Berlin · Worldwide",
+      "foot-tag": "Digital experiences for design-driven brands",
+      "foot-loc": "Berlin · 52.5200° N",
+      "foot-launch": "Launching soon"
+    }
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (dict[lang] && dict[lang][key] !== undefined) el.textContent = dict[lang][key];
+    });
+    document.querySelectorAll(".lang button").forEach(b => {
+      b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false");
+    });
+    document.title = lang === "de"
+      ? "Studio Greyform — In Vorbereitung"
+      : "Studio Greyform — Coming soon";
+  }
+  document.querySelectorAll(".lang button").forEach(b => {
+    b.addEventListener("click", () => setLang(b.dataset.lang));
+  });
+
+  window.addEventListener("load", () => {
+    requestAnimationFrame(() => {
+      document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
+    });
+  });
+</script>
+
+</body>
+</html>
