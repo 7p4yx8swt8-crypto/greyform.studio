@@ -1,0 +1,99 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-tag">
+      <span class="dot"></span>
+      <span>{t("hero.tag")}</span>
+    </div>
+
+    <h1>
+      <span>{t("hero.headline1")}</span><br />
+      <span>{t("hero.headline2")}</span><br />
+      <em>{t("hero.headline3")}</em>
+    </h1>
+
+    <div class="hero-foot">
+      <p class="hero-sub">{t("hero.sub")}</p>
+      <div class="hero-meta">
+        <div class="row">
+          <span>Berlin</span>
+          <span>52.5200° N</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: clamp(60px, 10vw, 120px);
+    padding-top: clamp(140px, 18vw, 220px);
+    position: relative;
+  }
+  .hero-tag {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: clamp(40px, 8vw, 80px);
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .hero-tag .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-black);
+    border-radius: 50%;
+  }
+  h1 {
+    font-size: clamp(44px, 9.2vw, 168px);
+    line-height: 0.92;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    max-width: 14ch;
+  }
+  h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--color-stone);
+  }
+  .hero-foot {
+    margin-top: clamp(40px, 8vw, 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .hero-sub {
+    max-width: 38ch;
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.55;
+  }
+  .hero-meta {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+  }
+  .hero-meta .row {
+    display: flex;
+    gap: 28px;
+  }
+</style>

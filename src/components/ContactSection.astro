@@ -1,0 +1,102 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="num">05</span><span class="line"></span><span>{t("contact.eyebrow")}</span>
+    </div>
+
+    <h2 class="contact-head">
+      <span>{t("contact.heading1")}</span> <em>{t("contact.heading2")}</em>
+    </h2>
+
+    <div class="contact-grid">
+      <p class="contact-body">{t("contact.body")}</p>
+
+      <div class="contact-channels">
+        <div class="channel">
+          <span class="label">{t("contact.emailLabel")}</span>
+          <a href="mailto:hello@greyform.studio">hello@greyform.studio</a>
+        </div>
+        <div class="channel">
+          <span class="label">{t("contact.studioLabel")}</span>
+          <a href="https://www.thegrey.berlin" target="_blank" rel="noopener">thegrey.berlin</a>
+        </div>
+        <div class="channel">
+          <span class="label">{t("contact.instagramLabel")}</span>
+          <a href="https://instagram.com/greyform.studio" target="_blank" rel="noopener">@greyform.studio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding-block: var(--section-y);
+  }
+  .contact-head {
+    font-size: clamp(48px, 8vw, 140px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    margin-bottom: clamp(40px, 6vw, 72px);
+  }
+  .contact-head em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--color-stone);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(40px, 8vw, 100px);
+    align-items: end;
+  }
+  .contact-body {
+    font-size: clamp(15px, 1.3vw, 17px);
+    line-height: 1.6;
+    max-width: 46ch;
+    color: #2a2a28;
+  }
+  .contact-channels {
+    display: grid;
+    gap: 22px;
+    font-size: 13px;
+  }
+  .channel {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .channel .label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .channel a {
+    font-size: 17px;
+    letter-spacing: -0.005em;
+    transition: color 0.3s var(--ease);
+  }
+  .channel a:hover {
+    color: var(--color-stone);
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+</style>

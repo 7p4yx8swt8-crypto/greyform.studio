@@ -1,0 +1,192 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+
+const otherLang: Lang = lang === "de" ? "en" : "de";
+---
+
+<nav class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Studio Greyform">
+    <span>Greyform</span><span class="slash">/</span><span>Studio</span>
+  </a>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#work">{t("nav.work")}</a>
+    <a href="#services">{t("nav.services")}</a>
+    <a href="#approach">{t("nav.studio")}</a>
+    <a href="#contact">{t("nav.contact")}</a>
+  </div>
+
+  <div class="lang">
+    <span aria-current={lang === "de"} class:list={{ active: lang === "de" }}>DE</span>
+    <span class="sep">/</span>
+    <a href={lang === "de" ? "/en" : "/"} class:list={{ active: lang === "en" }}>EN</a>
+  </div>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    padding: 24px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.4s var(--ease), backdrop-filter 0.4s var(--ease),
+      border-color 0.4s var(--ease);
+    border-bottom: 1px solid transparent;
+  }
+  .nav.is-scrolled {
+    background: rgba(245, 243, 239, 0.82);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    border-bottom-color: rgba(13, 13, 13, 0.08);
+  }
+
+  .brand {
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .brand .slash {
+    opacity: 0.4;
+    margin-inline: 6px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  }
+  .nav-links a {
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease);
+  }
+  .nav-links a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .lang {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .lang span,
+  .lang a {
+    padding: 4px 6px;
+    transition: color 0.3s var(--ease);
+  }
+  .lang .active {
+    color: var(--color-black);
+    font-weight: 500;
+  }
+  .lang .sep {
+    opacity: 0.5;
+  }
+
+  .menu-toggle {
+    display: none;
+    width: 28px;
+    height: 18px;
+    position: relative;
+  }
+  .menu-toggle span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-black);
+    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+  }
+  .menu-toggle span:nth-child(1) {
+    top: 0;
+  }
+  .menu-toggle span:nth-child(2) {
+    top: 50%;
+  }
+  .menu-toggle span:nth-child(3) {
+    bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--color-white);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      font-size: 22px;
+      letter-spacing: -0.005em;
+    }
+    .nav-links.is-open {
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+      z-index: 200;
+    }
+    .menu-toggle.is-open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.is-open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+</style>
+
+<script>
+  // Scroll state
+  const nav = document.getElementById("nav");
+  const onScroll = () => nav?.classList.toggle("is-scrolled", window.scrollY > 24);
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById("menuToggle");
+  const links = document.getElementById("navLinks");
+  toggle?.addEventListener("click", () => {
+    toggle.classList.toggle("is-open");
+    links?.classList.toggle("is-open");
+  });
+  links?.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      toggle?.classList.remove("is-open");
+      links?.classList.remove("is-open");
+    })
+  );
+</script>

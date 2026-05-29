@@ -1,0 +1,77 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="num">03</span><span class="line"></span><span>{t("services.eyebrow")}</span>
+    </div>
+
+    <div class="services-grid">
+      <div class="service">
+        <span class="idx">i</span>
+        <h3>{t("services.s1Heading")}</h3>
+        <p>{t("services.s1Body")}</p>
+      </div>
+      <div class="service">
+        <span class="idx">ii</span>
+        <h3>{t("services.s2Heading")}</h3>
+        <p>{t("services.s2Body")}</p>
+      </div>
+      <div class="service">
+        <span class="idx">iii</span>
+        <h3>{t("services.s3Heading")}</h3>
+        <p>{t("services.s3Body")}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding-block: var(--section-y);
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(32px, 4vw, 60px);
+  }
+  .service {
+    padding-top: 28px;
+    border-top: 1px solid rgba(13, 13, 13, 0.18);
+  }
+  .service .idx {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    margin-bottom: 28px;
+    display: inline-block;
+  }
+  .service h3 {
+    font-size: clamp(20px, 1.8vw, 26px);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+  .service p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #2a2a28;
+    max-width: 36ch;
+  }
+
+  @media (max-width: 900px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "work": "Arbeiten",
+    "services": "Leistungen",
+    "studio": "Studio",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "tag": "Digitales Studio · Berlin",
+    "headline1": "Digitale Auftritte",
+    "headline2": "für Marken",
+    "headline3": "mit Haltung.",
+    "sub": "Greyform ist ein digitales Studio für Interior-, Architektur- und Lifestyle-Marken. Editorial-Websites, visuelle Systeme, präzise umgesetzt."
+  },
+  "studio": {
+    "eyebrow": "Studio",
+    "lead1": "Wir gestalten ruhige, präzise Websites für Marken,",
+    "lead2": "die gestalten können.",
+    "p1": "Greyform arbeitet mit Interior-, Architektur- und Designmarken, deren visuelle Sprache bereits etabliert ist und im Digitalen eine ebenbürtige Form verdient. Wir entwickeln Websites, die sich wie eine Fortsetzung der Marke lesen, nicht wie eine Übersetzung.",
+    "p2": "Das Studio ist klein, fokussiert und arbeitet mit modernen Werkzeugen. Wenige Projekte parallel, klare Verantwortung, kurze Wege. Das Ergebnis ist Tempo ohne Hektik, Qualität ohne Aufwand-für-Aufwand-Logik."
+  },
+  "work": {
+    "eyebrow": "Ausgewählte Arbeiten",
+    "cta": "Projekt ansehen",
+    "soon": "In Kürze",
+    "tbd": "Nächste Arbeit"
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "s1Heading": "Brand Websites",
+    "s1Body": "Editorial gestaltete Websites für Marken mit ausgeprägter visueller Identität. Vom Konzept bis zum Launch, in einem durchdachten Prozess.",
+    "s2Heading": "Creative Direction",
+    "s2Body": "Visuelle Systeme, Bildsprache, digitale Erzählweise. Wir denken in Marke, nicht in Templates, und gestalten Auftritte, die langfristig tragen.",
+    "s3Heading": "Visual Systems",
+    "s3Body": "Typografie, Layout, Bewegung und Komponenten als zusammenhängendes System. Konsistent über alle Berührungspunkte hinweg."
+  },
+  "approach": {
+    "eyebrow": "Arbeitsweise",
+    "lead1": "Wenige Projekte. Klare Köpfe.",
+    "lead2": "Moderne Werkzeuge.",
+    "p1": "Greyform arbeitet mit einem schlanken Studio-Setup und integriert moderne Produktionswerkzeuge tief in den Prozess. Das bedeutet kürzere Iterationszyklen, mehr Varianten in der Designphase und ein Tempo, das früher nur größere Teams erreichen konnten.",
+    "p2": "Die Technologie bleibt im Hintergrund. Was zählt, ist das Ergebnis: eine Website, die sich anfühlt, als wäre sie sorgfältig geformt — weil sie es ist.",
+    "pillar1Label": "Tempo",
+    "pillar1Value": "Tage statt Monate",
+    "pillar2Label": "Fokus",
+    "pillar2Value": "Wenige Projekte parallel",
+    "pillar3Label": "Ästhetik",
+    "pillar3Value": "Editorial · Architektonisch",
+    "pillar4Label": "Standort",
+    "pillar4Value": "Berlin · Worldwide"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "heading1": "Reden wir",
+    "heading2": "über Form.",
+    "body": "Eine neue Website, ein visuelles System, ein Re-Launch. Schreiben Sie uns ein paar Sätze zum Projekt — wir antworten innerhalb von zwei Werktagen mit einer ehrlichen Einschätzung.",
+    "emailLabel": "E-Mail",
+    "studioLabel": "Studio",
+    "instagramLabel": "Instagram"
+  },
+  "footer": {
+    "tag": "Digital experiences for design-driven brands",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  }
+}

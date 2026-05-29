@@ -1,0 +1,330 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import type { Lang } from "../i18n/ui";
+
+export interface Props {
+  title: string;
+  client: string;
+  year: number;
+  category: string;
+  cover: string;
+  services: string[];
+  duration?: string;
+  role?: string;
+  stack?: string[];
+  liveUrl?: string;
+  launched?: string;
+  description: string;
+  lang?: Lang;
+}
+
+const {
+  title,
+  client,
+  year,
+  category,
+  services,
+  duration,
+  role,
+  stack,
+  liveUrl,
+  launched,
+  description,
+  lang = "de",
+} = Astro.props;
+---
+
+<BaseLayout title={`${title} — Studio Greyform`} description={description} lang={lang}>
+  <article class="case">
+
+    <!-- ============ COVER (typographic only) ============ -->
+    <section class="cover">
+      <div class="wrap">
+        <div class="cover-meta">
+          <span class="num">Case · {year}</span>
+          <span class="category">{category}</span>
+        </div>
+        <h1 class="cover-title">
+          <span>{client}</span>
+        </h1>
+        <p class="cover-sub">{title}</p>
+      </div>
+    </section>
+
+    <!-- ============ META BLOCK ============ -->
+    <section class="meta-block">
+      <div class="wrap">
+        <dl class="meta-grid">
+          <div class="meta-item">
+            <dt>{lang === "de" ? "Leistungen" : "Services"}</dt>
+            <dd>{services.join(" · ")}</dd>
+          </div>
+          {duration && (
+            <div class="meta-item">
+              <dt>{lang === "de" ? "Zeitraum" : "Duration"}</dt>
+              <dd>{duration}</dd>
+            </div>
+          )}
+          {role && (
+            <div class="meta-item">
+              <dt>{lang === "de" ? "Rolle" : "Role"}</dt>
+              <dd>{role}</dd>
+            </div>
+          )}
+          {stack && stack.length > 0 && (
+            <div class="meta-item">
+              <dt>Stack</dt>
+              <dd>{stack.join(" · ")}</dd>
+            </div>
+          )}
+          {liveUrl && (
+            <div class="meta-item">
+              <dt>{lang === "de" ? "Live" : "Live"}</dt>
+              <dd>
+                <a href={liveUrl} target="_blank" rel="noopener">{liveUrl.replace(/^https?:\/\//, "").replace(/\/$/, "")}</a>
+              </dd>
+            </div>
+          )}
+          {launched && (
+            <div class="meta-item">
+              <dt>{lang === "de" ? "Launch" : "Launched"}</dt>
+              <dd>{launched}</dd>
+            </div>
+          )}
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ BODY (Markdown content) ============ -->
+    <div class="body">
+      <div class="wrap">
+        <slot />
+      </div>
+    </div>
+
+    <!-- ============ NEXT / BACK ============ -->
+    <nav class="next-nav">
+      <div class="wrap">
+        <a href="/#work" class="back">
+          <span class="arr">←</span>
+          <span>{lang === "de" ? "Alle Arbeiten" : "All work"}</span>
+        </a>
+      </div>
+    </nav>
+
+  </article>
+</BaseLayout>
+
+<style>
+  /* ---------- COVER ---------- */
+  .cover {
+    padding-block: clamp(140px, 18vw, 220px) clamp(60px, 8vw, 100px);
+  }
+  .cover-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: clamp(40px, 6vw, 64px);
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(13, 13, 13, 0.18);
+  }
+  .cover-title {
+    font-size: clamp(56px, 10vw, 180px);
+    line-height: 0.94;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin-bottom: clamp(24px, 3vw, 36px);
+    max-width: 14ch;
+  }
+  .cover-sub {
+    font-size: clamp(20px, 2vw, 30px);
+    line-height: 1.3;
+    color: var(--color-stone);
+    font-style: italic;
+    font-weight: 300;
+    max-width: 40ch;
+  }
+
+  /* ---------- META BLOCK ---------- */
+  .meta-block {
+    padding-block: clamp(60px, 8vw, 100px);
+    border-top: 1px solid rgba(13, 13, 13, 0.12);
+    border-bottom: 1px solid rgba(13, 13, 13, 0.12);
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(24px, 4vw, 56px) clamp(32px, 5vw, 80px);
+  }
+  .meta-item dt {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .meta-item dd {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--fg);
+  }
+  .meta-item a {
+    border-bottom: 1px solid currentColor;
+    transition: color 0.3s var(--ease);
+  }
+  .meta-item a:hover {
+    color: var(--color-stone);
+  }
+
+  /* ---------- BODY (Markdown) ---------- */
+  .body {
+    padding-block: clamp(60px, 10vw, 140px);
+  }
+
+  /* Markdown styling */
+  .body :global(h2) {
+    font-size: clamp(28px, 3.6vw, 56px);
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-top: clamp(60px, 8vw, 120px);
+    margin-bottom: clamp(28px, 3vw, 40px);
+    max-width: 18ch;
+  }
+  .body :global(h2:first-child) {
+    margin-top: 0;
+  }
+  .body :global(h2 em) {
+    font-style: italic;
+    color: var(--color-stone);
+    font-weight: 300;
+  }
+
+  .body :global(h3) {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: clamp(48px, 6vw, 80px);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+
+  .body :global(p) {
+    font-size: clamp(16px, 1.3vw, 19px);
+    line-height: 1.6;
+    max-width: 64ch;
+    margin-bottom: 1.2em;
+    color: #2a2a28;
+  }
+
+  .body :global(p.lead),
+  .body :global(blockquote) {
+    font-size: clamp(22px, 2.4vw, 34px);
+    line-height: 1.35;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--fg);
+    margin-block: clamp(40px, 5vw, 64px);
+    max-width: 28ch;
+  }
+  .body :global(blockquote) {
+    font-style: italic;
+    color: var(--color-stone);
+    font-weight: 300;
+    border-left: 1px solid var(--color-stone);
+    padding-left: clamp(20px, 3vw, 40px);
+  }
+
+  .body :global(img) {
+    width: 100%;
+    height: auto;
+    margin-block: clamp(40px, 6vw, 80px);
+    background: var(--color-sand);
+  }
+
+  /* Gallery rows */
+  .body :global(.row-2),
+  .body :global(.row-3) {
+    display: grid;
+    gap: clamp(16px, 2.5vw, 32px);
+    margin-block: clamp(40px, 6vw, 80px);
+  }
+  .body :global(.row-2) {
+    grid-template-columns: 1fr 1fr;
+  }
+  .body :global(.row-3) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .body :global(.row-2 img),
+  .body :global(.row-3 img) {
+    margin: 0;
+  }
+  .body :global(.row-mobile) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: clamp(20px, 3vw, 40px);
+    align-items: center;
+    margin-block: clamp(40px, 6vw, 80px);
+  }
+  .body :global(.row-mobile img) {
+    margin: 0;
+  }
+  .body :global(.row-mobile .caption) {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 32ch;
+  }
+
+  .body :global(figure) {
+    margin-block: clamp(40px, 6vw, 80px);
+  }
+  .body :global(figcaption) {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin-top: 14px;
+  }
+
+  .body :global(hr) {
+    border: 0;
+    height: 1px;
+    background: rgba(13, 13, 13, 0.18);
+    margin-block: clamp(60px, 8vw, 120px);
+  }
+
+  /* ---------- NEXT NAV ---------- */
+  .next-nav {
+    padding-block: clamp(60px, 8vw, 100px);
+    border-top: 1px solid rgba(13, 13, 13, 0.12);
+  }
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    transition: gap 0.4s var(--ease);
+  }
+  .back:hover {
+    gap: 22px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .meta-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 32px;
+    }
+    .body :global(.row-2),
+    .body :global(.row-3),
+    .body :global(.row-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

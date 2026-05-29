@@ -1,0 +1,126 @@
+/* ============================================
+   Greyform Studio — Global Styles
+   ============================================ */
+
+/* --- Satoshi via Fontshare --- */
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500&display=swap");
+
+/* --- Design Tokens --- */
+:root {
+  /* Brand colors */
+  --color-black: #0d0d0d;
+  --color-white: #f5f3ef;
+  --color-grey: #b8b3ac;
+  --color-stone: #8d877f;
+  --color-sand: #d6cfc7;
+  --color-olive: #767268;
+
+  /* Semantic */
+  --bg: var(--color-white);
+  --fg: var(--color-black);
+  --muted: var(--color-stone);
+
+  /* Typography */
+  --font-sans: "Satoshi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Spacing */
+  --gutter: clamp(20px, 4vw, 56px);
+  --section-y: clamp(80px, 12vw, 180px);
+  --content-max: 1280px;
+
+  /* Easing */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--fg);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+/* --- Utility: Section eyebrow (01 / Studio) --- */
+.eyebrow {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+.eyebrow .num {
+  color: var(--color-black);
+}
+.eyebrow .line {
+  flex: 0 0 48px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+  transform: translateY(-3px);
+}
+
+/* --- Container --- */
+.wrap {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

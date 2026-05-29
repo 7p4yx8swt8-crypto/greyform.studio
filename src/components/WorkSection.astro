@@ -1,0 +1,163 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="work">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="num">02</span><span class="line"></span><span>{t("work.eyebrow")}</span>
+    </div>
+
+    <div class="work-grid">
+      <article class="work-item">
+        <a href="/work/jina-kim" class="work-link">
+          <div class="work-media">
+            <img src="/work/jina-kim/01-hero.jpg" alt="Ji-Na Kim — Editorial Brand Site" loading="lazy" />
+          </div>
+        </a>
+        <div class="work-meta">
+          <span class="title">Ji-Na Kim</span>
+          <span class="cat">Editorial · Brand Site</span>
+        </div>
+        <a class="work-arrow" href="/work/jina-kim">
+          <span>{t("work.cta")}</span> <span class="arr">→</span>
+        </a>
+      </article>
+
+      <article class="work-item">
+        <a href="/work/the-grey" class="work-link">
+          <div class="work-media dark">
+            <span class="placeholder">The Grey Berlin</span>
+          </div>
+        </a>
+        <div class="work-meta">
+          <span class="title">The Grey</span>
+          <span class="cat">Studio · Eigene Plattform</span>
+        </div>
+        <a class="work-arrow" href="/work/the-grey">
+          <span>{t("work.cta")}</span> <span class="arr">→</span>
+        </a>
+      </article>
+
+      <article class="work-item upcoming">
+        <div class="work-media sand">
+          <span class="placeholder">{t("work.soon")}</span>
+        </div>
+        <div class="work-meta">
+          <span class="title">{t("work.tbd")}</span>
+          <span class="cat">{t("work.soon")}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding-block: var(--section-y);
+  }
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 56px) clamp(24px, 5vw, 64px);
+  }
+  .work-item:nth-child(2) {
+    margin-top: clamp(40px, 12vw, 160px);
+  }
+  .work-item:nth-child(3) {
+    margin-top: clamp(-60px, -6vw, -20px);
+  }
+
+  .work-link {
+    display: block;
+  }
+  .work-media {
+    aspect-ratio: 4 / 5;
+    background: var(--color-sand);
+    overflow: hidden;
+    position: relative;
+    transition: opacity 0.4s var(--ease);
+  }
+  .work-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .work-link:hover .work-media {
+    opacity: 0.85;
+  }
+  .work-media.dark {
+    background: #111;
+    aspect-ratio: 5 / 6;
+  }
+  .work-media.sand {
+    background: #ece8e2;
+  }
+  .work-media .placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(13, 13, 13, 0.18);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .work-media.dark .placeholder {
+    color: rgba(245, 243, 239, 0.18);
+  }
+
+  .work-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 18px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .work-meta .title {
+    font-weight: 500;
+  }
+  .work-meta .cat {
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .work-arrow {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.4s var(--ease);
+  }
+  .work-arrow:hover {
+    gap: 18px;
+  }
+
+  .work-item.upcoming {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 900px) {
+    .work-grid {
+      grid-template-columns: 1fr;
+    }
+    .work-item:nth-child(2),
+    .work-item:nth-child(3) {
+      margin-top: 0;
+    }
+  }
+</style>

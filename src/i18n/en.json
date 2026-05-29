@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "studio": "Studio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tag": "Digital studio · Berlin",
+    "headline1": "Digital experiences",
+    "headline2": "for brands",
+    "headline3": "with form.",
+    "sub": "Greyform is a digital studio for interior, architecture and lifestyle brands. Editorial websites and visual systems, built with care."
+  },
+  "studio": {
+    "eyebrow": "Studio",
+    "lead1": "We build quiet, precise websites for brands",
+    "lead2": "that already know how to design.",
+    "p1": "Greyform works with interior, architecture and design brands whose visual language is already established and deserves a digital form that lives up to it. We build websites that read as a continuation of the brand — not a translation.",
+    "p2": "The studio is small, focused, and works with modern tools. Few projects in parallel, clear ownership, short paths. The result is pace without panic, quality without effort-for-effort's-sake."
+  },
+  "work": {
+    "eyebrow": "Selected Work",
+    "cta": "View project",
+    "soon": "Coming soon",
+    "tbd": "Next project"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "s1Heading": "Brand Websites",
+    "s1Body": "Editorially designed websites for brands with a strong visual identity. From concept to launch, in a considered process.",
+    "s2Heading": "Creative Direction",
+    "s2Body": "Visual systems, image direction, digital narrative. We think in brand, not in templates, and design presences that hold up over time.",
+    "s3Heading": "Visual Systems",
+    "s3Body": "Typography, layout, motion and components as a coherent system. Consistent across every touchpoint."
+  },
+  "approach": {
+    "eyebrow": "Approach",
+    "lead1": "Few projects. Clear heads.",
+    "lead2": "Modern tools.",
+    "p1": "Greyform runs on a lean studio setup and integrates modern production tools deep into the process. That means shorter iteration cycles, more variants in the design phase, and a pace that used to require larger teams.",
+    "p2": "The technology stays in the background. What matters is the outcome: a website that feels carefully formed — because it is.",
+    "pillar1Label": "Pace",
+    "pillar1Value": "Days, not months",
+    "pillar2Label": "Focus",
+    "pillar2Value": "Few projects in parallel",
+    "pillar3Label": "Aesthetic",
+    "pillar3Value": "Editorial · Architectural",
+    "pillar4Label": "Based in",
+    "pillar4Value": "Berlin · Worldwide"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "heading1": "Let's talk",
+    "heading2": "about form.",
+    "body": "A new website, a visual system, a relaunch. Send us a few lines about the project — we respond within two working days with an honest assessment.",
+    "emailLabel": "Email",
+    "studioLabel": "Studio",
+    "instagramLabel": "Instagram"
+  },
+  "footer": {
+    "tag": "Digital experiences for design-driven brands",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  }
+}

@@ -1,0 +1,118 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section id="approach" class="approach">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="num">04</span><span class="line"></span><span>{t("approach.eyebrow")}</span>
+    </div>
+
+    <div class="approach-grid">
+      <p class="approach-lead">
+        <span>{t("approach.lead1")}</span> <em>{t("approach.lead2")}</em>
+      </p>
+      <div class="approach-body">
+        <p>{t("approach.p1")}</p>
+        <p>{t("approach.p2")}</p>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="label">{t("approach.pillar1Label")}</div>
+        <div class="val">{t("approach.pillar1Value")}</div>
+      </div>
+      <div class="pillar">
+        <div class="label">{t("approach.pillar2Label")}</div>
+        <div class="val">{t("approach.pillar2Value")}</div>
+      </div>
+      <div class="pillar">
+        <div class="label">{t("approach.pillar3Label")}</div>
+        <div class="val">{t("approach.pillar3Value")}</div>
+      </div>
+      <div class="pillar">
+        <div class="label">{t("approach.pillar4Label")}</div>
+        <div class="val">{t("approach.pillar4Value")}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .approach {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding-block: var(--section-y);
+  }
+  .approach :global(.eyebrow) {
+    color: var(--color-grey);
+  }
+  .approach :global(.eyebrow .num) {
+    color: var(--color-white);
+  }
+
+  .approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(40px, 8vw, 120px);
+    align-items: start;
+  }
+  .approach-lead {
+    font-size: clamp(24px, 2.6vw, 38px);
+    line-height: 1.25;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+  .approach-lead em {
+    font-style: italic;
+    color: var(--color-grey);
+  }
+  .approach-body p {
+    margin-bottom: 1.2em;
+    color: rgba(245, 243, 239, 0.78);
+    max-width: 58ch;
+  }
+  .approach-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .pillars {
+    margin-top: clamp(60px, 10vw, 120px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    border-top: 1px solid rgba(245, 243, 239, 0.18);
+    padding-top: 40px;
+  }
+  .pillar .label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-grey);
+    margin-bottom: 14px;
+  }
+  .pillar .val {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+  }
+
+  @media (max-width: 900px) {
+    .approach-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .pillars {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px 32px;
+    }
+  }
+</style>
