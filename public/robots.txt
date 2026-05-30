@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://greyform.studio/sitemap-index.xml
