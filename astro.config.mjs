@@ -21,7 +21,7 @@ export default defineConfig({
     shikiConfig: {
       theme: "min-light",
     },
-    smartypants: true,
+    
   },
 
   build: {
