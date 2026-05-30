@@ -1,0 +1,181 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Privacy — Studio Greyform"
+  description="Privacy policy for Studio Greyform."
+  lang="en"
+>
+  <main class="legal">
+    <article>
+      <p class="eyebrow"><span class="num">·</span> Legal</p>
+      <h1>Privacy Policy</h1>
+
+      <section>
+        <h2>1 — Data controller</h2>
+        <p>
+          The party responsible for data processing on this website within the meaning of the General Data Protection Regulation (GDPR) is:
+        </p>
+        <p>
+          Patrik Salewski<br />
+          Gardeschützenweg 18<br />
+          12203 Berlin<br />
+          Germany<br />
+          Email: <a href="mailto:hello@greyform.studio">hello@greyform.studio</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>2 — Hosting</h2>
+        <p>
+          This website is hosted by Cloudflare (Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA). When you visit the website, technical data (IP address, browser type, time of access) are processed by Cloudflare to ensure content delivery and protection against attacks.
+        </p>
+        <p>
+          The legal basis is Art. 6 (1) (f) GDPR (legitimate interest in a secure and stable provision of the website). Cloudflare processes data partly in the USA. A data processing agreement pursuant to Art. 28 GDPR is in place with Cloudflare. For more information: <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">cloudflare.com/privacypolicy</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>3 — Server log files</h2>
+        <p>
+          When you access this website, information is automatically stored in so-called server log files, which your browser transmits to us. These include: browser type and version, operating system, referrer URL, hostname of the accessing computer, time of the server request, IP address.
+        </p>
+        <p>
+          This data is not merged with other data sources. The collection takes place on the basis of Art. 6 (1) (f) GDPR. The website operator has a legitimate interest in the technically error-free display and optimization of the website.
+        </p>
+      </section>
+
+      <section>
+        <h2>4 — Contact by email</h2>
+        <p>
+          When you contact us by email, your information from the email (in particular name, email address, message text) will be stored for the purpose of processing your request and for follow-up questions. We do not pass on this data without your consent.
+        </p>
+        <p>
+          Processing takes place on the basis of Art. 6 (1) (b) GDPR (contract initiation) or Art. 6 (1) (f) GDPR (legitimate interest in responding to your inquiry). The data remains with us until you ask us to delete it or the purpose for storing the data no longer applies.
+        </p>
+      </section>
+
+      <section>
+        <h2>5 — Fonts (Fontshare)</h2>
+        <p>
+          This website uses the Satoshi typeface, which is loaded via the Fontshare service (Indian Type Foundry Pvt. Ltd., Ahmedabad, India). When the page is loaded, your browser loads the font from the Fontshare server, with your IP address being transmitted to Fontshare.
+        </p>
+        <p>
+          The legal basis is Art. 6 (1) (f) GDPR (legitimate interest in a consistent typographic presentation of the website). For more information: <a href="https://www.fontshare.com/legal/privacy" target="_blank" rel="noopener noreferrer">fontshare.com/legal/privacy</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>6 — Cookies</h2>
+        <p>
+          This website does not use its own cookies and does not perform tracking. Cloudflare may set technically necessary cookies for bot detection and security (e.g. <code>__cf_bm</code>). These are required for the operation of the website and are based on Art. 6 (1) (f) GDPR.
+        </p>
+      </section>
+
+      <section>
+        <h2>7 — Your rights</h2>
+        <p>You have the right at any time to:</p>
+        <ul>
+          <li>Access to the data stored about you (Art. 15 GDPR)</li>
+          <li>Correction of inaccurate data (Art. 16 GDPR)</li>
+          <li>Deletion of your data (Art. 17 GDPR)</li>
+          <li>Restriction of processing (Art. 18 GDPR)</li>
+          <li>Data portability (Art. 20 GDPR)</li>
+          <li>Object to processing (Art. 21 GDPR)</li>
+          <li>Lodge a complaint with a supervisory authority (Art. 77 GDPR)</li>
+        </ul>
+        <p>
+          To exercise your rights, an informal email to <a href="mailto:hello@greyform.studio">hello@greyform.studio</a> is sufficient.
+        </p>
+      </section>
+
+      <section>
+        <h2>8 — Last updated</h2>
+        <p>May 2026.</p>
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .legal {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: clamp(140px, 18vw, 220px) var(--gutter) clamp(80px, 12vw, 160px);
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  .eyebrow .num {
+    color: var(--color-black);
+  }
+
+  h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    margin-bottom: clamp(48px, 8vw, 96px);
+  }
+
+  section {
+    margin-bottom: clamp(40px, 5vw, 64px);
+  }
+
+  h2 {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-stone);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--fg);
+    margin-bottom: 16px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin: 16px 0 16px 24px;
+    padding: 0;
+  }
+  li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+  }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 14px;
+    background: rgba(13, 13, 13, 0.05);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: rgba(13, 13, 13, 0.2);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.3s var(--ease);
+  }
+  a:hover {
+    text-decoration-color: var(--color-black);
+  }
+</style>

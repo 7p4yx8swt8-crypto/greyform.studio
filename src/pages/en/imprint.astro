@@ -1,0 +1,152 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Imprint — Studio Greyform"
+  description="Imprint and legal information for Studio Greyform."
+  lang="en"
+>
+  <main class="legal">
+    <article>
+      <p class="eyebrow"><span class="num">·</span> Legal</p>
+      <h1>Imprint</h1>
+
+      <section>
+        <h2>Information according to § 5 TMG (German Telemedia Act)</h2>
+        <p>
+          Patrik Salewski<br />
+          Gardeschützenweg 18<br />
+          12203 Berlin<br />
+          Germany
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          Phone: <a href="tel:+4917813089650">+49 178 1308965</a><br />
+          Email: <a href="mailto:hello@greyform.studio">hello@greyform.studio</a>
+        </p>
+      </section>
+
+      <section>
+        <h2>VAT ID</h2>
+        <p>
+          Value-added tax identification number according to § 27 a German VAT Act:<br />
+          DE359774862
+        </p>
+      </section>
+
+      <section>
+        <h2>Responsible for content according to § 18 (2) MStV</h2>
+        <p>
+          Patrik Salewski<br />
+          Gardeschützenweg 18<br />
+          12203 Berlin<br />
+          Germany
+        </p>
+      </section>
+
+      <section>
+        <h2>EU dispute resolution</h2>
+        <p>
+          The European Commission provides a platform for online dispute resolution (ODR):
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a>.
+          Our email address can be found above in the imprint.
+        </p>
+        <p>
+          We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+        </p>
+      </section>
+
+      <section>
+        <h2>Liability for content</h2>
+        <p>
+          As a service provider, we are responsible for our own content on these pages in accordance with general laws under § 7 (1) TMG. According to §§ 8 to 10 TMG, however, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances indicating illegal activity.
+        </p>
+        <p>
+          Obligations to remove or block the use of information under general laws remain unaffected. Liability in this regard, however, is only possible from the point in time at which a concrete infringement of the law becomes known. Upon notification of corresponding infringements, we will remove this content immediately.
+        </p>
+      </section>
+
+      <section>
+        <h2>Liability for links</h2>
+        <p>
+          Our website contains links to external third-party websites over whose content we have no control. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the linked pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.
+        </p>
+      </section>
+
+      <section>
+        <h2>Copyright</h2>
+        <p>
+          The content and works on these pages created by the site operators are subject to German copyright law. Duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.
+        </p>
+      </section>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .legal {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: clamp(140px, 18vw, 220px) var(--gutter) clamp(80px, 12vw, 160px);
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  .eyebrow .num {
+    color: var(--color-black);
+  }
+
+  h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    margin-bottom: clamp(48px, 8vw, 96px);
+  }
+
+  section {
+    margin-bottom: clamp(40px, 5vw, 64px);
+  }
+
+  h2 {
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-stone);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--fg);
+    margin-bottom: 16px;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: rgba(13, 13, 13, 0.2);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.3s var(--ease);
+  }
+  a:hover {
+    text-decoration-color: var(--color-black);
+  }
+</style>
