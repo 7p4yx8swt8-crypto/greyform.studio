@@ -8,11 +8,20 @@ export interface Props {
 const { lang = "de" } = Astro.props;
 const t = useTranslations(lang);
 
-const otherLang: Lang = lang === "de" ? "en" : "de";
+// Determine the URL to switch language
+const currentPath = Astro.url.pathname;
+let switchUrl: string;
+if (lang === "de") {
+  // Switch DE → EN: prepend /en
+  switchUrl = currentPath === "/" ? "/en" : `/en${currentPath}`;
+} else {
+  // Switch EN → DE: remove /en prefix
+  switchUrl = currentPath.replace(/^\/en/, "") || "/";
+}
 ---
 
 <nav class="nav" id="nav">
-  <a href="#top" class="brand" aria-label="Studio Greyform">
+  <a href={lang === "de" ? "/" : "/en"} class="brand" aria-label="Studio Greyform">
     <span>Greyform</span><span class="slash">/</span><span>Studio</span>
   </a>
 
@@ -24,9 +33,19 @@ const otherLang: Lang = lang === "de" ? "en" : "de";
   </div>
 
   <div class="lang">
-    <span aria-current={lang === "de"} class:list={{ active: lang === "de" }}>DE</span>
-    <span class="sep">/</span>
-    <a href={lang === "de" ? "/en" : "/"} class:list={{ active: lang === "en" }}>EN</a>
+    {lang === "de" ? (
+      <>
+        <span class="active">DE</span>
+        <span class="sep">/</span>
+        <a href={switchUrl}>EN</a>
+      </>
+    ) : (
+      <>
+        <a href={switchUrl}>DE</a>
+        <span class="sep">/</span>
+        <span class="active">EN</span>
+      </>
+    )}
   </div>
 
   <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -109,6 +128,9 @@ const otherLang: Lang = lang === "de" ? "en" : "de";
     color: var(--color-black);
     font-weight: 500;
   }
+  .lang a:hover {
+    color: var(--color-black);
+  }
   .lang .sep {
     opacity: 0.5;
   }
@@ -170,13 +192,11 @@ const otherLang: Lang = lang === "de" ? "en" : "de";
 </style>
 
 <script>
-  // Scroll state
   const nav = document.getElementById("nav");
   const onScroll = () => nav?.classList.toggle("is-scrolled", window.scrollY > 24);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  // Mobile menu toggle
   const toggle = document.getElementById("menuToggle");
   const links = document.getElementById("navLinks");
   toggle?.addEventListener("click", () => {

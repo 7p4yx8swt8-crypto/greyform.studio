@@ -7,6 +7,22 @@ export interface Props {
 
 const { lang = "de" } = Astro.props;
 const t = useTranslations(lang);
+
+// Localized labels for work items
+const labels = {
+  de: {
+    jinaCat: "Editorial · Brand Site",
+    greyCat: "Studio · Eigene Plattform",
+  },
+  en: {
+    jinaCat: "Editorial · Brand Site",
+    greyCat: "Studio · Own Platform",
+  },
+}[lang];
+
+// Localized URLs
+const jinaUrl = lang === "de" ? "/work/jina-kim" : "/en/work/jina-kim";
+const greyUrl = lang === "de" ? "/work/the-grey" : "/en/work/the-grey";
 ---
 
 <section id="work">
@@ -17,31 +33,31 @@ const t = useTranslations(lang);
 
     <div class="work-grid">
       <article class="work-item">
-        <a href="/work/jina-kim" class="work-link">
+        <a href={jinaUrl} class="work-link">
           <div class="work-media">
             <img src="/work/jina-kim/01-hero.jpg" alt="Ji-Na Kim — Editorial Brand Site" loading="lazy" />
           </div>
         </a>
         <div class="work-meta">
           <span class="title">Ji-Na Kim</span>
-          <span class="cat">Editorial · Brand Site</span>
+          <span class="cat">{labels.jinaCat}</span>
         </div>
-        <a class="work-arrow" href="/work/jina-kim">
+        <a class="work-arrow" href={jinaUrl}>
           <span>{t("work.cta")}</span> <span class="arr">→</span>
         </a>
       </article>
 
       <article class="work-item">
-        <a href="/work/the-grey" class="work-link">
+        <a href={greyUrl} class="work-link">
           <div class="work-media dark">
             <span class="placeholder">The Grey Berlin</span>
           </div>
         </a>
         <div class="work-meta">
           <span class="title">The Grey</span>
-          <span class="cat">Studio · Eigene Plattform</span>
+          <span class="cat">{labels.greyCat}</span>
         </div>
-        <a class="work-arrow" href="/work/the-grey">
+        <a class="work-arrow" href={greyUrl}>
           <span>{t("work.cta")}</span> <span class="arr">→</span>
         </a>
       </article>

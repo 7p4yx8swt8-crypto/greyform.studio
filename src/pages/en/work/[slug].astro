@@ -1,11 +1,11 @@
 ---
 import { getCollection, render } from "astro:content";
-import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
+import CaseStudyLayout from "../../../layouts/CaseStudyLayout.astro";
 
 export async function getStaticPaths() {
-  const entries = await getCollection("work", ({ data }) => data.lang === "de");
+  const entries = await getCollection("work", ({ data }) => data.lang === "en");
   return entries.map((entry) => ({
-    params: { slug: entry.id },
+    params: { slug: entry.id.replace(/\.en$/, "") },
     props: { entry },
   }));
 }
