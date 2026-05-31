@@ -1,4 +1,5 @@
 ---
+id: "jina-kim-en"
 title: "Editorial brand site for a makeup artist"
 client: "Ji-Na Kim"
 year: 2026

@@ -5,7 +5,7 @@ import CaseStudyLayout from "../../../layouts/CaseStudyLayout.astro";
 export async function getStaticPaths() {
   const entries = await getCollection("work", ({ data }) => data.lang === "en");
   return entries.map((entry) => ({
-    params: { slug: entry.id.replace(/\.en$/, "") },
+    params: { slug: entry.id.replace("-en", "") },
     props: { entry },
   }));
 }
