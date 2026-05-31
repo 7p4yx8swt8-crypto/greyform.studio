@@ -13,17 +13,17 @@ export interface Props {
 
 const {
   title = "Studio Greyform — Digital experiences for design-driven brands",
-  description = "Studio Greyform — Digital studio for interior, architecture and lifestyle brands. Editorial websites, visual systems. Berlin.",
+  description = "Studio Greyform ist ein digitales Studio für Interior-, Architektur- und Lifestyle-Marken in Berlin. Editoriale Websites, visuelle Systeme und digitale Markenpräsenzen.",
   lang = defaultLang,
 } = Astro.props;
 
 const site = "https://greyform.studio";
 const currentPath = Astro.url.pathname;
 
-// Canonical URL – immer die kanonische Version dieser Seite
+// Canonical URL
 const canonicalURL = new URL(currentPath, site).href;
 
-// hreflang: DE-Version ist immer ohne /en/-Prefix
+// hreflang
 const dePath = currentPath.startsWith("/en/")
   ? currentPath.replace(/^\/en/, "") || "/"
   : currentPath;
@@ -33,6 +33,49 @@ const enPath = currentPath.startsWith("/en/")
 
 const deURL = new URL(dePath, site).href;
 const enURL = new URL(enPath, site).href;
+
+// Schema.org JSON-LD – nur auf Startseite ausgeben
+const isHome = currentPath === "/" || currentPath === "/en/";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Studio Greyform",
+  "url": "https://greyform.studio",
+  "logo": "https://greyform.studio/favicon.svg",
+  "image": "https://greyform.studio/og-image.png",
+  "description": "Digitales Studio für Interior-, Architektur- und Lifestyle-Marken. Editoriale Websites, visuelle Systeme und digitale Markenpräsenzen.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gardeschützenweg 18",
+    "addressLocality": "Berlin",
+    "postalCode": "12203",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.4345,
+    "longitude": 13.3135
+  },
+  "telephone": "+49-178-1308965",
+  "email": "hello@greyform.studio",
+  "founder": {
+    "@type": "Person",
+    "name": "Patrik Salewski"
+  },
+  "foundingDate": "2026",
+  "areaServed": {
+    "@type": "City",
+    "name": "Berlin"
+  },
+  "serviceType": [
+    "Webdesign",
+    "Brand Identity",
+    "Editorial Design",
+    "Digital Strategy"
+  ],
+  "sameAs": []
+};
 ---
 
 <!doctype html>
@@ -59,6 +102,11 @@ const enURL = new URL(enPath, site).href;
     <meta property="og:image" content="https://greyform.studio/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+
+    <!-- Schema.org JSON-LD -->
+    {isHome && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
 
     <title>{title}</title>
   </head>
