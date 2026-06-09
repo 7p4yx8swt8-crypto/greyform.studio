@@ -8,6 +8,12 @@ export interface Props {
 
 const { lang = "de" } = Astro.props;
 const t = useTranslations(lang);
+
+// Aktuelle Seite in beiden Sprachen verlinken
+const path = Astro.url.pathname;
+const isEnPath = path === "/en" || path.startsWith("/en/");
+const dePath = isEnPath ? path.slice(3) || "/" : path;
+const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
 ---
 
 <nav class="nav" id="nav">
@@ -24,7 +30,7 @@ const t = useTranslations(lang);
 
   <div class="lang">
     <a
-      href={lang === "de" ? "/" : "/en"}
+      href={dePath}
       class:list={{ active: lang === "de" }}
       aria-current={lang === "de" ? "true" : undefined}
     >
@@ -32,7 +38,7 @@ const t = useTranslations(lang);
     </a>
     <span class="sep">/</span>
     <a
-      href={lang === "de" ? "/en" : "/"}
+      href={enPath}
       class:list={{ active: lang === "en" }}
       aria-current={lang === "en" ? "true" : undefined}
     >
