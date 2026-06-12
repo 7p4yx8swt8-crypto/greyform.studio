@@ -1,0 +1,114 @@
+---
+// SectionHead.astro
+// Wiederverwendbarer Section-Anker: Eyebrow (Nummer + Linie + Label) plus optional
+// eine zweizeilige Editorial-Headline mit kursivem Akzent.
+//
+// Verwendung:
+//   <SectionHead num="02" eyebrow="Ausgewählte Arbeiten" title1="Ausgewählte" title2="Arbeiten." />
+//   <SectionHead num="04" eyebrow="Arbeitsweise" title1="..." title2="..." theme="dark" />
+
+export interface Props {
+  num: string;
+  eyebrow: string;
+  title1?: string;
+  title2?: string;
+  theme?: "light" | "dark";
+}
+
+const { num, eyebrow, title1, title2, theme = "light" } = Astro.props;
+---
+
+<div class:list={["section-head", theme]}>
+  <div class="eyebrow">
+    <span class="num">{num}</span>
+    <span class="line"></span>
+    <span class="label">{eyebrow}</span>
+  </div>
+
+  {
+    title1 && (
+      <h2 class="section-title">
+        <span>{title1}</span>
+        {title2 && (
+          <>
+            <br />
+            <em>{title2}</em>
+          </>
+        )}
+      </h2>
+    )
+  }
+</div>
+
+<style>
+  .section-head {
+    margin-bottom: clamp(48px, 8vw, 96px);
+  }
+
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .eyebrow .num,
+  .eyebrow .label {
+    font-weight: 500;
+  }
+
+  .eyebrow .line {
+    width: 56px;
+    height: 1px;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-size: clamp(40px, 7vw, 128px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    margin-top: clamp(28px, 4vw, 56px);
+    max-width: 18ch;
+  }
+
+  .section-title em {
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* Light theme (default) */
+  .section-head.light .eyebrow .num,
+  .section-head.light .eyebrow .label {
+    color: var(--color-black);
+  }
+  .section-head.light .eyebrow .line {
+    background: var(--color-stone);
+  }
+  .section-head.light .section-title {
+    color: var(--color-black);
+  }
+  .section-head.light .section-title em {
+    color: var(--color-stone);
+  }
+
+  /* Dark theme (for sections with black background) */
+  .section-head.dark .eyebrow .num {
+    color: var(--color-white);
+  }
+  .section-head.dark .eyebrow .label {
+    color: var(--color-white);
+  }
+  .section-head.dark .eyebrow .line {
+    background: rgba(245, 243, 239, 0.4);
+  }
+  .section-head.dark .section-title {
+    color: var(--color-white);
+  }
+  .section-head.dark .section-title em {
+    color: var(--color-grey, rgba(245, 243, 239, 0.6));
+  }
+</style>

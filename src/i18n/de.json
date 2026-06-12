@@ -14,19 +14,25 @@
   },
   "studio": {
     "eyebrow": "Studio",
+    "title1": "Für Marken,",
+    "title2": "die gestalten.",
     "lead1": "Wir gestalten ruhige, präzise Websites für Marken,",
     "lead2": "die gestalten können.",
     "p1": "Greyform arbeitet mit Interior-, Architektur- und Designmarken, deren visuelle Sprache bereits etabliert ist und im Digitalen eine ebenbürtige Form verdient. Wir entwickeln Websites, die sich wie eine Fortsetzung der Marke lesen, nicht wie eine Übersetzung.",
     "p2": "Das Studio ist klein, fokussiert und arbeitet mit modernen Werkzeugen. Wenige Projekte parallel, klare Verantwortung, kurze Wege. Das Ergebnis ist Tempo ohne Hektik, Qualität ohne Aufwand-für-Aufwand-Logik."
   },
   "work": {
-    "eyebrow": "Ausgewählte Arbeiten",
+    "eyebrow": "Arbeiten",
+    "title1": "Ausgewählte",
+    "title2": "Arbeiten.",
     "cta": "Projekt ansehen",
     "soon": "In Kürze",
     "tbd": "Nächste Arbeit"
   },
   "services": {
     "eyebrow": "Leistungen",
+    "title1": "Was wir",
+    "title2": "machen.",
     "s1Heading": "Brand Websites",
     "s1Body": "Editorial gestaltete Websites für Marken mit ausgeprägter visueller Identität. Vom Konzept bis zum Launch, in einem durchdachten Prozess.",
     "s2Heading": "Creative Direction",
@@ -36,6 +42,8 @@
   },
   "approach": {
     "eyebrow": "Arbeitsweise",
+    "title1": "Wenige Projekte.",
+    "title2": "Moderne Werkzeuge.",
     "lead1": "Wenige Projekte. Klare Köpfe.",
     "lead2": "Moderne Werkzeuge.",
     "p1": "Greyform arbeitet mit einem schlanken Studio-Setup und integriert moderne Produktionswerkzeuge tief in den Prozess. Das bedeutet kürzere Iterationszyklen, mehr Varianten in der Designphase und ein Tempo, das früher nur größere Teams erreichen konnten.",

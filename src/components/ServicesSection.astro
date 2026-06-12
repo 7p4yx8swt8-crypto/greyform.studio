@@ -1,5 +1,6 @@
 ---
 import { useTranslations, type Lang } from "../i18n/ui";
+import SectionHead from "./SectionHead.astro";
 
 export interface Props {
   lang?: Lang;
@@ -11,9 +12,12 @@ const t = useTranslations(lang);
 
 <section id="services">
   <div class="wrap">
-    <div class="eyebrow">
-      <span class="num">03</span><span class="line"></span><span>{t("services.eyebrow")}</span>
-    </div>
+    <SectionHead
+      num="03"
+      eyebrow={t("services.eyebrow")}
+      title1={t("services.title1")}
+      title2={t("services.title2")}
+    />
 
     <div class="services-grid">
       <div class="service">

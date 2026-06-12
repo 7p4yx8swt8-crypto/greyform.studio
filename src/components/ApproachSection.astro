@@ -1,5 +1,6 @@
 ---
 import { useTranslations, type Lang } from "../i18n/ui";
+import SectionHead from "./SectionHead.astro";
 
 export interface Props {
   lang?: Lang;
@@ -11,14 +12,15 @@ const t = useTranslations(lang);
 
 <section id="approach" class="approach">
   <div class="wrap">
-    <div class="eyebrow">
-      <span class="num">04</span><span class="line"></span><span>{t("approach.eyebrow")}</span>
-    </div>
+    <SectionHead
+      num="04"
+      eyebrow={t("approach.eyebrow")}
+      title1={t("approach.title1")}
+      title2={t("approach.title2")}
+      theme="dark"
+    />
 
-    <div class="approach-grid">
-      <p class="approach-lead">
-        <span>{t("approach.lead1")}</span> <em>{t("approach.lead2")}</em>
-      </p>
+    <div class="approach-body-wrap">
       <div class="approach-body">
         <p>{t("approach.p1")}</p>
         <p>{t("approach.p2")}</p>
@@ -52,33 +54,19 @@ const t = useTranslations(lang);
     color: var(--color-white);
     padding-block: var(--section-y);
   }
-  .approach :global(.eyebrow) {
-    color: var(--color-grey);
-  }
-  .approach :global(.eyebrow .num) {
-    color: var(--color-white);
-  }
 
-  .approach-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: clamp(40px, 8vw, 120px);
-    align-items: start;
+  .approach-body-wrap {
+    display: flex;
+    justify-content: flex-end;
   }
-  .approach-lead {
-    font-size: clamp(24px, 2.6vw, 38px);
-    line-height: 1.25;
-    font-weight: 300;
-    letter-spacing: -0.01em;
-  }
-  .approach-lead em {
-    font-style: italic;
-    color: var(--color-grey);
+  .approach-body {
+    max-width: 64ch;
   }
   .approach-body p {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.4em;
     color: rgba(245, 243, 239, 0.78);
-    max-width: 58ch;
+    font-size: clamp(15px, 1.3vw, 17px);
+    line-height: 1.65;
   }
   .approach-body p:last-child {
     margin-bottom: 0;
@@ -96,7 +84,7 @@ const t = useTranslations(lang);
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--color-grey);
+    color: rgba(245, 243, 239, 0.6);
     margin-bottom: 14px;
   }
   .pillar .val {
@@ -106,9 +94,11 @@ const t = useTranslations(lang);
   }
 
   @media (max-width: 900px) {
-    .approach-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
+    .approach-body-wrap {
+      justify-content: flex-start;
+    }
+    .approach-body {
+      max-width: 100%;
     }
     .pillars {
       grid-template-columns: 1fr 1fr;

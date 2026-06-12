@@ -1,5 +1,6 @@
 ---
 import { useTranslations, type Lang } from "../i18n/ui";
+import SectionHead from "./SectionHead.astro";
 
 export interface Props {
   lang?: Lang;
@@ -27,15 +28,22 @@ const greyUrl = lang === "de" ? "/work/the-grey" : "/en/work/the-grey";
 
 <section id="work">
   <div class="wrap">
-    <div class="eyebrow">
-      <span class="num">02</span><span class="line"></span><span>{t("work.eyebrow")}</span>
-    </div>
+    <SectionHead
+      num="02"
+      eyebrow={t("work.eyebrow")}
+      title1={t("work.title1")}
+      title2={t("work.title2")}
+    />
 
     <div class="work-grid">
       <article class="work-item">
         <a href={jinaUrl} class="work-link">
           <div class="work-media">
-            <img src="/work/jina-kim/cover.jpg" alt="Ji-Na Kim — Editorial Brand Site" loading="lazy" />
+            <img
+              src="/work/jina-kim/cover.jpg"
+              alt="Ji-Na Kim — Editorial Brand Site"
+              loading="lazy"
+            />
           </div>
         </a>
         <div class="work-meta">

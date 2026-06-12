@@ -14,19 +14,25 @@
   },
   "studio": {
     "eyebrow": "Studio",
+    "title1": "For brands",
+    "title2": "that design.",
     "lead1": "We build quiet, precise websites for brands",
     "lead2": "that already know how to design.",
     "p1": "Greyform works with interior, architecture and design brands whose visual language is already established and deserves a digital form that lives up to it. We build websites that read as a continuation of the brand — not a translation.",
     "p2": "The studio is small, focused, and works with modern tools. Few projects in parallel, clear ownership, short paths. The result is pace without panic, quality without effort-for-effort's-sake."
   },
   "work": {
-    "eyebrow": "Selected Work",
+    "eyebrow": "Work",
+    "title1": "Selected",
+    "title2": "Work.",
     "cta": "View project",
     "soon": "Coming soon",
     "tbd": "Next project"
   },
   "services": {
     "eyebrow": "Services",
+    "title1": "What we",
+    "title2": "do.",
     "s1Heading": "Brand Websites",
     "s1Body": "Editorially designed websites for brands with a strong visual identity. From concept to launch, in a considered process.",
     "s2Heading": "Creative Direction",
@@ -36,6 +42,8 @@
   },
   "approach": {
     "eyebrow": "Approach",
+    "title1": "Few projects.",
+    "title2": "Modern tools.",
     "lead1": "Few projects. Clear heads.",
     "lead2": "Modern tools.",
     "p1": "Greyform runs on a lean studio setup and integrates modern production tools deep into the process. That means shorter iteration cycles, more variants in the design phase, and a pace that used to require larger teams.",
