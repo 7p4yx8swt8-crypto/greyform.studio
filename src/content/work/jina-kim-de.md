@@ -15,7 +15,7 @@ stack:
   - "CSS"
   - "Vanilla JS"
   - "Netlify"
-liveUrl: "https://teal-biscuit-36b6b0.netlify.app"
+liveUrl: "https://jinakim-makeup.com"
 launched: "Mai 2026"
 description: "Eine ruhige, editorial gestaltete Website für die Berliner Maskenbildnerin Ji-Na Kim. Bilingual, präzise, kameratauglich — wie ihre Arbeit."
 order: 1

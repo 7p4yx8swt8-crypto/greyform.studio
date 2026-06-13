@@ -16,7 +16,7 @@ stack:
   - "CSS"
   - "Vanilla JS"
   - "Netlify"
-liveUrl: "https://teal-biscuit-36b6b0.netlify.app"
+liveUrl: "https://jinakim-makeup.com"
 launched: "May 2026"
 description: "A quiet, editorial-led website for Berlin makeup artist Ji-Na Kim. Bilingual, precise, camera-ready — much like her work."
 order: 1
