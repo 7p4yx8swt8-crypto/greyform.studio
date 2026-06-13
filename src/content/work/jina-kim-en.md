@@ -4,7 +4,7 @@ title: "Editorial brand site for a makeup artist"
 client: "Ji-Na Kim"
 year: 2026
 category: "Editorial · Brand Site"
-cover: "/work/jina-kim/01-hero.jpg"
+cover: "/work/jina-kim/cover.jpg"
 services:
   - "Concept"
   - "Design"
@@ -35,7 +35,7 @@ The brief: a digital presence that doesn't compete with her images, but gives th
 
 Editorial, not portfolio-showcase. The site reads like a short magazine feature: hero, introduction, work as a curated grid, services, contact. Section numbering as a quiet editorial accent. Type in a thin grotesk, generous whitespace, no decorative noise.
 
-![Ji-Na Kim hero section](/work/jina-kim/01-hero.jpg)
+![Ji-Na Kim at work](/work/jina-kim/02-ansatz.jpg)
 
 The hero shows Ji-Na as a portrait — not a mood image, not an abstract composition. The headline "Ji-Na Kim · Berlin · worldwide." sits in two weights — the black-and-white logic of the brand continues into the typography.
 

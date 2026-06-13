@@ -3,7 +3,7 @@ title: "Editorial Brand Site für eine Maskenbildnerin"
 client: "Ji-Na Kim"
 year: 2026
 category: "Editorial · Brand Site"
-cover: "/work/jina-kim/01-hero.jpg"
+cover: "/work/jina-kim/cover.jpg"
 services:
   - "Konzept"
   - "Design"
@@ -33,7 +33,7 @@ Die Aufgabe: ein digitaler Auftritt, der nicht mit ihren Bildern konkurriert, so
 
 Editorial statt Portfolio-Showcase. Die Site liest sich wie eine kurze Magazin-Strecke: Hero, Selbstvorstellung, Arbeiten als kuratiertes Grid, Leistungen, Kontakt. Sektionsnummerierung als ruhiger Editorial-Akzent. Schrift in einer dünnen Grotesk, viel Weißraum, kein decorative noise.
 
-![Hero der Ji-Na Kim Website](/work/jina-kim/01-hero.jpg)
+![Ji-Na Kim bei der Arbeit](/work/jina-kim/02-ansatz.jpg)
 
 Der Hero zeigt Ji-Na im Portrait, nicht ein Mood-Bild oder eine abstrakte Komposition. Die Headline „Ji-Na Kim · Berlin · worldwide." in zwei Gewichten — die Schwarzweißlogik der Marke setzt sich in der Typo fort.
 
