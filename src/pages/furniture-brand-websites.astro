@@ -6,48 +6,53 @@ const lang = "de";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Website Design für Möbelmarken",
+  "name": "Digitale Auftritte für Möbelmarken",
   "provider": {
     "@type": "ProfessionalService",
     "name": "Studio Greyform",
     "url": "https://greyform.studio"
   },
-  "description": "Greyform gestaltet editoriale Websites und flexible digitale Systeme für Möbelmarken, Möbelhersteller, Lichtmarken und Interior-Produktmarken.",
+  "description": "Greyform gestaltet editoriale Websites, Content-Systeme und digitale Plattformen für Möbelmarken, Möbelhersteller, Lichtmarken und Interior-Produktmarken. Studio in Berlin, international tätig.",
   "areaServed": "Worldwide",
-  "serviceType": "Website Design",
+  "serviceType": ["Website Design", "Editorial Design", "Content-Systeme", "Digitale Markenstrategie"],
   "audience": {
     "@type": "Audience",
-    "audienceType": "Möbelmarken, Möbelhersteller, Lichtmarken, Interior-Produktmarken"
-  }
+    "audienceType": "Möbelmarken, Möbelhersteller, Lichtmarken, Interior-Produktmarken, Design-getriebene Produktmarken"
+  },
+  "knowsAbout": ["Möbelmarken-Websites", "Kollektionspräsentation", "Messedigitalisierung", "Händlernetzwerk-Kommunikation", "Premium-Positionierung", "Editoriale Content-Systeme"]
 };
 
 const faqs = [
   {
-    q: "Sind Sie auf Websites für Möbelmarken spezialisiert?",
-    a: "Ja. Greyform arbeitet mit Möbelmarken, Möbelherstellern, Lichtmarken und Interior-Produktmarken. Wir verstehen die spezifischen Anforderungen der Kategorie — Produktpräsentation, Kollektionsstruktur, Markenerzählung — und gestalten Websites, die all das leisten."
+    q: "Sind Sie auf Websites für Möbelmarken und Möbelhersteller spezialisiert?",
+    a: "Ja. Greyform arbeitet mit Möbelmarken, Möbelherstellern, Lichtmarken und Interior-Produktmarken. Wir verstehen die spezifischen Anforderungen der Kategorie — Kollektionsstruktur, spezifikationsgetriebener Einkauf, Händlernetzwerk-Kommunikation, Messeauftritte und Premium-Positionierung — und gestalten digitale Systeme, die all das leisten."
   },
   {
-    q: "Wie lange dauert ein Möbelmarken-Website-Projekt?",
+    q: "Wie lange dauert ein Website-Projekt für eine Möbelmarke?",
     a: "Ein fokussiertes Projekt dauert in der Regel drei bis sechs Wochen von Briefing bis Launch. Der Zeitrahmen hängt vom Umfang der Inhalte, der Anzahl der Produktlinien und davon ab, ob ein Content-System integriert wird."
   },
   {
     q: "Können wir die Website nach dem Launch selbst pflegen?",
-    a: "Ja — und das ist ein zentrales Ziel unserer Arbeit. Wir entwickeln flexible Content-Systeme, mit denen Ihr Team Kollektionen aktualisieren, Produkte hinzufügen und Inhalte pflegen kann — ohne für jede Änderung auf einen Entwickler angewiesen zu sein."
+    a: "Ja — und das ist ein zentrales Ziel unserer Arbeit. Wir entwickeln flexible Content-Systeme, mit denen Ihr Team Kollektionen aktualisieren, Produkte hinzufügen und Inhalte eigenständig pflegen kann — ohne für jede Änderung auf einen Entwickler angewiesen zu sein."
   },
   {
     q: "Arbeiten Sie auch mit Möbelmarken außerhalb Deutschlands?",
     a: "Ja. Greyform arbeitet international. Das Studio ist in Berlin ansässig und betreut Projekte auf Deutsch und Englisch. Wir haben mit Marken in ganz Europa zusammengearbeitet und sind offen für Projekte weltweit."
   },
   {
-    q: "Können Sie bei der SEO für unsere Möbelmarken-Website helfen?",
-    a: "Ja. SEO ist von Anfang an Teil jedes Projekts — semantische Struktur, Metadaten, Performance und Content-Architektur werden von Beginn an berücksichtigt. Wir strukturieren Inhalte auch so, dass sie von KI-Systemen wie ChatGPT und Googles AI Overviews klar verstanden werden."
+    q: "Können Sie bei SEO und KI-Sichtbarkeit für unsere Möbelmarke helfen?",
+    a: "Ja. SEO und strukturierte Inhalte sind von Anfang an Teil jedes Projekts — semantische Struktur, Metadaten, Performance und Content-Architektur werden von Beginn an berücksichtigt. Wir strukturieren Inhalte auch so, dass sie von KI-Systemen wie ChatGPT, Gemini und Google AI Overviews klar verstanden werden — die zunehmend von Käufern, Planern und Journalisten genutzt werden, um Möbelmarken zu entdecken."
+  },
+  {
+    q: "Arbeiten Sie auch für Interior-Marken und Architekturbüros?",
+    a: "Ja. Neben Möbelmarken arbeitet Greyform mit Interior-Marken, Architekturbüros und Lifestyle-Marken. Jede Kategorie hat ihre eigenen digitalen Anforderungen — wir gestalten Systeme, die auf die spezifischen Kommunikationsbedürfnisse jeder Marke zugeschnitten sind."
   }
 ];
 ---
 
 <BaseLayout
-  title="Website Design für Möbelmarken — Greyform Studio Berlin"
-  description="Greyform gestaltet editoriale Websites und digitale Markensysteme für Möbelmarken, Hersteller und Interior-Produktmarken. Studio in Berlin, international tätig."
+  title="Digitale Auftritte für Möbelmarken — Greyform Studio Berlin"
+  description="Greyform gestaltet editoriale Websites, Content-Systeme und digitale Plattformen für Möbelmarken, Hersteller und Interior-Produktmarken. Studio in Berlin, international tätig."
   lang={lang}
 >
 
@@ -58,15 +63,15 @@ const faqs = [
     <div class="wrap">
       <div class="hero-tag">
         <span class="dot"></span>
-        <span>Website Design · Möbelmarken</span>
+        <span>Digitale Auftritte · Möbelmarken</span>
       </div>
       <h1>
-        <span>Website Design</span><br />
+        <span>Digitale Auftritte</span><br />
         <span>für Möbel-</span><br />
         <em>marken.</em>
       </h1>
       <div class="hero-foot">
-        <p class="hero-sub">Greyform gestaltet editoriale Websites und flexible digitale Systeme für Möbelmarken, Hersteller und Interior-Produktmarken — präzise umgesetzt, nach dem Launch eigenständig pflegbar.</p>
+        <p class="hero-sub">Greyform gestaltet editoriale Websites, Content-Systeme und digitale Plattformen für Möbelmarken, Hersteller und design-getriebene Produktmarken — präzise umgesetzt, nach dem Launch eigenständig pflegbar.</p>
         <div class="hero-meta">
           <div class="row">
             <span>Berlin</span>
@@ -94,9 +99,9 @@ const faqs = [
       <div class="two-col">
         <div class="col-text">
           <p class="lead">Eine Möbelmarken-Website ist kein Produktkatalog. Sie ist ein Markenerlebnis — und die meisten Websites in dieser Kategorie liefern keines.</p>
-          <p>Möbelmarken operieren in einer Kategorie, in der das physische Produkt aspirativ, haptisch und tief mit einem Lebensgefühl verknüpft ist. Die Website muss dieses Gewicht tragen. Sie muss Kollektionen mit editorialer Präzision präsentieren, Handwerk und Materialien klar kommunizieren und eine Markengeschichte erzählen, die einem Käufer einen Grund gibt, sich für diese Marke zu entscheiden.</p>
+          <p>Möbelmarken operieren in einer Kategorie, in der das physische Produkt aspirativ, haptisch und tief mit einem Lebensgefühl verknüpft ist. Die Website muss dieses Gewicht tragen. Sie muss Kollektionen mit editorialer Präzision präsentieren, Handwerk und Materialien klar kommunizieren und eine Markengeschichte erzählen, die einem Käufer — ob Privatkunde, Innenarchitekt oder Handelseinkäufer — einen Grund gibt, sich für diese Marke zu entscheiden.</p>
           <p>Generische Website-Builder und Template-basierte Agenturen verstehen das nicht. Sie produzieren Sites, die wie jede andere Möbelwebsite aussehen — Produktgrids, Slider-Karussells, Stockfotografie. Das Ergebnis ist ein digitaler Auftritt, der aktiv das bereits geleistete Markeninvestment untergräbt.</p>
-          <p>Greyform arbeitet anders. Wir entwickeln Websites für Möbelmarken, die als editoriale Plattformen funktionieren — ruhig, präzise, markengeführt — und die nach dem Launch von Ihrem eigenen Team gepflegt und erweitert werden können.</p>
+          <p>Greyform arbeitet anders. Wir entwickeln digitale Systeme für Möbelmarken, die als editoriale Plattformen funktionieren — ruhig, präzise, markengeführt — und die nach dem Launch von Ihrem eigenen Team gepflegt und erweitert werden können.</p>
         </div>
         <div class="col-stat">
           <div class="stat-block">
@@ -118,12 +123,57 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 3. HÄUFIGE PROBLEME -->
-  <section class="section-problems">
+  <!-- 3. WARUM GREYFORM MÖBELMARKEN VERSTEHT -->
+  <section class="section-credibility">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
           <span class="num">02</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Branchenverständnis</span>
+        </div>
+        <h2>
+          Warum Greyform Möbelmarken<br />
+          <em>von innen versteht.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Greyform nähert sich Möbelmarken nicht als externe Agentur, die eine neue Kategorie kennenlernt. Das Studio bringt direkte Erfahrung aus der Möbel- und Einrichtungsbranche mit.</p>
+          <p>Wir verstehen, wie Möbelmarken auf den Markt kommen — über Händlernetzwerke, Fachausstellungen, Planungskanäle und direkte Verbraucherplattformen. Wir verstehen den Unterschied zwischen einem Kollektionslaunch und einem Produktupdate, zwischen einem Messeauftritt und einer Verbraucherkampagne, zwischen einer Materialgeschichte und einem Preisargument.</p>
+          <p>Wir verstehen, dass eine Möbelmarken-Website mehrere Zielgruppen gleichzeitig bedienen muss: den Endkunden, der die Marke zum ersten Mal entdeckt, den Innenarchitekten, der ein Produkt für ein Projekt spezifiziert, den Handelseinkäufer, der einen neuen Lieferanten bewertet, und den Journalisten, der eine Geschichte sucht. Jede dieser Zielgruppen braucht etwas anderes — und ein gut strukturiertes digitales System kann alle bedienen, ohne Kompromisse.</p>
+          <p>Dieses Verständnis bringen wir in jedes Möbelmarkenprojekt ein. Nicht aus einem Brief abgeleitet, sondern aus Erfahrung aufgebaut.</p>
+        </div>
+        <div class="col-credibility">
+          <div class="credibility-list">
+            <div class="cred-item">
+              <span class="cred-label">Kollektionen</span>
+              <span class="cred-text">Saisonale und permanente Kollektionsarchitektur, Variantenverwaltung und editoriale Präsentation</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">Handel & Händler</span>
+              <span class="cred-text">Händlerfinder, Handelsportale, Spezifikationsdownloads und B2B-Kommunikationsstrukturen</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">Messen</span>
+              <span class="cred-text">Digitale Begleitung für Salone del Mobile, imm cologne, Maison & Objet und andere Branchenevents</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">Premium-Positionierung</span>
+              <span class="cred-text">Visuelle Systeme, die Qualität, Handwerk und Markenautorität kommunizieren — ohne es direkt auszusprechen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HÄUFIGE PROBLEME -->
+  <section class="section-problems">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">03</span>
           <span class="dash"></span>
           <span class="eyebrow">Häufige Probleme</span>
         </div>
@@ -161,18 +211,18 @@ const faqs = [
         <div class="problem-item">
           <span class="problem-num">vi</span>
           <h3>Langsame Performance</h3>
-          <p>Bildlastige Möbelwebsites laden häufig langsam, was sowohl die Nutzererfahrung als auch die Suchmaschinen-Rankings schädigt. Performance sollte von Anfang an als Design-Constraint verstanden werden, nicht als Nachgedanke.</p>
+          <p>Bildlastige Möbelwebsites laden häufig langsam, was sowohl die Nutzererfahrung als auch die Suchmaschinen-Rankings schädigt. Performance sollte von Anfang an als Design-Constraint verstanden werden.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. UNSER ANSATZ -->
+  <!-- 5. UNSER ANSATZ -->
   <section class="section-approach">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
-          <span class="num">03</span>
+          <span class="num">04</span>
           <span class="dash"></span>
           <span class="eyebrow">Unser Ansatz</span>
         </div>
@@ -186,8 +236,8 @@ const faqs = [
           <p class="lead">Jedes Greyform-Projekt beginnt mit der Marke, nicht mit dem Template.</p>
           <p>Wir lesen die visuelle Sprache, die eine Möbelmarke bereits besitzt — in ihren Produkten, ihrer Fotografie, ihren Printmaterialien — und gestalten ein digitales System, das diese Sprache fortsetzt, anstatt sie in etwas Generisches zu übersetzen.</p>
           <p>Das Ergebnis ist eine Website, die sich wie eine Erweiterung der Marke liest. Typografie, Weißraum, Bildbehandlung, Seitenstruktur und Navigation werden als Teil eines kohärenten Ganzen betrachtet. Nicht aus Komponenten zusammengesetzt, sondern von Grund auf um das gestaltet, was diese spezifische Marke kommunizieren muss.</p>
-          <p>Wir arbeiten mit wenigen Projekten parallel. Das bedeutet klare Verantwortung, kurze Kommunikationswege und ein Maß an Aufmerksamkeit, das größere Agenturen mit größeren Kundenlisten nicht bieten können. Von Briefing bis Launch in Wochen, nicht Monaten — ohne Qualität für Geschwindigkeit zu opfern.</p>
-          <p>Referenzprojekte: <a href="/work/the-grey">thegrey.berlin — Brand Identity & Website</a> · <a href="/work/jina-kim">Ji-Na Kim — Editorial Brand Site</a></p>
+          <p>Wir arbeiten mit wenigen Projekten parallel. Das bedeutet klare Verantwortung, kurze Kommunikationswege und ein Maß an Aufmerksamkeit, das größere Agenturen nicht bieten können. Von Briefing bis Launch in Wochen, nicht Monaten.</p>
+          <p class="internal-links">Referenzprojekte: <a href="/work/the-grey">thegrey.berlin — Brand Identity & Website</a> · <a href="/work/jina-kim">Ji-Na Kim — Editorial Brand Site</a></p>
         </div>
         <div class="col-pillars">
           <div class="pillar">
@@ -211,12 +261,12 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 5. FLEXIBLE CONTENT-SYSTEME -->
+  <!-- 6. FLEXIBLE CONTENT-SYSTEME -->
   <section class="section-content-systems">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
-          <span class="num">04</span>
+          <span class="num">05</span>
           <span class="dash"></span>
           <span class="eyebrow">Content-Systeme</span>
         </div>
@@ -229,8 +279,8 @@ const faqs = [
         <div class="col-text">
           <p class="lead">Eine Möbelmarken-Website ist nie fertig. Kollektionen ändern sich. Neue Produkte werden gelauncht. Presseberichte kommen hinzu. Messeauftritte müssen angekündigt werden.</p>
           <p>Deshalb entwickeln wir flexible Content-Systeme — keine statischen Websites. Jedes Greyform-Projekt ist so strukturiert, dass Ihr Team Kollektionen aktualisieren, Produkte hinzufügen, Journal-Beiträge veröffentlichen und Inhalte nach dem Launch pflegen kann — ohne für jede Änderung auf einen Entwickler angewiesen zu sein.</p>
-          <p>Das System ist auf die redaktionellen Bedürfnisse einer Möbelmarke ausgelegt: strukturierte Produkteinträge, Kollektionsübersichten, Material- und Spezifikationsseiten, Presse- und Journal-Bereiche. Jeder Bereich kann unabhängig, im Browser, von jedem Teammitglied mit grundlegenden Computerkenntnissen aktualisiert werden.</p>
-          <p>Wir dokumentieren das System und übergeben es am Ende jedes Projekts klar und vollständig. Es gehört Ihnen.</p>
+          <p>Das System ist auf die redaktionellen Bedürfnisse einer Möbelmarke ausgelegt: strukturierte Produkteinträge, Kollektionsübersichten, Material- und Spezifikationsseiten, Presse- und Journal-Bereiche. Jeder Bereich kann unabhängig, im Browser, von jedem Teammitglied aktualisiert werden.</p>
+          <p>Wir dokumentieren das System und übergeben es am Ende jedes Projekts vollständig. Es gehört Ihnen.</p>
         </div>
         <div class="col-features">
           <ul class="feature-list">
@@ -246,12 +296,55 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 6. AUSGEWÄHLTE ARBEITEN -->
+  <!-- 7. EDITORIALE INHALTE -->
+  <section class="section-editorial">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">06</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Editoriale Inhalte</span>
+        </div>
+        <h2>
+          Jenseits der Produkte:<br />
+          <em>editoriale Inhalte.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Die stärksten Möbelmarken veröffentlichen nicht nur Produkte. Sie veröffentlichen Ideen.</p>
+          <p>Materialgeschichten. Design-Thinking. Referenzen und Installationen. Kollaborationsprofile. Neuigkeiten aus dem Studio. Expertise, die nirgendwo sonst zu finden ist. Diese Art von Inhalt füllt nicht nur ein Journal — sie baut langfristige Sichtbarkeit, Autorität und Vertrauen bei genau den Zielgruppen auf, die eine Möbelmarke erreichen muss.</p>
+          <p>Greyform entwickelt editoriale Systeme und Journal-Strukturen, die diese Art der Content-Produktion ermöglichen, nachhaltig machen und konsistent halten. Kein Blog als Nachgedanke, sondern eine Content-Architektur, die von Anfang an für Langform-Storytelling, organische Suchsichtbarkeit und die Art von Thought Leadership konzipiert ist, die Architekten, Innenarchitekten und anspruchsvolle Käufer anzieht.</p>
+          <p>Wir beraten auch zur Content-Strategie — welche Themen besetzt werden sollten, welche Formate für welche Zielgruppen funktionieren, und wie Inhalte so strukturiert werden, dass sie über die Zeit an Wert gewinnen.</p>
+        </div>
+        <div class="col-editorial-list">
+          <div class="editorial-item">
+            <span class="editorial-label">Journal-Systeme</span>
+            <span class="editorial-text">Strukturierte editoriale Plattformen für Kollektionen, Neuigkeiten, Interviews und Langform-Inhalte</span>
+          </div>
+          <div class="editorial-item">
+            <span class="editorial-label">Materialgeschichten</span>
+            <span class="editorial-text">Eigene Seiten für Materialien, Oberflächen, Herstellungsprozesse und Beschaffungsnarrative</span>
+          </div>
+          <div class="editorial-item">
+            <span class="editorial-label">Referenzprojekte</span>
+            <span class="editorial-text">Case-Study-Strukturen für Installationen, Hotelprojekte und Wohnreferenzen</span>
+          </div>
+          <div class="editorial-item">
+            <span class="editorial-label">Organische Sichtbarkeit</span>
+            <span class="editorial-text">Content-Architektur, die Suchautorität in Möbel-, Interior- und Design-Kategorien aufbaut</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. AUSGEWÄHLTE ARBEITEN -->
   <section class="section-work">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
-          <span class="num">05</span>
+          <span class="num">07</span>
           <span class="dash"></span>
           <span class="eyebrow">Ausgewählte Arbeiten</span>
         </div>
@@ -266,7 +359,7 @@ const faqs = [
             <div class="work-media">
               <img
                 src="/work/thegrey-berlin/00-cover.jpg"
-                alt="thegrey.berlin — Brand Identity & Website für ein Berliner Teppich-Label"
+                alt="thegrey.berlin — Brand Identity & Website für ein Berliner Teppich- und Interior-Label"
                 loading="lazy"
                 class="img-bottom"
               />
@@ -302,12 +395,55 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 7. PROZESS -->
+  <!-- 9. KI-SICHTBARKEIT -->
+  <section class="section-ai">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">08</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Suche & Sichtbarkeit</span>
+        </div>
+        <h2>
+          Für Suchmaschinen gebaut.<br />
+          <em>Bereit für KI.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Das Suchverhalten ändert sich. Die Art, wie Möbelkäufer, Innenarchitekten, Architekten und Handelseinkäufer Marken entdecken, hat sich verschoben — und verschiebt sich weiter.</p>
+          <p>Zunehmend nutzen Fachleute KI-Systeme, um Kategorien zu recherchieren, Lieferanten zu vergleichen, Inspiration zu finden und Optionen zu bewerten, bevor sie Kontakt aufnehmen. Eine Möbelmarke, die nicht klar für maschinenlesbare Inhalte strukturiert ist, ist für diese Systeme unsichtbar — unabhängig davon, wie gut ihre Produkte sind.</p>
+          <p>Greyform strukturiert Inhalte, Leistungsseiten, Case Studies und Journal-Beiträge so, dass sowohl Suchmaschinen als auch KI-Systeme klar verstehen, was eine Marke herstellt, für wen sie ist und warum sie relevant ist. Das ist kein technischer Nachgedanke — es ist ein grundlegender Teil der Gestaltung digitaler Systeme.</p>
+          <p>Semantisches HTML, strukturierte Daten, klare Entity-Beziehungen, konsistente Terminologie und inhaltliche Tiefe werden von Tag eins jedes Projekts berücksichtigt — nicht am Ende als Optimierungsaufgabe hinzugefügt.</p>
+        </div>
+        <div class="col-pillars">
+          <div class="pillar">
+            <span class="pillar-label">Semantische Struktur</span>
+            <span class="pillar-value">Sauberes HTML, korrekte Überschriftenhierarchie, Entity-Klarheit</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Strukturierte Daten</span>
+            <span class="pillar-value">Schema.org-Markup für Produkte, Leistungen, FAQs und Markenidentität</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Inhaltliche Tiefe</span>
+            <span class="pillar-value">Langform-Seiten, die echte Fragen echter Zielgruppen beantworten</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">KI-Lesbarkeit</span>
+            <span class="pillar-value">Inhalte strukturiert für ChatGPT, Gemini, Perplexity und Google AI Overviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. PROZESS -->
   <section class="section-process">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
-          <span class="num">06</span>
+          <span class="num">09</span>
           <span class="dash"></span>
           <span class="eyebrow">Prozess</span>
         </div>
@@ -321,7 +457,7 @@ const faqs = [
           <span class="step-num">01</span>
           <div class="step-content">
             <h3>Briefing & Discovery</h3>
-            <p>Wir beginnen mit einem fokussierten Briefing — Ihre Marke, Ihre Zielgruppe, Ihre Ziele. Keine langen Discovery-Phasen oder teure Strategiedokumente. Ein klares Gespräch, ein gemeinsames Verständnis, ein definierter Umfang.</p>
+            <p>Wir beginnen mit einem fokussierten Briefing — Ihre Marke, Ihre Zielgruppen, Ihre Ziele. Keine langen Discovery-Phasen oder teure Strategiedokumente. Ein klares Gespräch, ein gemeinsames Verständnis, ein definierter Umfang.</p>
           </div>
         </div>
         <div class="process-step">
@@ -349,12 +485,50 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 8. FAQ -->
+  <!-- 11. VERWANDTE LEISTUNGEN -->
+  <section class="section-related">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">10</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Verwandt</span>
+        </div>
+        <h2>
+          Weitere Branchen,<br />
+          <em>mit denen wir arbeiten.</em>
+        </h2>
+      </div>
+      <div class="related-grid">
+        {/* Zukünftiger Link: /interior-marken-websites */}
+        <div class="related-item">
+          <span class="related-label">Interior Brands</span>
+          <p>Editoriale Websites und digitale Systeme für Interior-Marken und Labels. <span class="related-soon">— Seite in Kürze</span></p>
+        </div>
+        {/* Zukünftiger Link: /architekturbüro-websites */}
+        <div class="related-item">
+          <span class="related-label">Architekturbüros</span>
+          <p>Projekt-Portfolios und Studio-Präsenzen für Architekturbüros. <span class="related-soon">— Seite in Kürze</span></p>
+        </div>
+        {/* Zukünftiger Link: /lifestyle-marken-websites */}
+        <div class="related-item">
+          <span class="related-label">Lifestyle Brands</span>
+          <p>Editoriale Systeme für Lifestyle-Marken mit Haltung und Ästhetik. <span class="related-soon">— Seite in Kürze</span></p>
+        </div>
+        <div class="related-item">
+          <a href="/" class="related-label related-link">Studio-Übersicht →</a>
+          <p>Alle Leistungen, ausgewählte Arbeiten und Studio-Ansatz auf der Greyform-Hauptseite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FAQ -->
   <section class="section-faq">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
-          <span class="num">07</span>
+          <span class="num">11</span>
           <span class="dash"></span>
           <span class="eyebrow">FAQ</span>
         </div>
@@ -390,20 +564,20 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 9. CTA -->
+  <!-- 13. CTA -->
   <section class="section-cta">
     <div class="wrap">
       <div class="cta-inner">
         <div class="eyebrow-row">
-          <span class="num">08</span>
+          <span class="num">12</span>
           <span class="dash"></span>
           <span class="eyebrow">Projekt starten</span>
         </div>
         <h2>
-          Bereit für etwas<br />
-          <em>Durchdachtes?</em>
+          Lassen Sie uns über<br />
+          <em>Ihr Projekt sprechen.</em>
         </h2>
-        <p>Erzählen Sie uns von Ihrer Möbelmarke und was Sie brauchen. Wir antworten innerhalb von zwei Werktagen mit einer ehrlichen Einschätzung und einem klaren nächsten Schritt.</p>
+        <p>Ob Sie eine neue Kollektion launchen, eine etablierte Möbelmarke neu positionieren oder einen stärkeren digitalen Auftritt aufbauen möchten — wir freuen uns auf das Gespräch. Wir antworten innerhalb von zwei Werktagen mit einer ehrlichen Einschätzung und einem klaren nächsten Schritt.</p>
         <a href="mailto:hello@greyform.studio" class="cta-btn">Gespräch beginnen →</a>
         <p class="cta-sub">Oder <a href="/#contact">nutzen Sie das Kontaktformular</a> auf unserer Hauptseite.</p>
       </div>
@@ -413,71 +587,18 @@ const faqs = [
 </BaseLayout>
 
 <style>
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: clamp(60px, 10vw, 120px);
-    padding-top: clamp(120px, 14vw, 180px);
-  }
-  .hero-tag {
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: clamp(24px, 4vw, 48px);
-    display: flex;
-    gap: 14px;
-    align-items: center;
-  }
-  .hero-tag .dot {
-    width: 6px;
-    height: 6px;
-    background: var(--color-black);
-    border-radius: 50%;
-  }
-  .hero h1 {
-    font-size: clamp(44px, 9.2vw, 168px);
-    line-height: 0.92;
-    font-weight: 400;
-    letter-spacing: -0.025em;
-    max-width: 14ch;
-  }
-  .hero h1 em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--color-stone);
-  }
-  .hero-foot {
-    margin-top: clamp(24px, 4vw, 48px);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  .hero-sub {
-    max-width: 46ch;
-    font-size: clamp(15px, 1.4vw, 18px);
-    line-height: 1.55;
-  }
-  .hero-meta {
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-align: right;
-  }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: clamp(60px, 10vw, 120px); padding-top: clamp(120px, 14vw, 180px); }
+  .hero-tag { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: clamp(24px, 4vw, 48px); display: flex; gap: 14px; align-items: center; }
+  .hero-tag .dot { width: 6px; height: 6px; background: var(--color-black); border-radius: 50%; }
+  .hero h1 { font-size: clamp(44px, 9.2vw, 168px); line-height: 0.92; font-weight: 400; letter-spacing: -0.025em; max-width: 14ch; }
+  .hero h1 em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .hero-foot { margin-top: clamp(24px, 4vw, 48px); display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+  .hero-sub { max-width: 46ch; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.55; }
+  .hero-meta { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-align: right; }
   .hero-meta .row { display: flex; gap: 28px; }
   section { padding-block: var(--section-y); }
   .section-head { margin-bottom: clamp(48px, 8vw, 96px); }
-  .eyebrow-row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: clamp(16px, 2vw, 24px);
-  }
+  .eyebrow-row { display: flex; align-items: center; gap: 16px; margin-bottom: clamp(16px, 2vw, 24px); }
   .num { font-size: 11px; letter-spacing: 0.18em; color: var(--muted); }
   .dash { width: 32px; height: 1px; background: var(--muted); opacity: 0.4; }
   .eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
@@ -487,10 +608,16 @@ const faqs = [
   .col-text p { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.8; color: var(--muted); margin-bottom: 20px; }
   .col-text p.lead { font-size: clamp(16px, 1.6vw, 20px); line-height: 1.5; color: var(--color-black); margin-bottom: 24px; }
   .col-text a { color: var(--color-black); text-decoration: underline; text-underline-offset: 3px; }
+  .internal-links { font-size: 13px !important; color: var(--muted) !important; }
   .stat-block { display: flex; flex-direction: column; gap: 32px; padding-top: clamp(16px, 3vw, 48px); border-top: 1px solid var(--color-border, #e0ddd8); }
   .stat-item { display: flex; flex-direction: column; gap: 6px; }
   .stat-value { font-size: clamp(28px, 3vw, 44px); font-weight: 400; letter-spacing: -0.02em; line-height: 1; }
   .stat-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .credibility-list { display: flex; flex-direction: column; padding-top: clamp(16px, 3vw, 48px); }
+  .cred-item { padding-block: 20px; border-bottom: 1px solid var(--color-border, #e0ddd8); }
+  .cred-item:first-child { border-top: 1px solid var(--color-border, #e0ddd8); }
+  .cred-label { display: block; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .cred-text { font-size: clamp(13px, 1.2vw, 14px); line-height: 1.6; color: var(--color-black); }
   .section-problems { background: var(--color-ink, #0d0d0d); color: var(--color-paper, #f5f3ef); }
   .section-problems h2 em { color: rgba(245,243,239,0.4); }
   .section-problems .eyebrow, .section-problems .num { color: rgba(245,243,239,0.4); }
@@ -498,17 +625,22 @@ const faqs = [
   .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(245,243,239,0.1); border: 1px solid rgba(245,243,239,0.1); }
   .problem-item { background: var(--color-ink, #0d0d0d); padding: clamp(28px, 4vw, 48px); }
   .problem-num { display: block; font-size: 11px; letter-spacing: 0.2em; color: rgba(245,243,239,0.3); margin-bottom: 16px; }
-  .problem-item h3 { font-size: clamp(14px, 1.4vw, 16px); font-weight: 500; margin-bottom: 12px; letter-spacing: 0.02em; }
+  .problem-item h3 { font-size: clamp(14px, 1.4vw, 16px); font-weight: 500; margin-bottom: 12px; }
   .problem-item p { font-size: clamp(13px, 1.1vw, 14px); line-height: 1.75; color: rgba(245,243,239,0.55); }
-  .col-pillars { display: flex; flex-direction: column; gap: 0; padding-top: clamp(16px, 3vw, 48px); }
+  .col-pillars { display: flex; flex-direction: column; padding-top: clamp(16px, 3vw, 48px); }
   .pillar { display: flex; flex-direction: column; gap: 4px; padding-block: 20px; border-bottom: 1px solid var(--color-border, #e0ddd8); }
   .pillar:first-child { border-top: 1px solid var(--color-border, #e0ddd8); }
   .pillar-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-  .pillar-value { font-size: clamp(14px, 1.3vw, 16px); font-weight: 500; }
+  .pillar-value { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.5; }
   .col-features { padding-top: clamp(16px, 3vw, 48px); }
   .feature-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--color-border, #e0ddd8); }
   .feature-list li { font-size: clamp(13px, 1.2vw, 15px); padding-block: 18px; border-bottom: 1px solid var(--color-border, #e0ddd8); padding-left: 20px; position: relative; color: var(--muted); }
   .feature-list li::before { content: "→"; position: absolute; left: 0; color: var(--color-black); }
+  .col-editorial-list { display: flex; flex-direction: column; padding-top: clamp(16px, 3vw, 48px); }
+  .editorial-item { padding-block: 20px; border-bottom: 1px solid var(--color-border, #e0ddd8); }
+  .editorial-item:first-child { border-top: 1px solid var(--color-border, #e0ddd8); }
+  .editorial-label { display: block; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .editorial-text { font-size: clamp(13px, 1.2vw, 14px); line-height: 1.6; color: var(--color-black); }
   .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 56px) clamp(24px, 5vw, 64px); }
   .work-item:nth-child(2) { margin-top: clamp(40px, 12vw, 160px); }
   .work-link { display: block; }
@@ -522,11 +654,27 @@ const faqs = [
   .work-cat { color: var(--muted); font-size: 11px; }
   .work-arrow { margin-top: 14px; font-size: 13px; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 10px; transition: gap 0.4s var(--ease); }
   .work-arrow:hover { gap: 18px; }
+  .section-ai { background: var(--color-ink, #0d0d0d); color: var(--color-paper, #f5f3ef); }
+  .section-ai h2 em { color: rgba(245,243,239,0.4); }
+  .section-ai .eyebrow, .section-ai .num { color: rgba(245,243,239,0.4); }
+  .section-ai .dash { background: rgba(245,243,239,0.2); }
+  .section-ai .col-text p { color: rgba(245,243,239,0.6); }
+  .section-ai .col-text p.lead { color: var(--color-paper, #f5f3ef); }
+  .section-ai .col-pillars .pillar { border-color: rgba(245,243,239,0.1); }
+  .section-ai .pillar-label { color: rgba(245,243,239,0.4); }
+  .section-ai .pillar-value { color: var(--color-paper, #f5f3ef); font-size: clamp(12px, 1.1vw, 14px); }
   .process-steps { display: flex; flex-direction: column; border-top: 1px solid var(--color-border, #e0ddd8); }
   .process-step { display: grid; grid-template-columns: 80px 1fr; gap: 40px; padding-block: clamp(28px, 4vw, 48px); border-bottom: 1px solid var(--color-border, #e0ddd8); align-items: start; }
   .step-num { font-size: 11px; letter-spacing: 0.2em; color: var(--muted); padding-top: 4px; }
-  .step-content h3 { font-size: clamp(15px, 1.4vw, 18px); font-weight: 500; margin-bottom: 12px; letter-spacing: 0.02em; }
+  .step-content h3 { font-size: clamp(15px, 1.4vw, 18px); font-weight: 500; margin-bottom: 12px; }
   .step-content p { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.8; color: var(--muted); max-width: 58ch; }
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--color-border, #e0ddd8); border: 1px solid var(--color-border, #e0ddd8); }
+  .related-item { background: var(--color-bg, #f5f3ef); padding: clamp(28px, 4vw, 48px); }
+  .related-label { display: block; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+  .related-link { color: var(--color-black); text-decoration: none; }
+  .related-link:hover { text-decoration: underline; }
+  .related-item p { font-size: clamp(13px, 1.1vw, 14px); line-height: 1.7; color: var(--muted); }
+  .related-soon { font-style: italic; opacity: 0.6; }
   .faq-list { margin-top: clamp(40px, 6vw, 80px); border-top: 1px solid var(--color-border, #e0ddd8); }
   .faq-item { border-bottom: 1px solid var(--color-border, #e0ddd8); }
   .faq-question { display: flex; justify-content: space-between; align-items: center; padding-block: 24px; font-size: clamp(13px, 1.3vw, 15px); font-weight: 500; letter-spacing: 0.04em; cursor: pointer; list-style: none; gap: 24px; }
@@ -540,7 +688,7 @@ const faqs = [
   .section-cta .dash { background: rgba(245,243,239,0.2); }
   .section-cta h2 { color: var(--color-paper, #f5f3ef); margin-bottom: 24px; }
   .section-cta h2 em { color: rgba(245,243,239,0.4); }
-  .section-cta p { font-size: clamp(14px, 1.3vw, 16px); line-height: 1.7; color: rgba(245,243,239,0.6); margin-bottom: 32px; max-width: 48ch; }
+  .section-cta p { font-size: clamp(14px, 1.3vw, 16px); line-height: 1.7; color: rgba(245,243,239,0.6); margin-bottom: 32px; max-width: 52ch; }
   .cta-btn { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--color-paper, #f5f3ef); color: var(--color-ink, #0d0d0d); padding: 16px 28px; transition: opacity 0.3s ease; margin-bottom: 20px; }
   .cta-btn:hover { opacity: 0.85; }
   .cta-sub { font-size: 13px; color: rgba(245,243,239,0.4); margin-bottom: 0; }
@@ -552,5 +700,6 @@ const faqs = [
     .work-grid { grid-template-columns: 1fr; }
     .work-item:nth-child(2) { margin-top: 0; }
     .process-step { grid-template-columns: 48px 1fr; gap: 20px; }
+    .related-grid { grid-template-columns: 1fr; }
   }
 </style>
