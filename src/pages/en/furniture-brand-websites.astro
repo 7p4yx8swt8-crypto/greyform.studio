@@ -1,0 +1,856 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ContactSection from "../../components/ContactSection.astro";
+
+const lang = "en";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Website Design for Furniture Brands",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Studio Greyform",
+    "url": "https://greyform.studio"
+  },
+  "description": "Greyform designs editorial websites and digital brand systems for furniture brands, furniture manufacturers, lighting brands and interior product companies.",
+  "areaServed": "Worldwide",
+  "serviceType": "Website Design",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Furniture Brands, Furniture Manufacturers, Lighting Brands, Interior Product Companies"
+  }
+};
+
+const faqs = [
+  {
+    q: "Do you specialise in furniture brand websites?",
+    a: "Yes. Greyform works with furniture brands, furniture manufacturers, lighting companies and interior product brands. We understand the specific demands of the category — product presentation, collection structure, brand narrative — and design websites that serve all of them."
+  },
+  {
+    q: "How long does a furniture brand website project take?",
+    a: "A focused project typically takes three to six weeks from brief to launch. Timeline depends on the scope of content, number of product lines and whether a content system is included."
+  },
+  {
+    q: "Can we manage the website ourselves after launch?",
+    a: "Yes — and this is central to how we work. We build flexible content systems that allow your team to update collections, add products and publish content independently, without relying on a developer for every change."
+  },
+  {
+    q: "Do you work with furniture brands outside Germany?",
+    a: "Yes. Greyform works internationally. The studio is based in Berlin and handles projects in both German and English. We have worked with brands across Europe and are open to projects worldwide."
+  },
+  {
+    q: "Can you help with SEO for our furniture brand website?",
+    a: "Yes. SEO is built into every project from the start — semantic structure, metadata, performance and content architecture are all considered. We also structure content so it is readable by AI systems like ChatGPT and Google's AI Overviews."
+  }
+];
+---
+
+<BaseLayout
+  title="Website Design for Furniture Brands — Greyform Studio Berlin"
+  description="Greyform designs editorial websites and digital brand systems for furniture brands, manufacturers and interior product companies. Berlin-based, working worldwide."
+  lang={lang}
+>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- 1. HERO -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        <span>Website Design · Furniture Brands</span>
+      </div>
+      <h1>
+        <span>Website Design</span><br />
+        <span>for Furniture</span><br />
+        <em>Brands.</em>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-sub">Greyform designs editorial websites and flexible digital systems for furniture brands, manufacturers and interior product companies — built to present collections, tell brand stories and be managed independently after launch.</p>
+        <div class="hero-meta">
+          <div class="row">
+            <span>Berlin</span>
+            <span>Worldwide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. WHY FURNITURE BRANDS NEED DIFFERENT WEBSITES -->
+  <section class="section-why">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">01</span>
+          <span class="dash"></span>
+          <span class="eyebrow">The Challenge</span>
+        </div>
+        <h2>
+          Why furniture brands<br />
+          <em>need different websites.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">A furniture brand website is not a product catalogue. It is a brand experience — and most websites in the category fail to deliver one.</p>
+          <p>Furniture brands operate in a category where the physical product is aspirational, tactile and deeply tied to a lifestyle. The website needs to carry that weight. It needs to present collections with editorial precision, communicate craftsmanship and materials clearly, and tell a brand story that gives a buyer a reason to choose you over a competitor they found in the same Google search.</p>
+          <p>Generic website builders and template-based agencies do not understand this. They produce sites that look like every other furniture website — product grids, slider carousels, stock photography. The result is a digital presence that actively undermines the brand investment you have already made.</p>
+          <p>Greyform works differently. We build websites for furniture brands that function as editorial platforms — quiet, precise, brand-led — and that can be managed and expanded by your own team after launch.</p>
+        </div>
+        <div class="col-stat">
+          <div class="stat-block">
+            <div class="stat-item">
+              <span class="stat-value">3–6</span>
+              <span class="stat-label">Weeks from brief to launch</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Manageable by your team after launch</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">DE / EN</span>
+              <span class="stat-label">Bilingual by default</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. COMMON PROBLEMS -->
+  <section class="section-problems">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">02</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Common Problems</span>
+        </div>
+        <h2>
+          What goes wrong with<br />
+          <em>furniture brand websites.</em>
+        </h2>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-item">
+          <span class="problem-num">i</span>
+          <h3>Template aesthetics</h3>
+          <p>Generic themes and drag-and-drop builders produce sites that look indistinguishable from competitors. The visual system communicates nothing about the brand.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">ii</span>
+          <h3>Product-first, brand-last</h3>
+          <p>Most furniture websites lead with product grids and pricing. Brand story, material philosophy and design process — the things that actually justify a premium price — are buried or absent entirely.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">iii</span>
+          <h3>No content system</h3>
+          <p>Websites that cannot be updated without a developer become stale within months. New collections do not get launched. Press coverage is not added. The site stops working as a marketing tool.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">iv</span>
+          <h3>Poor SEO architecture</h3>
+          <p>Furniture brands invest in beautiful photography but neglect the semantic structure, page speed and metadata that determine whether that investment reaches anyone through search.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">v</span>
+          <h3>Not built for international audiences</h3>
+          <p>Single-language websites that lack hreflang structure, localised content and international SEO leave significant markets untouched — particularly for brands seeking trade buyers across Europe.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">vi</span>
+          <h3>Slow performance</h3>
+          <p>Image-heavy furniture websites frequently load slowly, damaging both user experience and search rankings. Performance should be a design constraint from the start, not an afterthought.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. OUR APPROACH -->
+  <section class="section-approach">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">03</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Our Approach</span>
+        </div>
+        <h2>
+          Editorial design.<br />
+          <em>Precise execution.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Every Greyform project begins with the brand, not the template.</p>
+          <p>We read the visual language a furniture brand already has — in its products, its photography, its printed materials — and design a digital system that continues it, rather than translating it into something generic.</p>
+          <p>The result is a website that reads as an extension of the brand. Typography, whitespace, image treatment, page structure and navigation are all considered as part of a coherent whole. Not assembled from components, but designed from the ground up around what this specific brand needs to communicate.</p>
+          <p>We work with a small number of projects in parallel. This means clear ownership, short communication paths and a level of attention that larger agencies with larger client lists cannot offer. From brief to launch in weeks, not months — without sacrificing quality for speed.</p>
+          <p>Internal links: <a href="/work/the-grey">thegrey.berlin — Brand Identity & Website</a> · <a href="/work/jina-kim">Ji-Na Kim — Editorial Brand Site</a></p>
+        </div>
+        <div class="col-pillars">
+          <div class="pillar">
+            <span class="pillar-label">Approach</span>
+            <span class="pillar-value">Brand-led, not template-led</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Pace</span>
+            <span class="pillar-value">Weeks, not months</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Aesthetic</span>
+            <span class="pillar-value">Editorial · Architectural</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Languages</span>
+            <span class="pillar-value">DE / EN · International</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FLEXIBLE CONTENT SYSTEMS -->
+  <section class="section-content-systems">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">04</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Content Systems</span>
+        </div>
+        <h2>
+          Websites your team<br />
+          <em>can manage independently.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">A furniture brand website is never finished. Collections change. New products launch. Press coverage arrives. Trade show appearances need to be announced.</p>
+          <p>This is why we build flexible content systems — not static websites. Every Greyform project is structured so that your team can update collections, add products, publish journal entries and manage content after launch, without requiring a developer for every change.</p>
+          <p>The system is designed around the editorial needs of a furniture brand: structured product entries, collection overviews, material and specification pages, press and journal sections. Each can be updated independently, in the browser, by any member of your team with basic computer literacy.</p>
+          <p>We document the system and hand it over clearly at the end of every project. You own it entirely.</p>
+        </div>
+        <div class="col-features">
+          <ul class="feature-list">
+            <li>Collection and product management</li>
+            <li>Journal and press section</li>
+            <li>Team and about pages</li>
+            <li>Project and case study entries</li>
+            <li>No developer required for content updates</li>
+            <li>Full documentation at handover</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SELECTED WORK -->
+  <section class="section-work">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">05</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Selected Work</span>
+        </div>
+        <h2>
+          Recent projects<br />
+          <em>from the studio.</em>
+        </h2>
+      </div>
+      <div class="work-grid">
+        <article class="work-item">
+          <a href="/en/work/the-grey" class="work-link">
+            <div class="work-media">
+              <img
+                src="/work/thegrey-berlin/00-cover.jpg"
+                alt="thegrey.berlin — Brand Identity & Website for a Berlin Rug Label"
+                loading="lazy"
+                class="img-bottom"
+              />
+            </div>
+          </a>
+          <div class="work-meta">
+            <span class="work-title">thegrey.berlin</span>
+            <span class="work-cat">Brand Identity · Website</span>
+          </div>
+          <a class="work-arrow" href="/en/work/the-grey">
+            <span>View project</span> <span class="arr">→</span>
+          </a>
+        </article>
+        <article class="work-item">
+          <a href="/en/work/jina-kim" class="work-link">
+            <div class="work-media">
+              <img
+                src="/work/jina-kim/cover.jpg"
+                alt="Ji-Na Kim — Editorial Brand Site"
+                loading="lazy"
+              />
+            </div>
+          </a>
+          <div class="work-meta">
+            <span class="work-title">Ji-Na Kim</span>
+            <span class="work-cat">Editorial · Brand Site</span>
+          </div>
+          <a class="work-arrow" href="/en/work/jina-kim">
+            <span>View project</span> <span class="arr">→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PROCESS -->
+  <section class="section-process">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">06</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Process</span>
+        </div>
+        <h2>
+          How a project<br />
+          <em>takes shape.</em>
+        </h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-num">01</span>
+          <div class="step-content">
+            <h3>Brief & Discovery</h3>
+            <p>We begin with a focused brief — your brand, your audience, your goals. No lengthy discovery phases or expensive strategy documents. A clear conversation, a shared understanding, a defined scope.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">02</span>
+          <div class="step-content">
+            <h3>Design</h3>
+            <p>We design the full visual system — typography, layout, colour, image treatment, component library — before writing a line of code. You review, respond and we refine. Typically two rounds of revisions before sign-off.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">03</span>
+          <div class="step-content">
+            <h3>Build</h3>
+            <p>We build the site with the same attention to detail as the design. Performance, semantic HTML, SEO structure and content system architecture are all considered as core deliverables, not optional extras.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">04</span>
+          <div class="step-content">
+            <h3>Launch & Handover</h3>
+            <p>We handle the technical launch — domain configuration, hosting setup, analytics and sitemap submission. We document the content system clearly and hand everything over so your team can work independently from day one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ -->
+  <section class="section-faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">07</span>
+          <span class="dash"></span>
+          <span class="eyebrow">FAQ</span>
+        </div>
+        <h2>
+          Frequently asked<br />
+          <em>questions.</em>
+        </h2>
+      </div>
+      <div class="faq-list">
+        {faqs.map((item) => (
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>{item.q}</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <p class="faq-answer">{item.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <!-- FAQ Schema -->
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a
+          }
+        }))
+      })} />
+    </div>
+  </section>
+
+  <!-- 9. CTA -->
+  <section class="section-cta">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div class="eyebrow-row">
+          <span class="num">08</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Start a project</span>
+        </div>
+        <h2>
+          Ready to build<br />
+          <em>something considered?</em>
+        </h2>
+        <p>Tell us about your furniture brand and what you need. We respond within two working days with an honest assessment and a clear next step.</p>
+        <a href="mailto:hello@greyform.studio" class="cta-btn">Start the conversation →</a>
+        <p class="cta-sub">Or <a href="/#contact">use the contact form</a> on our homepage.</p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: clamp(60px, 10vw, 120px);
+    padding-top: clamp(120px, 14vw, 180px);
+  }
+  .hero-tag {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: clamp(24px, 4vw, 48px);
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+  .hero-tag .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-black);
+    border-radius: 50%;
+  }
+  .hero h1 {
+    font-size: clamp(44px, 9.2vw, 168px);
+    line-height: 0.92;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    max-width: 14ch;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--color-stone);
+  }
+  .hero-foot {
+    margin-top: clamp(24px, 4vw, 48px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .hero-sub {
+    max-width: 46ch;
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.55;
+  }
+  .hero-meta {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+  }
+  .hero-meta .row {
+    display: flex;
+    gap: 28px;
+  }
+
+  /* ── SHARED SECTION STYLES ── */
+  section {
+    padding-block: var(--section-y);
+  }
+  .section-head {
+    margin-bottom: clamp(48px, 8vw, 96px);
+  }
+  .eyebrow-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: clamp(16px, 2vw, 24px);
+  }
+  .num {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+  }
+  .dash {
+    width: 32px;
+    height: 1px;
+    background: var(--muted);
+    opacity: 0.4;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h2 {
+    font-size: clamp(32px, 5vw, 72px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+  h2 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--color-stone);
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 8vw, 120px);
+    align-items: start;
+  }
+  .col-text p {
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .col-text p.lead {
+    font-size: clamp(16px, 1.6vw, 20px);
+    line-height: 1.5;
+    color: var(--color-black);
+    margin-bottom: 24px;
+  }
+  .col-text a {
+    color: var(--color-black);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ── STAT BLOCK ── */
+  .stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: clamp(16px, 3vw, 48px);
+    border-top: 1px solid var(--color-border, #e0ddd8);
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .stat-value {
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ── PROBLEMS ── */
+  .section-problems {
+    background: var(--color-ink, #0d0d0d);
+    color: var(--color-paper, #f5f3ef);
+  }
+  .section-problems h2 em {
+    color: rgba(245,243,239,0.4);
+  }
+  .section-problems .eyebrow,
+  .section-problems .num {
+    color: rgba(245,243,239,0.4);
+  }
+  .section-problems .dash {
+    background: rgba(245,243,239,0.2);
+  }
+  .problems-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(245,243,239,0.1);
+    border: 1px solid rgba(245,243,239,0.1);
+  }
+  .problem-item {
+    background: var(--color-ink, #0d0d0d);
+    padding: clamp(28px, 4vw, 48px);
+  }
+  .problem-num {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(245,243,239,0.3);
+    margin-bottom: 16px;
+  }
+  .problem-item h3 {
+    font-size: clamp(14px, 1.4vw, 16px);
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+  .problem-item p {
+    font-size: clamp(13px, 1.1vw, 14px);
+    line-height: 1.75;
+    color: rgba(245,243,239,0.55);
+  }
+
+  /* ── PILLARS ── */
+  .col-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: clamp(16px, 3vw, 48px);
+  }
+  .pillar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-block: 20px;
+    border-bottom: 1px solid var(--color-border, #e0ddd8);
+  }
+  .pillar:first-child {
+    border-top: 1px solid var(--color-border, #e0ddd8);
+  }
+  .pillar-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .pillar-value {
+    font-size: clamp(14px, 1.3vw, 16px);
+    font-weight: 500;
+  }
+
+  /* ── FEATURE LIST ── */
+  .col-features {
+    padding-top: clamp(16px, 3vw, 48px);
+  }
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--color-border, #e0ddd8);
+  }
+  .feature-list li {
+    font-size: clamp(13px, 1.2vw, 15px);
+    padding-block: 18px;
+    border-bottom: 1px solid var(--color-border, #e0ddd8);
+    padding-left: 20px;
+    position: relative;
+    color: var(--muted);
+  }
+  .feature-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-black);
+  }
+
+  /* ── WORK GRID ── */
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 56px) clamp(24px, 5vw, 64px);
+  }
+  .work-item:nth-child(2) {
+    margin-top: clamp(40px, 12vw, 160px);
+  }
+  .work-link { display: block; }
+  .work-media {
+    aspect-ratio: 4 / 5;
+    background: var(--color-sand);
+    overflow: hidden;
+    position: relative;
+    transition: opacity 0.4s var(--ease);
+  }
+  .work-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.6s var(--ease);
+  }
+  .work-media img.img-bottom {
+    object-position: center 75%;
+  }
+  .work-link:hover .work-media img { filter: grayscale(0%); }
+  .work-link:hover .work-media { opacity: 0.85; }
+  .work-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 18px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .work-title { font-weight: 500; }
+  .work-cat { color: var(--muted); font-size: 11px; }
+  .work-arrow {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.4s var(--ease);
+  }
+  .work-arrow:hover { gap: 18px; }
+
+  /* ── PROCESS ── */
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--color-border, #e0ddd8);
+  }
+  .process-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 40px;
+    padding-block: clamp(28px, 4vw, 48px);
+    border-bottom: 1px solid var(--color-border, #e0ddd8);
+    align-items: start;
+  }
+  .step-num {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    padding-top: 4px;
+  }
+  .step-content h3 {
+    font-size: clamp(15px, 1.4vw, 18px);
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+  .step-content p {
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 58ch;
+  }
+
+  /* ── FAQ ── */
+  .faq-list {
+    margin-top: clamp(40px, 6vw, 80px);
+    border-top: 1px solid var(--color-border, #e0ddd8);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--color-border, #e0ddd8);
+  }
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 24px;
+    font-size: clamp(13px, 1.3vw, 15px);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    list-style: none;
+    gap: 24px;
+  }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-icon {
+    font-size: 20px;
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-answer {
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 1.8;
+    color: var(--muted);
+    padding-bottom: 24px;
+    max-width: 64ch;
+  }
+
+  /* ── CTA ── */
+  .section-cta {
+    background: var(--color-ink, #0d0d0d);
+    color: var(--color-paper, #f5f3ef);
+  }
+  .cta-inner {
+    max-width: 640px;
+  }
+  .section-cta .eyebrow,
+  .section-cta .num {
+    color: rgba(245,243,239,0.4);
+  }
+  .section-cta .dash {
+    background: rgba(245,243,239,0.2);
+  }
+  .section-cta h2 {
+    color: var(--color-paper, #f5f3ef);
+    margin-bottom: 24px;
+  }
+  .section-cta h2 em {
+    color: rgba(245,243,239,0.4);
+  }
+  .section-cta p {
+    font-size: clamp(14px, 1.3vw, 16px);
+    line-height: 1.7;
+    color: rgba(245,243,239,0.6);
+    margin-bottom: 32px;
+    max-width: 48ch;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--color-paper, #f5f3ef);
+    color: var(--color-ink, #0d0d0d);
+    padding: 16px 28px;
+    transition: opacity 0.3s ease;
+    margin-bottom: 20px;
+  }
+  .cta-btn:hover { opacity: 0.85; }
+  .cta-sub {
+    font-size: 13px;
+    color: rgba(245,243,239,0.4);
+    margin-bottom: 0;
+  }
+  .cta-sub a {
+    color: rgba(245,243,239,0.7);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { min-height: auto; padding-top: 140px; }
+    .two-col { grid-template-columns: 1fr; }
+    .problems-grid { grid-template-columns: 1fr; }
+    .work-grid { grid-template-columns: 1fr; }
+    .work-item:nth-child(2) { margin-top: 0; }
+    .process-step { grid-template-columns: 48px 1fr; gap: 20px; }
+  }
+</style>
