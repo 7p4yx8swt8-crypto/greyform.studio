@@ -1,0 +1,58 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+import SectionHead from "./SectionHead.astro";
+export interface Props {
+  lang?: Lang;
+}
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+---
+<section id="ai-visibility">
+  <div class="wrap">
+    <div class="ai-inner">
+      <SectionHead
+        num="07"
+        eyebrow={t("aiVisibility.eyebrow")}
+        title1={t("aiVisibility.title1")}
+        title2={t("aiVisibility.title2")}
+      />
+      <div class="ai-body">
+        <p class="ai-lead">{t("aiVisibility.p1")}</p>
+        <p>{t("aiVisibility.p2")}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding-block: var(--section-y);
+    background: var(--color-ink, #0d0d0d);
+    color: var(--color-paper, #f5f3ef);
+  }
+  .ai-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 8vw, 120px);
+    align-items: start;
+  }
+  .ai-body {
+    padding-top: clamp(16px, 3vw, 32px);
+  }
+  .ai-lead {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--color-paper, #f5f3ef);
+  }
+  p {
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 1.8;
+    color: rgba(245, 243, 239, 0.6);
+  }
+  @media (max-width: 800px) {
+    .ai-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

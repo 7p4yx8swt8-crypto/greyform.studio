@@ -1,0 +1,55 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+import SectionHead from "./SectionHead.astro";
+export interface Props {
+  lang?: Lang;
+}
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+---
+<section id="content-systems">
+  <div class="wrap">
+    <div class="cs-inner">
+      <SectionHead
+        num="05"
+        eyebrow={t("contentSystems.eyebrow")}
+        title1={t("contentSystems.title1")}
+        title2={t("contentSystems.title2")}
+      />
+      <div class="cs-body">
+        <p class="cs-lead">{t("contentSystems.p1")}</p>
+        <p>{t("contentSystems.p2")}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding-block: var(--section-y);
+  }
+  .cs-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 8vw, 120px);
+    align-items: start;
+  }
+  .cs-body {
+    padding-top: clamp(16px, 3vw, 32px);
+  }
+  .cs-lead {
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 1.8;
+    color: var(--muted);
+  }
+  @media (max-width: 800px) {
+    .cs-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
