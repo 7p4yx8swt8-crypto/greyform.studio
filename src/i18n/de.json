@@ -8,17 +8,17 @@
   "hero": {
     "tag": "Digitales Studio · Berlin",
     "headline1": "Digitale Auftritte",
-    "headline2": "für Marken",
-    "headline3": "mit Haltung.",
-    "sub": "Greyform ist ein digitales Studio für Interior-, Architektur- und Lifestyle-Marken. Editorial-Websites, visuelle Systeme, präzise umgesetzt."
+    "headline2": "für Design-Marken.",
+    "headline3": "",
+    "sub": "Greyform entwickelt Websites, digitale Plattformen und visuelle Systeme für Interior-, Möbel-, Architektur- und Lifestyle-Marken."
   },
   "studio": {
     "eyebrow": "Studio",
-    "title1": "Für Marken,",
-    "title2": "die gestalten.",
+    "title1": "Für Marken mit",
+    "title2": "einem klaren Standpunkt.",
     "lead1": "Wir gestalten ruhige, präzise Websites für Marken,",
     "lead2": "die gestalten können.",
-    "p1": "Greyform arbeitet mit Interior-, Architektur- und Designmarken, deren visuelle Sprache bereits etabliert ist und im Digitalen eine ebenbürtige Form verdient. Wir entwickeln Websites, die sich wie eine Fortsetzung der Marke lesen, nicht wie eine Übersetzung.",
+    "p1": "Greyform ist ein digitales Studio aus Berlin. Wir entwickeln Websites, digitale Systeme und visuelle Identitäten für Interior-, Möbel-, Architektur- und Lifestyle-Marken. Unser Fokus liegt auf klarer Kommunikation, hochwertiger Gestaltung und nachhaltiger Sichtbarkeit.",
     "p2": "Das Studio ist klein, fokussiert und arbeitet mit modernen Werkzeugen. Wenige Projekte parallel, klare Verantwortung, kurze Wege. Das Ergebnis ist Tempo ohne Hektik, Qualität ohne Aufwand-für-Aufwand-Logik."
   },
   "work": {
@@ -34,11 +34,55 @@
     "title1": "Was wir",
     "title2": "machen.",
     "s1Heading": "Brand Websites",
-    "s1Body": "Editorial gestaltete Websites für Marken mit ausgeprägter visueller Identität. Vom Konzept bis zum Launch, in einem durchdachten Prozess.",
+    "s1Body": "Editorial gestaltete Websites für Marken mit ausgeprägter visueller Identität. Vom Konzept bis zum Launch — und darüber hinaus pflegbar durch das eigene Team.",
     "s2Heading": "Creative Direction",
     "s2Body": "Visuelle Systeme, Bildsprache, digitale Erzählweise. Wir denken in Marke, nicht in Templates, und gestalten Auftritte, die langfristig tragen.",
-    "s3Heading": "Visual Systems",
-    "s3Body": "Typografie, Layout, Bewegung und Komponenten als zusammenhängendes System. Konsistent über alle Berührungspunkte hinweg."
+    "s3Heading": "Content-Systeme",
+    "s3Body": "Flexible digitale Systeme, mit denen Projekte, Inhalte und Journal-Beiträge eigenständig gepflegt werden können — ohne Entwickler für jede Änderung."
+  },
+  "industries": {
+    "eyebrow": "Branchen",
+    "title1": "Mit wem wir",
+    "title2": "arbeiten.",
+    "i1Heading": "Interior Brands",
+    "i1Body": "Digitale Auftritte für Einrichtungsmarken und Interior-Labels, die ihre visuelle Identität in eine editoriale Website überführen möchten.",
+    "i2Heading": "Möbelmarken",
+    "i2Body": "Websites und digitale Plattformen für Möbelhersteller und -händler, die Produkte, Kollektionen und Markengeschichten präzise kommunizieren.",
+    "i3Heading": "Architekturbüros",
+    "i3Body": "Projekt-Portfolios und Studio-Präsenzen für Architekturbüros, die ihre Arbeiten mit der Sorgfalt zeigen, die sie verdienen.",
+    "i4Heading": "Lifestyle Brands",
+    "i4Body": "Editoriale Systeme für Lifestyle-Marken, die Haltung, Ästhetik und Angebot in einer klaren digitalen Sprache verbinden."
+  },
+  "contentSystems": {
+    "eyebrow": "Content-Systeme",
+    "title1": "Flexible Systeme.",
+    "title2": "Eigenständig gepflegt.",
+    "p1": "Eine Website sollte mit einer Marke wachsen können.",
+    "p2": "Deshalb entwickeln wir flexible Content-Systeme, mit denen Projekte, Inhalte, Teamseiten und Journal-Beiträge eigenständig gepflegt werden können — ohne für jede Änderung auf externe Unterstützung angewiesen zu sein."
+  },
+  "aiVisibility": {
+    "eyebrow": "Sichtbarkeit",
+    "title1": "Für Suchmaschinen.",
+    "title2": "Bereit für KI.",
+    "p1": "Moderne Websites müssen über klassische Suchmaschinen hinaus funktionieren.",
+    "p2": "Greyform strukturiert Inhalte, Leistungen und Case Studies so, dass sowohl Menschen als auch KI-Systeme klar verstehen, was eine Marke macht und für wen sie arbeitet."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title1": "Häufige",
+    "title2": "Fragen.",
+    "q1": "Auf welche Branchen sind Sie spezialisiert?",
+    "a1": "Greyform arbeitet mit Interior-, Möbel-, Architektur- und Lifestyle-Marken. Unsere Projekte entstehen dort, wo eine starke visuelle Identität auf den Bedarf nach einem ebenbürtigen digitalen Auftritt trifft.",
+    "q2": "Arbeiten Sie auch international?",
+    "a2": "Ja. Das Studio ist in Berlin ansässig, arbeitet aber mit Marken aus ganz Europa und darüber hinaus. Sprache ist kein Hindernis — Projekte werden auf Deutsch und Englisch betreut.",
+    "q3": "Wie lange dauert ein typisches Website-Projekt?",
+    "a3": "Ein fokussiertes Projekt dauert in der Regel zwei bis sechs Wochen — von Briefing bis Launch. Der genaue Zeitrahmen hängt vom Umfang und den Inhalten ab.",
+    "q4": "Bauen Sie in Webflow?",
+    "a4": "Wir arbeiten technologieoffen und wählen den Stack nach den Anforderungen des Projekts. Neben Webflow setzen wir auf moderne Frameworks wie Astro und individuelle HTML/CSS/JS-Lösungen — je nachdem, was die Marke langfristig am besten bedient.",
+    "q5": "Können Sie bei SEO und KI-Sichtbarkeit helfen?",
+    "a5": "Ja. SEO und strukturierte Inhalte sind fester Bestandteil unserer Arbeit. Wir sorgen dafür, dass Websites technisch sauber, semantisch korrekt und für moderne Suchsysteme — einschließlich KI — lesbar sind.",
+    "q6": "Können wir die Website nach dem Launch selbst pflegen?",
+    "a6": "Das ist ein zentrales Ziel. Wir entwickeln Content-Systeme, die eigenständig bedienbar sind — ohne technisches Vorwissen für Redakteure und ohne Entwickler für jede inhaltliche Änderung."
   },
   "approach": {
     "eyebrow": "Arbeitsweise",

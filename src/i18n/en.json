@@ -7,18 +7,18 @@
   },
   "hero": {
     "tag": "Digital studio · Berlin",
-    "headline1": "Digital experiences",
-    "headline2": "for brands",
-    "headline3": "with form.",
-    "sub": "Greyform is a digital studio for interior, architecture and lifestyle brands. Editorial websites and visual systems, built with care."
+    "headline1": "Digital Experiences",
+    "headline2": "for Design Brands.",
+    "headline3": "",
+    "sub": "Greyform creates websites, editorial platforms and digital brand systems for interior, furniture, architecture and lifestyle brands."
   },
   "studio": {
     "eyebrow": "Studio",
-    "title1": "For brands",
-    "title2": "that design.",
+    "title1": "Built for Brands",
+    "title2": "with a Point of View.",
     "lead1": "We build quiet, precise websites for brands",
     "lead2": "that already know how to design.",
-    "p1": "Greyform works with interior, architecture and design brands whose visual language is already established and deserves a digital form that lives up to it. We build websites that read as a continuation of the brand — not a translation.",
+    "p1": "Greyform is a Berlin-based digital studio creating websites, digital systems and visual identities for interior, furniture, architecture and lifestyle brands. We combine strategic thinking with thoughtful design and precise execution.",
     "p2": "The studio is small, focused, and works with modern tools. Few projects in parallel, clear ownership, short paths. The result is pace without panic, quality without effort-for-effort's-sake."
   },
   "work": {
@@ -34,11 +34,55 @@
     "title1": "What we",
     "title2": "do.",
     "s1Heading": "Brand Websites",
-    "s1Body": "Editorially designed websites for brands with a strong visual identity. From concept to launch, in a considered process.",
+    "s1Body": "Editorially designed websites for brands with a strong visual identity. From concept to launch — and manageable by your own team afterwards.",
     "s2Heading": "Creative Direction",
     "s2Body": "Visual systems, image direction, digital narrative. We think in brand, not in templates, and design presences that hold up over time.",
-    "s3Heading": "Visual Systems",
-    "s3Body": "Typography, layout, motion and components as a coherent system. Consistent across every touchpoint."
+    "s3Heading": "Content Systems",
+    "s3Body": "Flexible digital systems that allow teams to update projects, publish articles and manage content independently — without relying on developers for every change."
+  },
+  "industries": {
+    "eyebrow": "Industries",
+    "title1": "Who we",
+    "title2": "work with.",
+    "i1Heading": "Interior Brands",
+    "i1Body": "Digital presences for interior brands and labels ready to translate their visual identity into an editorial website.",
+    "i2Heading": "Furniture Brands",
+    "i2Body": "Websites and digital platforms for furniture makers and retailers communicating products, collections and brand stories with precision.",
+    "i3Heading": "Architecture Studios",
+    "i3Body": "Project portfolios and studio presences for architecture practices that want to show their work with the care it deserves.",
+    "i4Heading": "Lifestyle Brands",
+    "i4Body": "Editorial systems for lifestyle brands connecting attitude, aesthetics and offering in a clear digital language."
+  },
+  "contentSystems": {
+    "eyebrow": "Content Systems",
+    "title1": "Flexible Systems.",
+    "title2": "Managed Independently.",
+    "p1": "Websites should evolve with the brands behind them.",
+    "p2": "We build flexible content systems that allow teams to update projects, publish articles and manage content independently — without relying on developers for every change."
+  },
+  "aiVisibility": {
+    "eyebrow": "Visibility",
+    "title1": "Built for Search.",
+    "title2": "Ready for AI.",
+    "p1": "Modern websites need to work beyond traditional search engines.",
+    "p2": "Greyform structures content, services and case studies so that both people and AI systems can clearly understand what a brand does and who it serves."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title1": "Frequently asked",
+    "title2": "questions.",
+    "q1": "What industries do you specialise in?",
+    "a1": "Greyform works with interior, furniture, architecture and lifestyle brands. Our projects arise where a strong visual identity meets the need for a digital presence that lives up to it.",
+    "q2": "Do you work internationally?",
+    "a2": "Yes. The studio is based in Berlin but works with brands across Europe and beyond. Projects are handled in both German and English.",
+    "q3": "How long does a typical website project take?",
+    "a3": "A focused project typically takes two to six weeks from brief to launch. The exact timeline depends on scope and content.",
+    "q4": "Do you build in Webflow?",
+    "a4": "We are technology-agnostic and choose the stack based on project requirements. Alongside Webflow we use modern frameworks like Astro and custom HTML/CSS/JS — whatever serves the brand best in the long run.",
+    "q5": "Can you help with SEO and AI visibility?",
+    "a5": "Yes. SEO and structured content are a core part of our work. We ensure websites are technically sound, semantically correct and readable by modern search systems — including AI.",
+    "q6": "Can we update the website ourselves after launch?",
+    "a6": "That is a central goal. We build content systems designed to be managed independently — no technical knowledge required for editors, no developer needed for every content change."
   },
   "approach": {
     "eyebrow": "Approach",
