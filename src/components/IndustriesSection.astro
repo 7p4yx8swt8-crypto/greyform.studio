@@ -6,32 +6,96 @@ export interface Props {
 }
 const { lang = "de" } = Astro.props;
 const t = useTranslations(lang);
+
+const industries = lang === "de"
+  ? [
+      {
+        heading: "Möbelmarken",
+        body: "Digitale Auftritte für Möbelhersteller, Designmarken und Produktunternehmen. Von der Kollektionspräsentation bis zum flexiblen Content-System.",
+        cta: "Mehr erfahren",
+        href: "/furniture-brand-websites",
+      },
+      {
+        heading: "Interior-Marken",
+        body: "Websites und Content-Systeme für Interior-, Licht-, Textil- und Home-Marken. Editorial, präzise, eigenständig pflegbar.",
+        cta: "Mehr erfahren",
+        href: "/interior-brand-websites",
+        soon: true,
+      },
+      {
+        heading: "Architekturbüros",
+        body: "Digitale Plattformen, die um Projekte, Referenzen und Expertise herum gestaltet sind. Kein Template — eine eigene Sprache.",
+        cta: "Mehr erfahren",
+        href: "/architecture-studio-websites",
+        soon: true,
+      },
+      {
+        heading: "Lifestyle-Marken",
+        body: "Premium-Digitalerlebnisse für designgetriebene Verbrauchermarken. Haltung, Ästhetik und Angebot in einer klaren digitalen Sprache.",
+        cta: "Mehr erfahren",
+        href: "/lifestyle-brand-websites",
+        soon: true,
+      },
+    ]
+  : [
+      {
+        heading: "Furniture Brands",
+        body: "Digital experiences for furniture manufacturers, design brands and product companies. From collection presentation to flexible content systems.",
+        cta: "Learn more",
+        href: "/en/furniture-brand-websites",
+      },
+      {
+        heading: "Interior Brands",
+        body: "Websites and content systems for interior, lighting, textile and home brands. Editorial, precise and independently manageable.",
+        cta: "Learn more",
+        href: "/en/interior-brand-websites",
+        soon: true,
+      },
+      {
+        heading: "Architecture Studios",
+        body: "Digital platforms designed around projects, references and expertise. Not a template — a language of your own.",
+        cta: "Learn more",
+        href: "/en/architecture-studio-websites",
+        soon: true,
+      },
+      {
+        heading: "Lifestyle Brands",
+        body: "Premium digital experiences for design-led consumer brands. Attitude, aesthetics and offering in a clear digital language.",
+        cta: "Learn more",
+        href: "/en/lifestyle-brand-websites",
+        soon: true,
+      },
+    ];
 ---
+
 <section id="industries">
   <div class="wrap">
     <SectionHead
       num="03"
-      eyebrow={t("industries.eyebrow")}
-      title1={t("industries.title1")}
-      title2={t("industries.title2")}
+      eyebrow={lang === "de" ? "Branchen" : "Industries"}
+      title1={lang === "de" ? "Mit wem wir" : "Industries we"}
+      title2={lang === "de" ? "arbeiten." : "work with."}
     />
+    <p class="industries-intro">
+      {lang === "de"
+        ? "Greyform entwickelt digitale Erlebnisse für Marken, bei denen Design, Storytelling und Präsentation zählen."
+        : "Greyform creates digital experiences for brands where design, storytelling and presentation matter."}
+    </p>
     <div class="industries-grid">
-      <article class="industry-item">
-        <h3>{t("industries.i1Heading")}</h3>
-        <p>{t("industries.i1Body")}</p>
-      </article>
-      <article class="industry-item">
-        <h3>{t("industries.i2Heading")}</h3>
-        <p>{t("industries.i2Body")}</p>
-      </article>
-      <article class="industry-item">
-        <h3>{t("industries.i3Heading")}</h3>
-        <p>{t("industries.i3Body")}</p>
-      </article>
-      <article class="industry-item">
-        <h3>{t("industries.i4Heading")}</h3>
-        <p>{t("industries.i4Body")}</p>
-      </article>
+      {industries.map((item) => (
+        <article class="industry-card">
+          <div class="industry-card-inner">
+            <h3>{item.heading}</h3>
+            <p>{item.body}</p>
+          </div>
+          <div class="industry-card-foot">
+            {item.soon
+              ? <span class="industry-soon">{lang === "de" ? "In Kürze" : "Coming soon"}</span>
+              : <a href={item.href} class="industry-cta">{item.cta} →</a>
+            }
+          </div>
+        </article>
+      ))}
     </div>
   </div>
 </section>
@@ -40,6 +104,13 @@ const t = useTranslations(lang);
   section {
     padding-block: var(--section-y);
   }
+  .industries-intro {
+    font-size: clamp(15px, 1.4vw, 18px);
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 52ch;
+    margin-bottom: clamp(40px, 6vw, 72px);
+  }
   .industries-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -47,22 +118,46 @@ const t = useTranslations(lang);
     background: var(--color-border, #e0ddd8);
     border: 1px solid var(--color-border, #e0ddd8);
   }
-  .industry-item {
+  .industry-card {
     background: var(--color-bg, #f5f3ef);
-    padding: clamp(32px, 5vw, 56px);
+    padding: clamp(32px, 4vw, 52px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
   }
-  .industry-item h3 {
-    font-size: clamp(14px, 1.5vw, 16px);
+  .industry-card h3 {
+    font-size: clamp(14px, 1.4vw, 16px);
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
-  .industry-item p {
+  .industry-card-inner p {
     font-size: clamp(13px, 1.2vw, 15px);
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--muted);
     max-width: 36ch;
+  }
+  .industry-cta {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-black);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: gap 0.3s var(--ease);
+  }
+  .industry-cta:hover {
+    gap: 14px;
+  }
+  .industry-soon {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    opacity: 0.5;
   }
   @media (max-width: 700px) {
     .industries-grid {

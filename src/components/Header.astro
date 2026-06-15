@@ -9,11 +9,24 @@ export interface Props {
 const { lang = "de" } = Astro.props;
 const t = useTranslations(lang);
 
-// Aktuelle Seite in beiden Sprachen verlinken
 const path = Astro.url.pathname;
 const isEnPath = path === "/en" || path.startsWith("/en/");
 const dePath = isEnPath ? path.slice(3) || "/" : path;
 const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
+
+const expertiseItems = lang === "de"
+  ? [
+      { label: "Möbelmarken", href: "/furniture-brand-websites" },
+      { label: "Interior-Marken", href: "/interior-brand-websites" },
+      { label: "Architekturbüros", href: "/architecture-studio-websites" },
+      { label: "Lifestyle-Marken", href: "/lifestyle-brand-websites" },
+    ]
+  : [
+      { label: "Furniture Brands", href: "/en/furniture-brand-websites" },
+      { label: "Interior Brands", href: "/en/interior-brand-websites" },
+      { label: "Architecture Studios", href: "/en/architecture-studio-websites" },
+      { label: "Lifestyle Brands", href: "/en/lifestyle-brand-websites" },
+    ];
 ---
 
 <nav class="nav" id="nav">
@@ -22,10 +35,24 @@ const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
   </a>
 
   <div class="nav-links" id="navLinks">
-    <a href="#work">{t("nav.work")}</a>
-    <a href="#services">{t("nav.services")}</a>
-    <a href="#approach">{t("nav.studio")}</a>
-    <a href="#contact">{t("nav.contact")}</a>
+    <a href={lang === "de" ? "/#work" : "/en/#work"}>{t("nav.work")}</a>
+    <a href={lang === "de" ? "/#services" : "/en/#services"}>{t("nav.services")}</a>
+
+    <!-- Expertise Dropdown -->
+    <div class="nav-dropdown" id="expertiseDropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        {lang === "de" ? "Branchen" : "Expertise"}
+        <span class="dropdown-arrow" aria-hidden="true"></span>
+      </button>
+      <div class="nav-dropdown-menu" role="menu">
+        {expertiseItems.map((item) => (
+          <a href={item.href} role="menuitem">{item.label}</a>
+        ))}
+      </div>
+    </div>
+
+    <a href={lang === "de" ? "/#approach" : "/en/#approach"}>{t("nav.studio")}</a>
+    <a href={lang === "de" ? "/#contact" : "/en/#contact"}>{t("nav.contact")}</a>
   </div>
 
   <div class="lang">
@@ -86,10 +113,10 @@ const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
     font-size: 13px;
     letter-spacing: 0.06em;
   }
-  .nav-links a {
+  .nav-links > a {
     position: relative;
   }
-  .nav-links a::after {
+  .nav-links > a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -101,10 +128,68 @@ const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
     transform-origin: left;
     transition: transform 0.4s var(--ease);
   }
-  .nav-links a:hover::after {
+  .nav-links > a:hover::after {
     transform: scaleX(1);
   }
 
+  /* ── DROPDOWN ── */
+  .nav-dropdown {
+    position: relative;
+  }
+  .nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+  }
+  .dropdown-arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.3s var(--ease);
+  }
+  .nav-dropdown.is-open .dropdown-arrow {
+    transform: rotate(-135deg) translateY(-2px);
+  }
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-paper, #f5f3ef);
+    border: 1px solid rgba(13, 13, 13, 0.08);
+    min-width: 200px;
+    padding: 8px 0;
+    z-index: 200;
+  }
+  .nav-dropdown.is-open .nav-dropdown-menu {
+    display: block;
+  }
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    transition: color 0.2s var(--ease);
+    white-space: nowrap;
+  }
+  .nav-dropdown-menu a:hover {
+    color: var(--color-black);
+  }
+
+  /* ── LANG ── */
   .lang {
     display: flex;
     align-items: center;
@@ -126,6 +211,7 @@ const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
     opacity: 0.5;
   }
 
+  /* ── MOBILE ── */
   .menu-toggle {
     display: none;
     width: 28px;
@@ -142,15 +228,9 @@ const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
       transform 0.3s var(--ease),
       opacity 0.3s var(--ease);
   }
-  .menu-toggle span:nth-child(1) {
-    top: 0;
-  }
-  .menu-toggle span:nth-child(2) {
-    top: 50%;
-  }
-  .menu-toggle span:nth-child(3) {
-    bottom: 0;
-  }
+  .menu-toggle span:nth-child(1) { top: 0; }
+  .menu-toggle span:nth-child(2) { top: 50%; }
+  .menu-toggle span:nth-child(3) { bottom: 0; }
 
   @media (max-width: 900px) {
     .nav-links {
@@ -181,6 +261,30 @@ const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
     .menu-toggle.is-open span:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
+    .nav-dropdown {
+      text-align: center;
+    }
+    .nav-dropdown-trigger {
+      font-size: 22px;
+      letter-spacing: -0.005em;
+      justify-content: center;
+    }
+    .nav-dropdown-menu {
+      position: static;
+      transform: none;
+      border: none;
+      background: none;
+      padding: 8px 0 0;
+      display: none;
+    }
+    .nav-dropdown.is-open .nav-dropdown-menu {
+      display: block;
+    }
+    .nav-dropdown-menu a {
+      font-size: 15px;
+      text-align: center;
+      color: var(--muted);
+    }
   }
 </style>
 
@@ -201,6 +305,31 @@ const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
   });
   links?.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
+      toggle?.classList.remove("is-open");
+      links?.classList.remove("is-open");
+    })
+  );
+
+  // Dropdown toggle
+  const dropdown = document.getElementById("expertiseDropdown");
+  const trigger = dropdown?.querySelector(".nav-dropdown-trigger");
+  trigger?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown?.classList.toggle("is-open");
+    trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener("click", () => {
+    dropdown?.classList.remove("is-open");
+    trigger?.setAttribute("aria-expanded", "false");
+  });
+
+  // Close dropdown when a link is clicked
+  dropdown?.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      dropdown?.classList.remove("is-open");
+      trigger?.setAttribute("aria-expanded", "false");
       toggle?.classList.remove("is-open");
       links?.classList.remove("is-open");
     })
