@@ -1,6 +1,6 @@
 ---
-id: "thegrey-berlin-en"
-slug: "thegrey-berlin"
+id: "the-grey-en"
+slug: "the-grey"
 title: "Brand Identity & Website for a Berlin Rug Label"
 client: "thegrey.berlin"
 year: 2025

@@ -1,6 +1,6 @@
 ---
-id: "thegrey-berlin-de"
-slug: "thegrey-berlin"
+id: "the-grey-de"
+slug: "the-grey"
 title: "Brand Identity & Website für ein Berliner Teppich-Label"
 client: "thegrey.berlin"
 year: 2025
@@ -24,8 +24,7 @@ order: 2
 featured: true
 lang: "de"
 ---
-id: "thegrey-berlin-de"
-slug: "thegrey-berlin"
+slug: "the-grey"
 
 ## Eine Marke, die so offen startet wie das Label selbst.
 
@@ -87,8 +86,7 @@ Die Site läuft auf reinem HTML/CSS/JS, ohne Build-Pipeline, ohne Framework, ohn
 Das spiegelt das Studio-Prinzip: moderne Werkzeuge im Hintergrund, ruhiges Ergebnis im Vordergrund.
 
 ---
-id: "thegrey-berlin-de"
-slug: "thegrey-berlin"
+slug: "the-grey"
 
 ### Outcome
 
