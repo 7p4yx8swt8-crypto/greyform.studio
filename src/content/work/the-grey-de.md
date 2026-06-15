@@ -1,6 +1,4 @@
 ---
-id: "the-grey-de"
-slug: "the-grey"
 title: "Brand Identity & Website für ein Berliner Teppich-Label"
 client: "thegrey.berlin"
 year: 2025
