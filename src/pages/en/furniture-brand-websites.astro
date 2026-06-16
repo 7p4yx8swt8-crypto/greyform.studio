@@ -123,6 +123,17 @@ const faqs = [
     </div>
   </section>
 
+  <!-- STATEMENT 1 -->
+  <section class="section-statement">
+    <div class="wrap">
+      <h2 class="statement-text">
+        A furniture brand website<br />
+        is not a catalogue.<br />
+        <em>It is a brand experience.</em>
+      </h2>
+    </div>
+  </section>
+
   <!-- 3. WHY GREYFORM UNDERSTANDS FURNITURE BRANDS -->
   <section class="section-credibility">
     <div class="wrap">
@@ -156,7 +167,7 @@ const faqs = [
             </div>
             <div class="cred-item">
               <span class="cred-label">Trade Fairs</span>
-              <span class="cred-text">Websites, landing pages and digital campaigns for brands exhibiting at Salone del Mobile, 3daysofdesign, Maison & Objet and beyond.</span>
+              <span class="cred-text">Digital support for Salone del Mobile, IMM Cologne, Maison & Objet and other key industry events</span>
             </div>
             <div class="cred-item">
               <span class="cred-label">Premium Positioning</span>
@@ -395,6 +406,16 @@ const faqs = [
     </div>
   </section>
 
+  <!-- STATEMENT 2 -->
+  <section class="section-statement-dark">
+    <div class="wrap">
+      <h2 class="statement-text-dark">
+        Visible to people.<br />
+        <em>Readable by AI.</em>
+      </h2>
+    </div>
+  </section>
+
   <!-- 9. AI VISIBILITY -->
   <section class="section-ai">
     <div class="wrap">
@@ -587,6 +608,14 @@ const faqs = [
 </BaseLayout>
 
 <style>
+  /* ── STATEMENTS ── */
+  .section-statement { padding-block: clamp(64px, 12vw, 140px); }
+  .statement-text { font-size: clamp(32px, 5.5vw, 80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; max-width: 16ch; }
+  .statement-text em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .section-statement-dark { background: var(--color-ink, #0d0d0d); padding-block: clamp(64px, 12vw, 140px); }
+  .statement-text-dark { font-size: clamp(32px, 5.5vw, 80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; max-width: 16ch; color: var(--color-paper, #f5f3ef); }
+  .statement-text-dark em { font-style: italic; font-weight: 300; color: rgba(245, 243, 239, 0.35); }
+
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
