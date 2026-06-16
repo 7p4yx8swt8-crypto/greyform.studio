@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const lang = "de";
 
@@ -123,6 +123,17 @@ const faqs = [
     </div>
   </section>
 
+  <!-- STATEMENT 1 -->
+  <section class="section-statement">
+    <div class="wrap">
+      <h2 class="statement-text">
+        Eine Möbelmarken-Website<br />
+        ist kein Katalog.<br />
+        <em>Sie ist ein Markenerlebnis.</em>
+      </h2>
+    </div>
+  </section>
+
   <!-- 3. WARUM GREYFORM MÖBELMARKEN VERSTEHT -->
   <section class="section-credibility">
     <div class="wrap">
@@ -156,7 +167,7 @@ const faqs = [
             </div>
             <div class="cred-item">
               <span class="cred-label">Messen</span>
-              <span class="cred-text">Websites, Landingpages und digitale Kampagnen für Auftritte bei der Salone del Mobile, 3daysofdesign, Maison & Objet und darüber hinaus.</span>
+              <span class="cred-text">Digitale Begleitung für Salone del Mobile, imm cologne, Maison & Objet und andere Branchenevents</span>
             </div>
             <div class="cred-item">
               <span class="cred-label">Premium-Positionierung</span>
@@ -395,6 +406,16 @@ const faqs = [
     </div>
   </section>
 
+  <!-- STATEMENT 2 -->
+  <section class="section-statement-dark">
+    <div class="wrap">
+      <h2 class="statement-text-dark">
+        Sichtbar für Menschen.<br />
+        <em>Verständlich für KI.</em>
+      </h2>
+    </div>
+  </section>
+
   <!-- 9. KI-SICHTBARKEIT -->
   <section class="section-ai">
     <div class="wrap">
@@ -587,6 +608,12 @@ const faqs = [
 </BaseLayout>
 
 <style>
+  .section-statement { padding-block: clamp(64px, 12vw, 140px); }
+  .statement-text { font-size: clamp(32px, 5.5vw, 80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; max-width: 16ch; }
+  .statement-text em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .section-statement-dark { background: var(--color-ink, #0d0d0d); padding-block: clamp(64px, 12vw, 140px); }
+  .statement-text-dark { font-size: clamp(32px, 5.5vw, 80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; max-width: 16ch; color: var(--color-paper, #f5f3ef); }
+  .statement-text-dark em { font-style: italic; font-weight: 300; color: rgba(245, 243, 239, 0.35); }
   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: clamp(60px, 10vw, 120px); padding-top: clamp(120px, 14vw, 180px); }
   .hero-tag { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: clamp(24px, 4vw, 48px); display: flex; gap: 14px; align-items: center; }
   .hero-tag .dot { width: 6px; height: 6px; background: var(--color-black); border-radius: 50%; }
