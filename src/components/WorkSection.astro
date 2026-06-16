@@ -77,8 +77,12 @@ const greyUrl = lang === "de" ? "/work/the-grey" : "/en/work/the-grey";
 
       <article class="work-item upcoming">
         <div class="work-media sand">
-          <span class="placeholder">{t("work.soon")}</span>
-        </div>
+  <img
+    src={lang === "de" ? "/work/next-project/next-project-de.svg" : "/work/next-project/next-project-en.svg"}
+    alt={lang === "de" ? "Nächstes Projekt — In Kürze" : "Next Project — Coming Soon"}
+    loading="lazy"
+  />
+</div>
         <div class="work-meta">
           <span class="title">{t("work.tbd")}</span>
           <span class="cat">{t("work.soon")}</span>
