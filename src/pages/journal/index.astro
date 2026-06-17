@@ -84,8 +84,9 @@ const sorted = entries.sort((a, b) => new Date(b.data.date).getTime() - new Date
     font-weight: 300;
     color: var(--color-stone);
   }
-  .journal-list {
-    padding-block: var(--section-y);
+.journal-list {
+    padding-top: clamp(40px, 5vw, 64px);
+    padding-bottom: var(--section-y);
     border-top: 0.5px solid rgba(13,13,13,0.12);
   }
   .journal-empty {
