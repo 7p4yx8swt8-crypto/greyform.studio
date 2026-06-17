@@ -1,0 +1,656 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const lang = "de";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Digitale Auftritte für Lifestyle-Marken",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Studio Greyform",
+    "url": "https://greyform.studio"
+  },
+  "description": "Greyform gestaltet editoriale Websites und digitale Systeme für Lifestyle-Marken, Design-Labels und designgetriebene Verbrauchermarken. Studio in Berlin, international tätig.",
+  "areaServed": "Worldwide",
+  "serviceType": ["Website Design", "Editorial Design", "Content-Systeme", "Digitale Markenstrategie"],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Lifestyle-Marken, Design-Labels, Designgetriebene Verbrauchermarken, Premium-Consumer-Brands"
+  },
+  "knowsAbout": ["Lifestyle-Marken-Websites", "Design-Label-Websites", "Premium-Consumer-Brand-Websites", "Editoriale Markensysteme"]
+};
+
+const faqs = [
+  {
+    q: "Was ist eine Lifestyle-Marke — und was braucht sie digital?",
+    a: "Eine Lifestyle-Marke ist eine Marke die nicht nur Produkte verkauft, sondern eine Haltung. Sie definiert eine Art zu leben, zu konsumieren, sich zu positionieren. Digital bedeutet das: die Website muss diese Haltung sofort vermitteln — atmosphärisch, präzise, mit einer redaktionellen Stimme die unverwechselbar ist."
+  },
+  {
+    q: "Worin unterscheidet sich eine Lifestyle-Marke von einer Interior-Marke?",
+    a: "Interior-Marken sind auf Wohnwelten fokussiert — Möbel, Licht, Textil, Raumgestaltung. Lifestyle-Marken sind breiter: sie können Mode, Food, Beauty, Wellness, Reise oder eine Kombination davon umfassen. Was sie eint: eine klare ästhetische Haltung und die Fähigkeit, eine Community um sich zu versammeln."
+  },
+  {
+    q: "Für welche Lifestyle-Marken arbeitet Greyform?",
+    a: "Wir arbeiten mit designgetriebenen Verbrauchermarken die eine klare ästhetische Position haben. Kein Massenmarkt, keine generischen Labels. Marken die etwas zu sagen haben — und es digital so sagen wollen, wie sie es auch sonst tun."
+  },
+  {
+    q: "Wie lange dauert ein Projekt?",
+    a: "Ein fokussiertes Projekt dauert in der Regel drei bis sechs Wochen von Briefing bis Launch. Der Zeitrahmen hängt vom Umfang der Inhalte, der Komplexität des Content-Systems und davon ab, ob ein Shop-System integriert wird."
+  },
+  {
+    q: "Können wir die Website nach dem Launch selbst pflegen?",
+    a: "Ja — und das ist entscheidend. Lifestyle-Marken leben von Aktualität: neue Kollektionen, neue Inhalte, neue Kampagnen. Das Content-System muss das eigenständig ermöglichen — ohne Entwickler, ohne Wartezeit."
+  },
+  {
+    q: "Können Sie bei SEO und KI-Sichtbarkeit helfen?",
+    a: "Ja. Lifestyle-Marken werden zunehmend über KI-Systeme entdeckt — von Journalisten, Einkäufern, Influencern und Konsumenten die nach Inspiration suchen. Wir strukturieren Inhalte so, dass sowohl Suchmaschinen als auch KI-Systeme klar verstehen, wofür eine Marke steht."
+  }
+];
+---
+
+<BaseLayout
+  title="Digitale Auftritte für Lifestyle-Marken — Greyform Studio Berlin"
+  description="Greyform gestaltet editoriale Websites und digitale Systeme für Lifestyle-Marken und designgetriebene Verbrauchermarken. Studio in Berlin, international tätig."
+  lang={lang}
+>
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- 1. HERO -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        <span>Digitale Auftritte · Lifestyle-Marken</span>
+      </div>
+      <h1>
+        <span>Digitale Auftritte</span><br />
+        <em>für Lifestyle-Marken.</em>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-sub">Greyform gestaltet editoriale Websites und digitale Systeme für Lifestyle-Marken und designgetriebene Verbrauchermarken — mit Haltung, Ästhetik und einer redaktionellen Stimme die trägt.</p>
+        <div class="hero-meta">
+          <div class="row">
+            <span>Berlin</span>
+            <span>Worldwide</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. WAS EINE LIFESTYLE-MARKE AUSMACHT -->
+  <section class="section-why">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">01</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Die Herausforderung</span>
+        </div>
+        <h2>
+          Mehr als ein Produkt.<br />
+          <em>Eine Haltung.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Eine Lifestyle-Marke verkauft nicht nur was sie herstellt. Sie verkauft wie man leben sollte.</p>
+          <p>Das ist der fundamentale Unterschied zu einer reinen Produktmarke. Ein Konsument kauft keine Kerze — er kauft eine Stimmung, eine Zugehörigkeit, eine Version von sich selbst. Die Website muss diese Übertragung leisten. Sie muss nicht nur Produkte zeigen, sie muss eine Welt bauen.</p>
+          <p>Das gelingt mit editorialer Bildsprache, einer klaren redaktionellen Stimme, einem Content-System das kontinuierlich neue Kapitel schreibt — und einem visuellen System das auf jedem Format, in jedem Kanal erkennbar bleibt.</p>
+          <p>Greyform entwickelt digitale Systeme für Lifestyle-Marken, die genau das leisten: Haltung kommunizieren, Welt bauen, Community versammeln. Kein generischer Online-Shop. Eine editoriale Plattform die Marke und Produkt untrennbar verbindet.</p>
+        </div>
+        <div class="col-stat">
+          <div class="stat-block">
+            <div class="stat-item">
+              <span class="stat-value">3–6</span>
+              <span class="stat-label">Wochen von Briefing bis Launch</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Nach dem Launch eigenständig pflegbar</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">DE / EN</span>
+              <span class="stat-label">Bilingual als Standard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT 1 -->
+  <section class="section-statement">
+    <div class="wrap">
+      <h2 class="statement-text">
+        Eine Lifestyle-Marke<br />
+        verkauft keine Produkte.<br />
+        <em>Sie verkauft eine Welt.</em>
+      </h2>
+    </div>
+  </section>
+
+  <!-- 3. WAS LIFESTYLE-MARKEN BRAUCHEN -->
+  <section class="section-needs">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">02</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Was Lifestyle-Marken brauchen</span>
+        </div>
+        <h2>
+          Welt bauen.<br />
+          <em>Community versammeln.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Die digitale Präsenz einer Lifestyle-Marke ist mehr als eine Website. Sie ist die Heimat der Marke im Netz.</p>
+          <p>Das bedeutet: ein visuelles System das die Haltung der Marke trägt — konsequent, erkennbar, unverwechselbar. Ein Content-System das Raum gibt für Kampagnen, Kollektionen, Kollaborationen, Editorials und Einblicke. Und eine Struktur die sowohl Inspiration als auch Konversion ermöglicht — ohne dass eines das andere schwächt.</p>
+          <p>Lifestyle-Marken brauchen eine Website die mit ihnen atmet. Die neue Kapitel aufnehmen kann, ohne ihr Gesicht zu verlieren. Die auf Instagram genauso stark wirkt wie auf dem Desktop. Die von einem kleinen Team eigenständig gepflegt werden kann — ohne dabei an Qualität zu verlieren.</p>
+        </div>
+        <div class="col-credibility">
+          <div class="credibility-list">
+            <div class="cred-item">
+              <span class="cred-label">Visuelles System</span>
+              <span class="cred-text">Typografie, Bildsprache und Farbwelt als kohärentes System — das auf jedem Format funktioniert</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">Editoriale Plattform</span>
+              <span class="cred-text">Journal, Kampagnen, Kollektionen und Kollaborationen als integrierter Teil der Markenarchitektur</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">Community & Engagement</span>
+              <span class="cred-text">Strukturen die Zugehörigkeit schaffen — Newsletter, Events, Mitgliedschaft, kuratorische Inhalte</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">Konversion ohne Kompromiss</span>
+              <span class="cred-text">Shop-Integration die zur Marke passt — nicht umgekehrt. Produkte im richtigen Kontext, nicht im Katalog</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HÄUFIGE PROBLEME -->
+  <section class="section-problems">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">03</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Häufige Probleme</span>
+        </div>
+        <h2>
+          Was bei Lifestyle-Marken-<br />
+          <em>Websites schiefläuft.</em>
+        </h2>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-item">
+          <span class="problem-num">i</span>
+          <h3>Shop statt Marke</h3>
+          <p>Lifestyle-Marken die ihre Website wie einen E-Commerce-Shop aufbauen verlieren das Wichtigste: die Welt. Wenn man auf der Startseite sofort im Produktraster landet, ist die Magie weg — bevor sie entstehen konnte.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">ii</span>
+          <h3>Instagram-Ästhetik auf Desktop</h3>
+          <p>Was auf Instagram funktioniert, funktioniert nicht automatisch auf einer Website. Quadratische Bilder, kurze Captions, schnelle Scrolls — das ist eine andere Sprache. Eine Website braucht Tiefe, Rhythmus, Raum.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">iii</span>
+          <h3>Kein Content-System</h3>
+          <p>Lifestyle-Marken die ihre Website nicht eigenständig aktualisieren können, verlieren den Anschluss. Neue Kollektionen kommen zu spät online. Kampagnen werden nicht digital verlängert. Die Site veraltet schnell.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">iv</span>
+          <h3>Visueller Bruch zwischen Kanälen</h3>
+          <p>Instagram sieht anders aus als die Website, die Website anders als der Newsletter. Kein kohärentes visuelles System. Die Marke wirkt beliebig — auch wenn die Produkte es nicht sind.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">v</span>
+          <h3>Keine redaktionelle Stimme</h3>
+          <p>Viele Lifestyle-Marken haben tolle Produkte und tolle Bilder — aber keine Stimme. Kein Journal. Keine Perspektive. Keine Inhalte die Menschen einen Grund geben wiederzukommen.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">vi</span>
+          <h3>Unsichtbar für KI</h3>
+          <p>Schöne Bilder, aber keine strukturierten Inhalte. KI-Systeme die nach Lifestyle-Empfehlungen gefragt werden, können diese Marke nicht verstehen — und empfehlen sie nicht.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. UNSER ANSATZ -->
+  <section class="section-approach">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">04</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Unser Ansatz</span>
+        </div>
+        <h2>
+          Haltung zuerst.<br />
+          <em>Produkte im Kontext.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Jedes Greyform-Projekt beginnt mit der Frage: Was ist die Welt dieser Marke?</p>
+          <p>Nicht: Wie viele Produkte hat sie? Sondern: Was ist ihre Haltung? Ihre Bildsprache? Ihre redaktionelle Stimme? Wie fühlt es sich an, Teil dieser Marke zu sein?</p>
+          <p>Erst wenn diese Fragen beantwortet sind, beginnen wir zu gestalten. Das Ergebnis ist ein digitales System das Haltung und Produkt untrennbar verbindet — eine Website die man besucht weil sie interessant ist, und auf der man kauft weil man überzeugt ist.</p>
+          <p class="internal-links">Referenzprojekte: <a href="/work/the-grey">thegrey.berlin — Brand Identity & Website</a> · <a href="/work/jina-kim">Ji-Na Kim — Editorial Brand Site</a></p>
+        </div>
+        <div class="col-pillars">
+          <div class="pillar">
+            <span class="pillar-label">Ansatz</span>
+            <span class="pillar-value">Haltung zuerst, Produkte im Kontext</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Tempo</span>
+            <span class="pillar-value">Wochen, nicht Monate</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Ästhetik</span>
+            <span class="pillar-value">Editorial · Unverwechselbar</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Sprachen</span>
+            <span class="pillar-value">DE / EN · International</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CONTENT-SYSTEME -->
+  <section class="section-content-systems">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">05</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Content-Systeme</span>
+        </div>
+        <h2>
+          Immer aktuell.<br />
+          <em>Immer in der Marke.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Lifestyle-Marken leben von Aktualität. Neue Kollektionen. Neue Kampagnen. Neue Kollaborationen. Das Content-System muss mithalten.</p>
+          <p>Deshalb entwickeln wir flexible Content-Systeme — keine statischen Websites. Jedes Greyform-Projekt ist so strukturiert, dass Ihr Team Kollektionen launchen, Kampagnen veröffentlichen, Journal-Beiträge schreiben und Inhalte pflegen kann — eigenständig, ohne Entwickler, ohne Wartezeit.</p>
+          <p>Das System ist auf die redaktionellen Bedürfnisse einer Lifestyle-Marke ausgelegt: Kollektion- und Produktverwaltung, Journal- und Kampagnenbereich, Newsletter-Integration, Event-Seiten. Alles eigenständig, alles im Browser, alles in der Marke.</p>
+        </div>
+        <div class="col-features">
+          <ul class="feature-list">
+            <li>Kollektion- und Produktverwaltung</li>
+            <li>Journal- und Kampagnenbereich</li>
+            <li>Kollaborations- und Editorial-Seiten</li>
+            <li>Newsletter- und Community-Integration</li>
+            <li>Kein Entwickler für Content-Updates erforderlich</li>
+            <li>Vollständige Dokumentation bei Übergabe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. AUSGEWÄHLTE ARBEITEN -->
+  <section class="section-work">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">06</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Ausgewählte Arbeiten</span>
+        </div>
+        <h2>
+          Aktuelle Projekte<br />
+          <em>aus dem Studio.</em>
+        </h2>
+      </div>
+      <div class="work-grid">
+        <article class="work-item">
+          <a href="/work/the-grey" class="work-link">
+            <div class="work-media">
+              <img src="/work/thegrey-berlin/00-cover.jpg" alt="thegrey.berlin — Brand Identity & Website für ein Berliner Lifestyle-Label" loading="lazy" class="img-bottom" />
+            </div>
+          </a>
+          <div class="work-meta">
+            <span class="work-title">thegrey.berlin</span>
+            <span class="work-cat">Brand Identity · Website</span>
+          </div>
+          <a class="work-arrow" href="/work/the-grey"><span>Projekt ansehen</span> <span class="arr">→</span></a>
+        </article>
+        <article class="work-item">
+          <a href="/work/jina-kim" class="work-link">
+            <div class="work-media">
+              <img src="/work/jina-kim/cover.jpg" alt="Ji-Na Kim — Editorial Brand Site" loading="lazy" />
+            </div>
+          </a>
+          <div class="work-meta">
+            <span class="work-title">Ji-Na Kim</span>
+            <span class="work-cat">Editorial · Brand Site</span>
+          </div>
+          <a class="work-arrow" href="/work/jina-kim"><span>Projekt ansehen</span> <span class="arr">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT 2 -->
+  <section class="section-statement-dark">
+    <div class="wrap">
+      <h2 class="statement-text-dark">
+        Sichtbar für Menschen.<br />
+        <em>Verständlich für KI.</em>
+      </h2>
+    </div>
+  </section>
+
+  <!-- 8. KI-SICHTBARKEIT -->
+  <section class="section-ai">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">07</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Suche & Sichtbarkeit</span>
+        </div>
+        <h2>
+          Für Suchmaschinen gebaut.<br />
+          <em>Bereit für KI.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Lifestyle-Marken werden heute über mehr Kanäle entdeckt als je zuvor — und KI-Systeme spielen dabei eine wachsende Rolle.</p>
+          <p>Wenn jemand ChatGPT fragt „Welche Lifestyle-Marken mit nachhaltigem Ansatz gibt es in Berlin?" — dann entscheidet die Struktur deiner Website darüber ob dein Name fällt. Nicht deine Follower-Zahl. Nicht deine Instagram-Reichweite. Deine Inhalte.</p>
+          <p>Greyform strukturiert Inhalte, Leistungsseiten, Journal-Beiträge und Produktseiten so, dass sowohl Suchmaschinen als auch KI-Systeme klar verstehen, was eine Marke ist, wofür sie steht und warum sie relevant ist.</p>
+        </div>
+        <div class="col-pillars">
+          <div class="pillar">
+            <span class="pillar-label">Semantische Struktur</span>
+            <span class="pillar-value">Sauberes HTML, korrekte Überschriftenhierarchie, Entity-Klarheit</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Strukturierte Daten</span>
+            <span class="pillar-value">Schema.org-Markup für Produkte, Kollektionen, FAQs und Markenidentität</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Inhaltliche Tiefe</span>
+            <span class="pillar-value">Journal und Kampagnen die echte Fragen echter Zielgruppen beantworten</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">KI-Lesbarkeit</span>
+            <span class="pillar-value">Inhalte strukturiert für ChatGPT, Gemini, Perplexity und Google AI Overviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. PROZESS -->
+  <section class="section-process">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">08</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Prozess</span>
+        </div>
+        <h2>
+          Wie ein Projekt<br />
+          <em>Form annimmt.</em>
+        </h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-num">01</span>
+          <div class="step-content">
+            <h3>Briefing & Discovery</h3>
+            <p>Wir beginnen mit einem fokussierten Briefing — Ihre Marke, Ihre Welt, Ihre Zielgruppen. Ein klares Gespräch, ein gemeinsames Verständnis, ein definierter Umfang.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">02</span>
+          <div class="step-content">
+            <h3>Design</h3>
+            <p>Wir gestalten das vollständige visuelle System — Typografie, Layout, Bildbehandlung, Seitenrhythmus — bevor wir eine Zeile Code schreiben. In der Regel zwei Überarbeitungsrunden bis zur Freigabe.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">03</span>
+          <div class="step-content">
+            <h3>Entwicklung</h3>
+            <p>Wir bauen die Site mit derselben Sorgfalt wie das Design. Performance, semantisches HTML, SEO-Struktur und Content-System-Architektur als Kernleistungen, nicht als optionale Extras.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">04</span>
+          <div class="step-content">
+            <h3>Launch & Übergabe</h3>
+            <p>Wir übernehmen den technischen Launch und dokumentieren das Content-System klar — damit Ihr Team von Tag eins eigenständig neue Inhalte veröffentlichen kann.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. VERWANDTE LEISTUNGEN -->
+  <section class="section-related">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">09</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Verwandt</span>
+        </div>
+        <h2>
+          Weitere Branchen,<br />
+          <em>mit denen wir arbeiten.</em>
+        </h2>
+      </div>
+      <div class="related-grid">
+        <div class="related-item">
+          <a href="/furniture-brand-websites" class="related-label related-link">Möbelmarken →</a>
+          <p>Digitale Auftritte für Möbelhersteller, Designmarken und Produktunternehmen.</p>
+        </div>
+        <div class="related-item">
+          <a href="/interior-brand-websites" class="related-label related-link">Interior-Marken →</a>
+          <p>Websites und Content-Systeme für Interior-, Licht-, Textil- und Home-Brands.</p>
+        </div>
+        <div class="related-item">
+          <a href="/architecture-studio-websites" class="related-label related-link">Architekturbüros →</a>
+          <p>Projekt-Portfolios und Studio-Präsenzen für Architekturbüros und Innenarchitekturbüros.</p>
+        </div>
+        <div class="related-item">
+          <a href="/" class="related-label related-link">Studio-Übersicht →</a>
+          <p>Alle Leistungen, ausgewählte Arbeiten und Studio-Ansatz auf der Greyform-Hauptseite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FAQ -->
+  <section class="section-faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">10</span>
+          <span class="dash"></span>
+          <span class="eyebrow">FAQ</span>
+        </div>
+        <h2>
+          Häufig gestellte<br />
+          <em>Fragen.</em>
+        </h2>
+      </div>
+      <div class="faq-list">
+        {faqs.map((item) => (
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>{item.q}</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <p class="faq-answer">{item.a}</p>
+          </details>
+        ))}
+      </div>
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": { "@type": "Answer", "text": f.a }
+        }))
+      })} />
+    </div>
+  </section>
+
+  <!-- 12. CTA -->
+  <section class="section-cta">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div class="eyebrow-row">
+          <span class="num">11</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Projekt starten</span>
+        </div>
+        <h2>
+          Lassen Sie uns über<br />
+          <em>Ihre Marke sprechen.</em>
+        </h2>
+        <p>Ob neue Kollektion, Relaunch einer etablierten Lifestyle-Marke oder der Aufbau einer stärkeren digitalen Präsenz — wir freuen uns auf das Gespräch. Wir antworten innerhalb von zwei Werktagen mit einer ehrlichen Einschätzung.</p>
+        <a href="mailto:hello@greyform.studio" class="cta-btn">Gespräch beginnen →</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .section-statement { padding-block: clamp(64px, 12vw, 140px); }
+  .statement-text { font-size: clamp(32px, 5.5vw, 80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; max-width: 16ch; }
+  .statement-text em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .section-statement-dark { background: var(--color-ink, #0d0d0d); padding-block: clamp(64px, 12vw, 140px); }
+  .statement-text-dark { font-size: clamp(32px, 5.5vw, 80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; max-width: 16ch; color: var(--color-paper, #f5f3ef); }
+  .statement-text-dark em { font-style: italic; font-weight: 300; color: rgba(245, 243, 239, 0.35); }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: clamp(60px, 10vw, 120px); padding-top: clamp(120px, 14vw, 180px); }
+  .hero-tag { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: clamp(24px, 4vw, 48px); display: flex; gap: 14px; align-items: center; }
+  .hero-tag .dot { width: 6px; height: 6px; background: var(--color-black); border-radius: 50%; }
+  .hero h1 { font-size: clamp(44px, 9.2vw, 168px); line-height: 0.92; font-weight: 400; letter-spacing: -0.025em; max-width: 14ch; }
+  .hero h1 em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .hero-foot { margin-top: clamp(24px, 4vw, 48px); display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+  .hero-sub { max-width: 46ch; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.55; }
+  .hero-meta { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-align: right; }
+  .hero-meta .row { display: flex; gap: 28px; }
+  section { padding-block: var(--section-y); }
+  .section-head { margin-bottom: clamp(48px, 8vw, 96px); }
+  .eyebrow-row { display: flex; align-items: center; gap: 16px; margin-bottom: clamp(16px, 2vw, 24px); }
+  .num { font-size: 11px; letter-spacing: 0.18em; color: var(--muted); }
+  .dash { width: 32px; height: 1px; background: var(--muted); opacity: 0.4; }
+  .eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  h2 { font-size: clamp(32px, 5vw, 72px); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; }
+  h2 em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 8vw, 120px); align-items: start; }
+  .col-text p { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.8; color: var(--muted); margin-bottom: 20px; }
+  .col-text p.lead { font-size: clamp(16px, 1.6vw, 20px); line-height: 1.5; color: var(--color-black); margin-bottom: 24px; }
+  .col-text a { color: var(--color-black); text-decoration: underline; text-underline-offset: 3px; }
+  .internal-links { font-size: 13px !important; color: var(--muted) !important; }
+  .stat-block { display: flex; flex-direction: column; gap: 32px; padding-top: clamp(16px, 3vw, 48px); border-top: 1px solid var(--color-border, #e0ddd8); }
+  .stat-item { display: flex; flex-direction: column; gap: 6px; }
+  .stat-value { font-size: clamp(28px, 3vw, 44px); font-weight: 400; letter-spacing: -0.02em; line-height: 1; }
+  .stat-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .credibility-list { display: flex; flex-direction: column; gap: 0; padding-top: clamp(16px, 3vw, 48px); }
+  .cred-item { padding-block: 20px; border-bottom: 1px solid var(--color-border, #e0ddd8); }
+  .cred-item:first-child { border-top: 1px solid var(--color-border, #e0ddd8); }
+  .cred-label { display: block; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .cred-text { font-size: clamp(13px, 1.2vw, 14px); line-height: 1.6; color: var(--color-black); }
+  .section-problems { background: var(--color-ink, #0d0d0d); color: var(--color-paper, #f5f3ef); }
+  .section-problems h2 em { color: rgba(245,243,239,0.4); }
+  .section-problems .eyebrow, .section-problems .num { color: rgba(245,243,239,0.4); }
+  .section-problems .dash { background: rgba(245,243,239,0.2); }
+  .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(245,243,239,0.1); border: 1px solid rgba(245,243,239,0.1); }
+  .problem-item { background: var(--color-ink, #0d0d0d); padding: clamp(28px, 4vw, 48px); }
+  .problem-num { display: block; font-size: 11px; letter-spacing: 0.2em; color: rgba(245,243,239,0.3); margin-bottom: 16px; }
+  .problem-item h3 { font-size: clamp(14px, 1.4vw, 16px); font-weight: 500; margin-bottom: 12px; }
+  .problem-item p { font-size: clamp(13px, 1.1vw, 14px); line-height: 1.75; color: rgba(245,243,239,0.55); }
+  .col-pillars { display: flex; flex-direction: column; padding-top: clamp(16px, 3vw, 48px); }
+  .pillar { display: flex; flex-direction: column; gap: 4px; padding-block: 20px; border-bottom: 1px solid var(--color-border, #e0ddd8); }
+  .pillar:first-child { border-top: 1px solid var(--color-border, #e0ddd8); }
+  .pillar-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .pillar-value { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.5; }
+  .col-features { padding-top: clamp(16px, 3vw, 48px); }
+  .feature-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--color-border, #e0ddd8); }
+  .feature-list li { font-size: clamp(13px, 1.2vw, 15px); padding-block: 18px; border-bottom: 1px solid var(--color-border, #e0ddd8); padding-left: 20px; position: relative; color: var(--muted); }
+  .feature-list li::before { content: "→"; position: absolute; left: 0; color: var(--color-black); }
+  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 56px) clamp(24px, 5vw, 64px); }
+  .work-item:nth-child(2) { margin-top: clamp(40px, 12vw, 160px); }
+  .work-link { display: block; }
+  .work-media { aspect-ratio: 4 / 5; background: var(--color-sand); overflow: hidden; position: relative; transition: opacity 0.4s var(--ease); }
+  .work-media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; filter: grayscale(100%); transition: filter 0.6s var(--ease); }
+  .work-media img.img-bottom { object-position: center 75%; }
+  .work-link:hover .work-media img { filter: grayscale(0%); }
+  .work-link:hover .work-media { opacity: 0.85; }
+  .work-meta { display: flex; justify-content: space-between; align-items: baseline; margin-top: 18px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .work-title { font-weight: 500; }
+  .work-cat { color: var(--muted); font-size: 11px; }
+  .work-arrow { margin-top: 14px; font-size: 13px; letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 10px; transition: gap 0.4s var(--ease); }
+  .work-arrow:hover { gap: 18px; }
+  .section-ai { background: var(--color-ink, #0d0d0d); color: var(--color-paper, #f5f3ef); }
+  .section-ai h2 em { color: rgba(245,243,239,0.4); }
+  .section-ai .eyebrow, .section-ai .num { color: rgba(245,243,239,0.4); }
+  .section-ai .dash { background: rgba(245,243,239,0.2); }
+  .section-ai .col-text p { color: rgba(245,243,239,0.6); }
+  .section-ai .col-text p.lead { color: var(--color-paper, #f5f3ef); }
+  .section-ai .col-pillars .pillar { border-color: rgba(245,243,239,0.1); }
+  .section-ai .pillar-label { color: rgba(245,243,239,0.4); }
+  .section-ai .pillar-value { color: var(--color-paper, #f5f3ef); font-size: clamp(12px, 1.1vw, 14px); }
+  .process-steps { display: flex; flex-direction: column; border-top: 1px solid var(--color-border, #e0ddd8); }
+  .process-step { display: grid; grid-template-columns: 80px 1fr; gap: 40px; padding-block: clamp(28px, 4vw, 48px); border-bottom: 1px solid var(--color-border, #e0ddd8); align-items: start; }
+  .step-num { font-size: 11px; letter-spacing: 0.2em; color: var(--muted); padding-top: 4px; }
+  .step-content h3 { font-size: clamp(15px, 1.4vw, 18px); font-weight: 500; margin-bottom: 12px; }
+  .step-content p { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.8; color: var(--muted); max-width: 58ch; }
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--color-border, #e0ddd8); border: 1px solid var(--color-border, #e0ddd8); }
+  .related-item { background: var(--color-bg, #f5f3ef); padding: clamp(28px, 4vw, 48px); }
+  .related-label { display: block; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+  .related-link { color: var(--color-black); text-decoration: none; }
+  .related-link:hover { text-decoration: underline; }
+  .related-item p { font-size: clamp(13px, 1.1vw, 14px); line-height: 1.7; color: var(--muted); }
+  .related-soon { font-style: italic; opacity: 0.6; }
+  .faq-list { margin-top: clamp(40px, 6vw, 80px); border-top: 1px solid var(--color-border, #e0ddd8); }
+  .faq-item { border-bottom: 1px solid var(--color-border, #e0ddd8); }
+  .faq-question { display: flex; justify-content: space-between; align-items: center; padding-block: 24px; font-size: clamp(13px, 1.3vw, 15px); font-weight: 500; letter-spacing: 0.04em; cursor: pointer; list-style: none; gap: 24px; }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-icon { font-size: 20px; font-weight: 300; flex-shrink: 0; transition: transform 0.3s ease; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+  .faq-answer { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.8; color: var(--muted); padding-bottom: 24px; max-width: 64ch; }
+  .section-cta { background: var(--color-ink, #0d0d0d); color: var(--color-paper, #f5f3ef); }
+  .cta-inner { max-width: 640px; }
+  .section-cta .eyebrow, .section-cta .num { color: rgba(245,243,239,0.4); }
+  .section-cta .dash { background: rgba(245,243,239,0.2); }
+  .section-cta h2 { color: var(--color-paper, #f5f3ef); margin-bottom: 24px; }
+  .section-cta h2 em { color: rgba(245,243,239,0.4); }
+  .section-cta p { font-size: clamp(14px, 1.3vw, 16px); line-height: 1.7; color: rgba(245,243,239,0.6); margin-bottom: 32px; max-width: 52ch; }
+  .cta-btn { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--color-paper, #f5f3ef); color: var(--color-ink, #0d0d0d); padding: 16px 28px; transition: opacity 0.3s ease; margin-bottom: 20px; }
+  .cta-btn:hover { opacity: 0.85; }
+  @media (max-width: 900px) {
+    .hero { min-height: auto; padding-top: 140px; }
+    .two-col { grid-template-columns: 1fr; }
+    .problems-grid { grid-template-columns: 1fr; }
+    .work-grid { grid-template-columns: 1fr; }
+    .work-item:nth-child(2) { margin-top: 0; }
+    .process-step { grid-template-columns: 48px 1fr; gap: 20px; }
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
