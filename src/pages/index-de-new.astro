@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/HeroSection.astro";
+import StudioSection from "../components/StudioSection.astro";
+import WorkSection from "../components/WorkSection.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import IndustriesSection from "../components/IndustriesSection.astro";
+import ContentSystemsSection from "../components/ContentSystemsSection.astro";
+import ApproachSection from "../components/ApproachSection.astro";
+import ProcessSection from "../components/ProcessSection.astro";
+import AiVisibilitySection from "../components/AiVisibilitySection.astro";
+import FaqSection from "../components/FaqSection.astro";
+import ContactSection from "../components/ContactSection.astro";
+const lang = "de";
+---
+<BaseLayout
+  title="Greyform Studio — Websites für Interior-, Möbel- und Architekturmarken | Berlin"
+  description="Greyform ist ein digitales Studio aus Berlin. Wir entwickeln Websites, Content-Systeme und visuelle Identitäten für Interior-, Möbel-, Architektur- und Lifestyle-Marken."
+  lang={lang}
+>
+  <HeroSection lang={lang} />
+  <StudioSection lang={lang} />
+  <WorkSection lang={lang} />
+  <ServicesSection lang={lang} />
+  <IndustriesSection lang={lang} />
+  <ContentSystemsSection lang={lang} />
+  <ApproachSection lang={lang} />
+  <ProcessSection lang={lang} />
+  <AiVisibilitySection lang={lang} />
+  <FaqSection lang={lang} />
+  <ContactSection lang={lang} />
+</BaseLayout>
