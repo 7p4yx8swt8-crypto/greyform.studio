@@ -63,11 +63,20 @@
     "p2": "We build flexible content systems that allow teams to update projects, publish articles and manage content independently — without relying on developers for every change."
   },
   "aiVisibility": {
-    "eyebrow": "Visibility",
-    "title1": "Built for Search.",
+    "eyebrow": "Search & Visibility",
+    "title1": "Built for search.",
     "title2": "Ready for AI.",
-    "p1": "Modern websites need to work beyond traditional search engines.",
-    "p2": "Greyform structures content, services and case studies so that both people and AI systems can clearly understand what a brand does and who it serves."
+    "p1": "Search behaviour is changing. The way buyers, interior designers, architects and trade specifiers discover brands has shifted — and continues to shift.",
+    "p2": "Increasingly, professionals use AI systems to research categories, compare suppliers, find inspiration and evaluate options before making contact. A brand that is not clearly structured for machine-readable content is invisible to these systems — regardless of how good its products are.",
+    "p3": "Greyform structures content, service pages, case studies and journal articles so that both search engines and AI systems can clearly understand what a brand makes, who it is for and why it matters. This is not a technical afterthought. It is a fundamental part of how we design digital systems.",
+    "pillar1Label": "Semantic Structure",
+    "pillar1Value": "Clean HTML, correct heading hierarchy, entity clarity",
+    "pillar2Label": "Structured Data",
+    "pillar2Value": "Schema.org markup for products, services, FAQs and brand identity",
+    "pillar3Label": "Content Depth",
+    "pillar3Value": "Long-form pages that answer real questions from real audiences",
+    "pillar4Label": "AI Readability",
+    "pillar4Value": "Content structured for ChatGPT, Gemini, Perplexity and Google AI Overviews"
   },
   "faq": {
     "eyebrow": "FAQ",

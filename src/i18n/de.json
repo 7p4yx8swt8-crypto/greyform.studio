@@ -63,11 +63,20 @@
     "p2": "Deshalb entwickeln wir flexible Content-Systeme, mit denen Projekte, Inhalte, Teamseiten und Journal-Beiträge eigenständig gepflegt werden können — ohne für jede Änderung auf externe Unterstützung angewiesen zu sein."
   },
   "aiVisibility": {
-    "eyebrow": "Sichtbarkeit",
-    "title1": "Für Suchmaschinen.",
+    "eyebrow": "Suche & Sichtbarkeit",
+    "title1": "Für Suchmaschinen gebaut.",
     "title2": "Bereit für KI.",
-    "p1": "Moderne Websites müssen über klassische Suchmaschinen hinaus funktionieren.",
-    "p2": "Greyform strukturiert Inhalte, Leistungen und Case Studies so, dass sowohl Menschen als auch KI-Systeme klar verstehen, was eine Marke macht und für wen sie arbeitet."
+    "p1": "Das Suchverhalten ändert sich. Die Art, wie Käufer, Innenarchitekten, Architekten und Einkäufer Marken entdecken, hat sich verschoben — und verschiebt sich weiter.",
+    "p2": "Zunehmend nutzen Fachleute KI-Systeme, um Kategorien zu recherchieren, Anbieter zu vergleichen, Inspiration zu finden und Optionen zu bewerten, bevor sie Kontakt aufnehmen. Eine Marke, die nicht klar für maschinenlesbare Inhalte strukturiert ist, ist für diese Systeme unsichtbar — unabhängig davon, wie gut ihre Produkte sind.",
+    "p3": "Greyform strukturiert Inhalte, Leistungsseiten, Case Studies und Journal-Beiträge so, dass sowohl Suchmaschinen als auch KI-Systeme klar verstehen, was eine Marke macht, für wen sie ist und warum sie relevant ist. Das ist kein technischer Nachgedanke — es ist ein grundlegender Teil der Gestaltung digitaler Systeme.",
+    "pillar1Label": "Semantische Struktur",
+    "pillar1Value": "Sauberes HTML, korrekte Überschriftenhierarchie, Entity-Klarheit",
+    "pillar2Label": "Strukturierte Daten",
+    "pillar2Value": "Schema.org-Markup für Produkte, Leistungen, FAQs und Markenidentität",
+    "pillar3Label": "Inhaltliche Tiefe",
+    "pillar3Value": "Langform-Seiten, die echte Fragen echter Zielgruppen beantworten",
+    "pillar4Label": "KI-Lesbarkeit",
+    "pillar4Value": "Inhalte strukturiert für ChatGPT, Gemini, Perplexity und Google AI Overviews"
   },
   "faq": {
     "eyebrow": "FAQ",
