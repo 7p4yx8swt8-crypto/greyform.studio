@@ -1,0 +1,92 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+import SectionHead from "./SectionHead.astro";
+export interface Props {
+  lang?: Lang;
+}
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+---
+<section id="process">
+  <div class="wrap">
+    <SectionHead
+      num="05"
+      eyebrow={t("process.eyebrow")}
+      title1={t("process.title1")}
+      title2={t("process.title2")}
+    />
+    <div class="process-steps">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <div class="step-content">
+          <h3>{t("process.s1Heading")}</h3>
+          <p>{t("process.s1Body")}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <div class="step-content">
+          <h3>{t("process.s2Heading")}</h3>
+          <p>{t("process.s2Body")}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <div class="step-content">
+          <h3>{t("process.s3Heading")}</h3>
+          <p>{t("process.s3Body")}</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <div class="step-content">
+          <h3>{t("process.s4Heading")}</h3>
+          <p>{t("process.s4Body")}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    padding-block: var(--section-y);
+  }
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(13, 13, 13, 0.12);
+  }
+  .process-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 40px;
+    padding-block: clamp(28px, 4vw, 48px);
+    border-bottom: 1px solid rgba(13, 13, 13, 0.12);
+    align-items: start;
+  }
+  .step-num {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    padding-top: 4px;
+  }
+  .step-content h3 {
+    font-size: clamp(15px, 1.4vw, 18px);
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+  .step-content p {
+    font-size: clamp(13px, 1.2vw, 15px);
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 58ch;
+  }
+  @media (max-width: 700px) {
+    .process-step {
+      grid-template-columns: 48px 1fr;
+      gap: 20px;
+    }
+  }
+</style>
