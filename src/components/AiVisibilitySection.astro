@@ -19,11 +19,29 @@ const t = useTranslations(lang);
       <div class="ai-body">
         <p class="ai-lead">{t("aiVisibility.p1")}</p>
         <p>{t("aiVisibility.p2")}</p>
+        <p>{t("aiVisibility.p3")}</p>
+        <div class="ai-pillars">
+          <div class="pillar">
+            <span class="pillar-label">{t("aiVisibility.pillar1Label")}</span>
+            <span class="pillar-value">{t("aiVisibility.pillar1Value")}</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">{t("aiVisibility.pillar2Label")}</span>
+            <span class="pillar-value">{t("aiVisibility.pillar2Value")}</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">{t("aiVisibility.pillar3Label")}</span>
+            <span class="pillar-value">{t("aiVisibility.pillar3Value")}</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">{t("aiVisibility.pillar4Label")}</span>
+            <span class="pillar-value">{t("aiVisibility.pillar4Value")}</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 <style>
   section {
     padding-block: var(--section-y);
@@ -49,6 +67,31 @@ const t = useTranslations(lang);
     font-size: clamp(13px, 1.2vw, 15px);
     line-height: 1.8;
     color: rgba(245, 243, 239, 0.6);
+    margin-bottom: 16px;
+  }
+  .ai-pillars {
+    margin-top: clamp(32px, 5vw, 56px);
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(245, 243, 239, 0.12);
+  }
+  .pillar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-block: 18px;
+    border-bottom: 1px solid rgba(245, 243, 239, 0.12);
+  }
+  .pillar-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245, 243, 239, 0.4);
+  }
+  .pillar-value {
+    font-size: clamp(12px, 1.1vw, 14px);
+    line-height: 1.5;
+    color: var(--color-paper, #f5f3ef);
   }
   @media (max-width: 800px) {
     .ai-inner {
