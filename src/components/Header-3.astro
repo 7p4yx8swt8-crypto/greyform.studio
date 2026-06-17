@@ -1,0 +1,339 @@
+---
+import { useTranslations, type Lang } from "../i18n/ui";
+import Logo from "./Logo.astro";
+
+export interface Props {
+  lang?: Lang;
+}
+
+const { lang = "de" } = Astro.props;
+const t = useTranslations(lang);
+
+const path = Astro.url.pathname;
+const isEnPath = path === "/en" || path.startsWith("/en/");
+const dePath = isEnPath ? path.slice(3) || "/" : path;
+const enPath = isEnPath ? path : path === "/" ? "/en" : `/en${path}`;
+
+const expertiseItems = lang === "de"
+  ? [
+      { label: "Architekturbüros", href: "/architecture-studio-websites" },
+      { label: "Interior-Marken", href: "/interior-brand-websites" },
+      { label: "Lifestyle-Marken", href: "/lifestyle-brand-websites" },
+      { label: "Möbelmarken", href: "/furniture-brand-websites" },
+    ]
+  : [
+      { label: "Architecture Studios", href: "/en/architecture-studio-websites" },
+      { label: "Interior Brands", href: "/en/interior-brand-websites" },
+      { label: "Lifestyle Brands", href: "/en/lifestyle-brand-websites" },
+      { label: "Furniture Brands", href: "/en/furniture-brand-websites" },
+    ];
+---
+
+<nav class="nav" id="nav">
+  <a href={lang === "de" ? "/" : "/en"} class="brand" aria-label="Studio Greyform">
+    <Logo />
+  </a>
+
+  <div class="nav-links" id="navLinks">
+    <a href={lang === "de" ? "/#approach" : "/en/#approach"}>{t("nav.studio")}</a>
+    <a href={lang === "de" ? "/#services" : "/en/#services"}>{t("nav.services")}</a>
+    <a href={lang === "de" ? "/#process" : "/en/#process"}>{t("nav.process")}</a>
+    <a href={lang === "de" ? "/#work" : "/en/#work"}>{t("nav.work")}</a>
+
+    <!-- Branchen Dropdown -->
+    <div class="nav-dropdown" id="expertiseDropdown">
+      <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+        {lang === "de" ? "Branchen" : "Expertise"}
+        <span class="dropdown-arrow" aria-hidden="true"></span>
+      </button>
+      <div class="nav-dropdown-menu" role="menu">
+        {expertiseItems.map((item) => (
+          <a href={item.href} role="menuitem">{item.label}</a>
+        ))}
+      </div>
+    </div>
+
+    <a href={lang === "de" ? "/journal" : "/en/journal"}>{t("nav.journal")}</a>
+    <a href={lang === "de" ? "/#contact" : "/en/#contact"}>{t("nav.contact")}</a>
+  </div>
+
+  <div class="lang">
+    <a
+      href={dePath}
+      class:list={{ active: lang === "de" }}
+      aria-current={lang === "de" ? "true" : undefined}
+    >
+      DE
+    </a>
+    <span class="sep">/</span>
+    <a
+      href={enPath}
+      class:list={{ active: lang === "en" }}
+      aria-current={lang === "en" ? "true" : undefined}
+    >
+      EN
+    </a>
+  </div>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    padding: 24px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition:
+      background 0.4s var(--ease),
+      backdrop-filter 0.4s var(--ease),
+      border-color 0.4s var(--ease);
+    border-bottom: 1px solid transparent;
+  }
+  .nav.is-scrolled {
+    background: rgba(245, 243, 239, 0.82);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    border-bottom-color: rgba(13, 13, 13, 0.08);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-black);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  }
+  .nav-links > a {
+    position: relative;
+  }
+  .nav-links > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease);
+  }
+  .nav-links > a:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* ── DROPDOWN ── */
+  .nav-dropdown {
+    position: relative;
+  }
+  .nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+  }
+  .dropdown-arrow {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.3s var(--ease);
+  }
+  .nav-dropdown.is-open .dropdown-arrow {
+    transform: rotate(-135deg) translateY(-2px);
+  }
+  .nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-paper, #f5f3ef);
+    border: 1px solid rgba(13, 13, 13, 0.08);
+    min-width: 200px;
+    padding: 8px 0;
+    z-index: 200;
+  }
+  .nav-dropdown.is-open .nav-dropdown-menu {
+    display: block;
+  }
+  .nav-dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    transition: color 0.2s var(--ease);
+    white-space: nowrap;
+  }
+  .nav-dropdown-menu a:hover {
+    color: var(--color-black);
+  }
+
+  /* ── LANG ── */
+  .lang {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .lang a {
+    padding: 4px 6px;
+    transition: color 0.3s var(--ease);
+  }
+  .lang .active {
+    color: var(--color-black);
+    font-weight: 500;
+  }
+  .lang .sep {
+    opacity: 0.5;
+  }
+
+  /* ── MOBILE ── */
+  .menu-toggle {
+    display: none;
+    width: 28px;
+    height: 18px;
+    position: relative;
+  }
+  .menu-toggle span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--color-black);
+    transition:
+      transform 0.3s var(--ease),
+      opacity 0.3s var(--ease);
+  }
+  .menu-toggle span:nth-child(1) { top: 0; }
+  .menu-toggle span:nth-child(2) { top: 50%; }
+  .menu-toggle span:nth-child(3) { bottom: 0; }
+
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--color-white);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      font-size: 22px;
+      letter-spacing: -0.005em;
+    }
+    .nav-links.is-open {
+      display: flex;
+    }
+    .menu-toggle {
+      display: block;
+      z-index: 200;
+    }
+    .menu-toggle.is-open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.is-open span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.is-open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-dropdown {
+      text-align: center;
+    }
+    .nav-dropdown-trigger {
+      font-size: 22px;
+      letter-spacing: -0.005em;
+      justify-content: center;
+    }
+    .nav-dropdown-menu {
+      position: static;
+      transform: none;
+      border: none;
+      background: none;
+      padding: 8px 0 0;
+      display: none;
+    }
+    .nav-dropdown.is-open .nav-dropdown-menu {
+      display: block;
+    }
+    .nav-dropdown-menu a {
+      font-size: 15px;
+      text-align: center;
+      color: var(--muted);
+    }
+  }
+</style>
+
+<script>
+  // Scroll state
+  const nav = document.getElementById("nav");
+  const onScroll = () =>
+    nav?.classList.toggle("is-scrolled", window.scrollY > 24);
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Mobile menu toggle
+  const toggle = document.getElementById("menuToggle");
+  const links = document.getElementById("navLinks");
+  toggle?.addEventListener("click", () => {
+    toggle.classList.toggle("is-open");
+    links?.classList.toggle("is-open");
+  });
+  links?.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      toggle?.classList.remove("is-open");
+      links?.classList.remove("is-open");
+    })
+  );
+
+  // Dropdown toggle
+  const dropdown = document.getElementById("expertiseDropdown");
+  const trigger = dropdown?.querySelector(".nav-dropdown-trigger");
+  trigger?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown?.classList.toggle("is-open");
+    trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener("click", () => {
+    dropdown?.classList.remove("is-open");
+    trigger?.setAttribute("aria-expanded", "false");
+  });
+
+  // Close dropdown when a link is clicked
+  dropdown?.querySelectorAll("a").forEach((a) =>
+    a.addEventListener("click", () => {
+      dropdown?.classList.remove("is-open");
+      trigger?.setAttribute("aria-expanded", "false");
+      toggle?.classList.remove("is-open");
+      links?.classList.remove("is-open");
+    })
+  );
+</script>
