@@ -1,0 +1,149 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("journal", ({ data }) => data.lang === "de");
+  return entries.map((entry) => ({
+    params: { slug: entry.id.replace("-de", "") },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const data = entry.data;
+---
+
+<BaseLayout
+  title={`${data.title} — Greyform Studio Journal`}
+  description={data.description}
+  lang="de"
+>
+  <article class="journal-article">
+    <header class="article-header">
+      <div class="wrap">
+        <div class="article-meta">
+          <a href="/journal" class="back-link">← Journal</a>
+          <span class="article-date">
+            {new Date(data.date).toLocaleDateString("de-DE", { year: "numeric", month: "long", day: "numeric" })}
+          </span>
+        </div>
+        <h1>{data.title}</h1>
+        <p class="article-desc">{data.description}</p>
+        {data.author && <span class="article-author">{data.author}</span>}
+      </div>
+    </header>
+
+    <div class="article-body">
+      <div class="wrap">
+        <div class="prose">
+          <Content />
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-header {
+    padding-top: clamp(120px, 14vw, 180px);
+    padding-bottom: clamp(48px, 6vw, 80px);
+    border-bottom: 0.5px solid rgba(13,13,13,0.12);
+  }
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(32px, 5vw, 56px);
+  }
+  .back-link {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    transition: color 0.3s var(--ease);
+  }
+  .back-link:hover { color: var(--color-black); }
+  .article-date {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h1 {
+    font-size: clamp(32px, 5.5vw, 80px);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    max-width: 18ch;
+    margin-bottom: 24px;
+  }
+  .article-desc {
+    font-size: clamp(16px, 1.6vw, 20px);
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 52ch;
+    margin-bottom: 20px;
+  }
+  .article-author {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .article-body {
+    padding-block: clamp(48px, 8vw, 96px);
+  }
+  .prose {
+    max-width: 68ch;
+  }
+  .prose :global(h2) {
+    font-size: clamp(20px, 2.5vw, 32px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-top: 2.5em;
+    margin-bottom: 0.8em;
+  }
+  .prose :global(h3) {
+    font-size: clamp(16px, 1.8vw, 22px);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+  }
+  .prose :global(p) {
+    font-size: clamp(15px, 1.3vw, 17px);
+    line-height: 1.75;
+    color: rgba(13,13,13,0.8);
+    margin-bottom: 1.4em;
+  }
+  .prose :global(a) {
+    color: var(--color-black);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose :global(ul), .prose :global(ol) {
+    padding-left: 1.5em;
+    margin-bottom: 1.4em;
+  }
+  .prose :global(li) {
+    font-size: clamp(15px, 1.3vw, 17px);
+    line-height: 1.75;
+    color: rgba(13,13,13,0.8);
+    margin-bottom: 0.4em;
+  }
+  .prose :global(blockquote) {
+    border-left: 1px solid var(--color-black);
+    padding-left: 24px;
+    margin: 2em 0;
+    font-size: clamp(17px, 1.6vw, 22px);
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(13,13,13,0.7);
+  }
+  .prose :global(hr) {
+    border: none;
+    border-top: 0.5px solid rgba(13,13,13,0.15);
+    margin: 3em 0;
+  }
+</style>
