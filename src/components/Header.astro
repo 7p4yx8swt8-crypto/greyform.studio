@@ -35,10 +35,12 @@ const expertiseItems = lang === "de"
   </a>
 
   <div class="nav-links" id="navLinks">
-    <a href={lang === "de" ? "/#work" : "/en/#work"}>{t("nav.work")}</a>
+    <a href={lang === "de" ? "/#approach" : "/en/#approach"}>{t("nav.studio")}</a>
     <a href={lang === "de" ? "/#services" : "/en/#services"}>{t("nav.services")}</a>
+    <a href={lang === "de" ? "/#process" : "/en/#process"}>{t("nav.process")}</a>
+    <a href={lang === "de" ? "/#work" : "/en/#work"}>{t("nav.work")}</a>
 
-    <!-- Expertise Dropdown -->
+    <!-- Branchen Dropdown -->
     <div class="nav-dropdown" id="expertiseDropdown">
       <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
         {lang === "de" ? "Branchen" : "Expertise"}
@@ -51,8 +53,7 @@ const expertiseItems = lang === "de"
       </div>
     </div>
 
-    <a href={lang === "de" ? "/#process" : "/en/#process"}>{t("nav.process")}</a>
-    <a href={lang === "de" ? "/#approach" : "/en/#approach"}>{t("nav.studio")}</a>
+    <a href={lang === "de" ? "/journal" : "/en/journal"}>{t("nav.journal")}</a>
     <a href={lang === "de" ? "/#contact" : "/en/#contact"}>{t("nav.contact")}</a>
   </div>
 
