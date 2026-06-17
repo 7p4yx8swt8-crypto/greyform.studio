@@ -86,6 +86,19 @@
     "q7": "Do we even need a website anymore? Isn't Instagram enough?",
     "a7": "Instagram shows what you do. A website explains who it is for and why — with the depth that justifies a buying decision. Anyone seriously considering working with you will search for you online. They will not open Instagram. There is also the question of ownership: Instagram belongs to Meta. Reach, algorithm, account — all outside your control. The website belongs to you. And the decisive difference going forward: when someone asks ChatGPT which studio designs websites for furniture brands in Berlin, the structure of your website determines whether your name comes up. Instagram does not count at all. Instagram brings people to the door. The website opens it."
   },
+  "process": {
+    "eyebrow": "Process",
+    "title1": "How a project",
+    "title2": "takes shape.",
+    "s1Heading": "Brief & Discovery",
+    "s1Body": "We begin with a focused brief — your brand, your audiences, your goals. No lengthy discovery phases or expensive strategy documents. A clear conversation, a shared understanding, a defined scope.",
+    "s2Heading": "Design",
+    "s2Body": "We design the full visual system — typography, layout, colour, image treatment, component library — before writing a line of code. You review, respond and we refine. Typically two rounds of revisions before sign-off.",
+    "s3Heading": "Build",
+    "s3Body": "We build the site with the same attention to detail as the design. Performance, semantic HTML, SEO structure and content system architecture are all considered as core deliverables, not optional extras.",
+    "s4Heading": "Launch & Handover",
+    "s4Body": "We handle the technical launch — domain configuration, hosting setup, analytics and sitemap submission. We document the content system clearly and hand everything over so your team can work independently from day one."
+  },
   "approach": {
     "eyebrow": "Approach",
     "title1": "Few projects.",

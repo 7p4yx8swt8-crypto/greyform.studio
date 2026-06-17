@@ -8,7 +8,7 @@
   "hero": {
     "tag": "Digitales Studio · Berlin",
     "headline1": "Digitale Auftritte",
-    "headline2": "für Marken mit Haltung.",
+    "headline2": "für Design-Marken.",
     "headline3": "",
     "sub": "Greyform entwickelt Websites, digitale Plattformen und visuelle Systeme für Interior-, Möbel-, Architektur- und Lifestyle-Marken."
   },
@@ -85,6 +85,19 @@
     "a6": "Das ist ein zentrales Ziel. Wir entwickeln Content-Systeme, die eigenständig bedienbar sind — ohne technisches Vorwissen für Redakteure und ohne Entwickler für jede inhaltliche Änderung.",
     "q7": "Brauchen wir überhaupt noch eine Website? Reicht nicht Instagram?",
     "a7": "Instagram zeigt, was Sie machen. Eine Website erklärt, für wen und warum — mit der Tiefe, die einen Kaufentscheid rechtfertigt. Wer ernsthaft überlegt, ob er mit Ihnen arbeitet, googelt Sie. Er öffnet nicht Instagram. Dazu kommt: Instagram gehört Meta. Reichweite, Algorithmus, Account — alles außerhalb Ihrer Kontrolle. Die Website gehört Ihnen. Und der entscheidende Unterschied für die Zukunft: Wenn jemand ChatGPT fragt, welches Studio Websites für Möbelmarken in Berlin gestaltet, entscheidet die Struktur Ihrer Website darüber, ob Ihr Name fällt. Instagram zählt da gar nicht. Instagram bringt Menschen zur Tür. Die Website öffnet sie."
+  },
+  "process": {
+    "eyebrow": "Prozess",
+    "title1": "Wie ein Projekt",
+    "title2": "Form annimmt.",
+    "s1Heading": "Briefing & Discovery",
+    "s1Body": "Wir beginnen mit einem fokussierten Briefing — Ihre Marke, Ihre Zielgruppen, Ihre Ziele. Keine langen Discovery-Phasen oder teure Strategiedokumente. Ein klares Gespräch, ein gemeinsames Verständnis, ein definierter Umfang.",
+    "s2Heading": "Design",
+    "s2Body": "Wir gestalten das vollständige visuelle System — Typografie, Layout, Farbe, Bildbehandlung, Komponentenbibliothek — bevor wir eine Zeile Code schreiben. Sie reviewen, reagieren und wir verfeinern. In der Regel zwei Überarbeitungsrunden bis zur Freigabe.",
+    "s3Heading": "Entwicklung",
+    "s3Body": "Wir bauen die Site mit derselben Sorgfalt wie das Design. Performance, semantisches HTML, SEO-Struktur und Content-System-Architektur werden als Kernleistungen behandelt, nicht als optionale Extras.",
+    "s4Heading": "Launch & Übergabe",
+    "s4Body": "Wir übernehmen den technischen Launch — Domain-Konfiguration, Hosting-Setup, Analytics und Sitemap-Einreichung. Wir dokumentieren das Content-System klar und übergeben alles, damit Ihr Team von Tag eins eigenständig arbeiten kann."
   },
   "approach": {
     "eyebrow": "Arbeitsweise",
