@@ -296,11 +296,24 @@ height: 100dvh;
   const toggle = document.getElementById("menuToggle");
   const links = document.getElementById("navLinks");
 
-  toggle?.addEventListener("click", () => {
+ let scrollY = 0;
+toggle?.addEventListener("click", () => {
     const opening = !links?.classList.contains("is-open");
     toggle.classList.toggle("is-open");
     links?.classList.toggle("is-open");
-    document.body.style.overflow = opening ? "hidden" : "";
+    if (opening) {
+      scrollY = window.scrollY;
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
+    }
   });
 
   links?.querySelectorAll("a").forEach((a) =>
