@@ -1,6 +1,27 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+const lang = "en";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Websites for Independent Sales Representatives",
+  "provider": {
+    "@type": "ProfessionalService",
+    "name": "Studio Greyform",
+    "url": "https://greyform.studio"
+  },
+  "description": "Greyform builds professional websites, brand presentations and digital systems for independent sales representatives in the furniture, interior and design industry.",
+  "areaServed": "Worldwide",
+  "serviceType": ["Website Design", "Brand Presentation", "Content Systems", "SEO"],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Independent sales representatives, sales agencies, commercial agents in the furniture and design industry"
+  },
+  "knowsAbout": ["Sales representative websites", "Brand presentation", "Multi-brand structure", "B2B communication", "Design industry", "Representative portfolio"]
+};
+
 const faqs = [
   {
     q: "What types of sales representatives does Greyform work with?",
@@ -23,8 +44,8 @@ const faqs = [
     a: "We begin with a conversation about your portfolio, your target audience and your goals. Then we develop the concept, design and structure before a single line of code is written. Implementation follows with clear milestones — no endless feedback loops."
   },
   {
-    q: "Does Greyform work with smaller budgets?",
-    a: "We are not a mass-market service provider, but we are also not a large agency. Our projects are tailored to independent professionals — focused, clear in scope, without hidden costs. Get in touch: we will find the right framework together."
+    q: "Do you work with sales representatives outside Germany?",
+    a: "Yes. Greyform works internationally. The studio is based in Berlin and handles projects in German and English. We have worked with companies across Europe and are open to projects worldwide."
   }
 ];
 ---
@@ -32,34 +53,40 @@ const faqs = [
 <BaseLayout
   title="Websites for Independent Sales Representatives — Greyform Studio Berlin"
   description="Greyform builds professional websites and digital presences for independent sales representatives in the furniture, interior and design industry. More credibility, more qualified enquiries."
-  lang="en"
+  lang={lang}
 >
 
-  <!-- 01. HERO -->
-  <section class="section-hero">
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- 1. HERO -->
+  <header class="hero" id="top">
     <div class="wrap">
-      <div class="eyebrow-row">
-        <span class="num">01</span>
-        <span class="dash"></span>
-        <span class="eyebrow">Sales Representatives</span>
+      <div class="hero-tag">
+        <span class="dot"></span>
+        <span>Digital Presence · Sales Representatives</span>
       </div>
       <h1>
-        Digital presence for<br />
+        <span>Digital presence for</span><br />
         <em>independent sales representatives.</em>
       </h1>
-      <p class="hero-sub">
-        Greyform builds professional websites, brand presentations and digital systems for independent sales agents in the furniture, interior and design industry — so you appear online as convincingly as you do in person.
-      </p>
-      <a href="#contact" class="btn">Discuss your project →</a>
+      <div class="hero-foot">
+        <p class="hero-sub">Greyform builds professional websites, brand presentations and digital systems for independent sales agents in the furniture, interior and design industry — so you appear online as convincingly as you do in person.</p>
+        <div class="hero-meta">
+          <div class="row">
+            <span>Berlin</span>
+            <span>Worldwide</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <!-- 02. WHY SALES REPS NEED DIFFERENT WEBSITES -->
-  <section class="section-problems">
+  <!-- 2. WHY SALES REPS NEED DIFFERENT WEBSITES -->
+  <section class="section-why">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
-          <span class="num">02</span>
+          <span class="num">01</span>
           <span class="dash"></span>
           <span class="eyebrow">The Starting Point</span>
         </div>
@@ -68,33 +95,50 @@ const faqs = [
           <em>need different websites.</em>
         </h2>
       </div>
-      <div class="problems-grid">
-        <div class="problem-item">
-          <h3>No professional online presence</h3>
-          <p>Many sales representatives are reachable via LinkedIn or an outdated company page — but not truly present. Potential clients and partners form their first impression online. Anyone who fails to convince there loses credibility before the first conversation.</p>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">A sales representative website is not a digital business card. It is a tool that builds trust — before the first conversation takes place.</p>
+          <p>Sales representatives operate in a category where personal relationships matter — but the first impression today is formed online. Buyers, interior architects and project managers research your agency before they call. What they find determines whether they call at all.</p>
+          <p>Most sales representatives have no website — or one that does not reflect their actual quality. A LinkedIn page, an outdated presence, a PDF portfolio: that is not a digital presence. That is a missed opportunity.</p>
+          <p>Greyform develops digital systems for sales representatives that function as professional platforms — multiple brands presented clearly, target audiences addressed directly, independently manageable after launch.</p>
         </div>
-        <div class="problem-item">
-          <h3>Brands are not shown properly</h3>
-          <p>You represent strong brands — but your website does not show that. Product lines, catalogues, collections: all of this needs a clear, organised digital stage. Not a list, but a presentation.</p>
-        </div>
-        <div class="problem-item">
-          <h3>Too few qualified enquiries</h3>
-          <p>New contacts often come only through personal networks or trade fairs. A professional website keeps working in the background — bringing enquiries from buyers, architects and planners who are actively searching.</p>
-        </div>
-        <div class="problem-item">
-          <h3>Invisible online</h3>
-          <p>When a buyer searches for a sales representative for a specific brand or product category — do you appear? Google and AI systems favour structured, clear content. Without this foundation, you are invisible.</p>
+        <div class="col-stat">
+          <div class="stat-block">
+            <div class="stat-item">
+              <span class="stat-value">3–5</span>
+              <span class="stat-label">Weeks from briefing to launch</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Independently manageable after launch</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">DE / EN</span>
+              <span class="stat-label">Bilingual as standard</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 03. WHY GREYFORM -->
+  <!-- STATEMENT 1 -->
+  <section class="section-statement">
+    <div class="wrap">
+      <h2 class="statement-text">
+        The first impression<br />
+        is formed online today.<br />
+        <em>Before anyone calls.</em>
+      </h2>
+    </div>
+  </section>
+
+  <!-- 3. WHY GREYFORM -->
   <section class="section-credibility">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
-          <span class="num">03</span>
+          <span class="num">02</span>
           <span class="dash"></span>
           <span class="eyebrow">Industry Understanding</span>
         </div>
@@ -103,32 +147,134 @@ const faqs = [
           <em>sales representatives from the inside.</em>
         </h2>
       </div>
-      <div class="credibility-content">
-        <p class="credibility-lead">Greyform did not arrive from outside the industry. The studio's roots lie in the furniture, interior and design world. We understand how the sector works: showrooms, trade fairs, sales territories, brand relationships, procurement cycles.</p>
-        <div class="credibility-points">
-          <div class="credibility-point">
-            <span class="point-label">Multi-brand structure</span>
-            <p>We develop pages that present multiple brands simultaneously — clearly and in an organised way, without confusion or visual noise.</p>
-          </div>
-          <div class="credibility-point">
-            <span class="point-label">Audience understood</span>
-            <p>Your visitors are buyers, interior architects, planners and project managers. We know how to address and persuade them.</p>
-          </div>
-          <div class="credibility-point">
-            <span class="point-label">No agency overhead</span>
-            <p>Greyform is a small, focused studio. You work directly with the people designing and building your website.</p>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Greyform does not approach sales representatives as an external agency learning a new category. The studio brings direct experience from the furniture and interior industry.</p>
+          <p>We understand how sales representatives work — territories, brand relationships, showrooms, trade fairs, procurement cycles, B2B communication. We understand the difference between a product line and a full range, between a trade partner and a contract client.</p>
+          <p>We understand that a sales representative website must serve multiple audiences: the buyer evaluating a new supplier, the interior architect specifying a brand, the manufacturer looking for a new agent. Each audience needs something different — a well-structured system can serve all of them.</p>
+        </div>
+        <div class="col-credibility">
+          <div class="credibility-list">
+            <div class="cred-item">
+              <span class="cred-label">Multi-brand structure</span>
+              <span class="cred-text">Multiple brands presented simultaneously — clearly and in an organised way, with dedicated space for each line</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">Sales territory</span>
+              <span class="cred-text">Clear communication of region, distribution channels and specialisations — so the right contacts find you</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">B2B communication</span>
+              <span class="cred-text">Language and structure for buyers, architects and project managers — not for the end consumer</span>
+            </div>
+            <div class="cred-item">
+              <span class="cred-label">Trade fairs & showrooms</span>
+              <span class="cred-text">Digital extension of trade fair appearances, showroom appointments and personal presentations</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 04. WHAT WE BUILD -->
-  <section class="section-services-detail">
+  <!-- 4. COMMON PROBLEMS -->
+  <section class="section-problems">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">03</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Common Problems</span>
+        </div>
+        <h2>
+          What goes wrong with<br />
+          <em>sales representative websites.</em>
+        </h2>
+      </div>
+      <div class="problems-grid">
+        <div class="problem-item">
+          <span class="problem-num">i</span>
+          <h3>No presence at all</h3>
+          <p>Many sales representatives have no website of their own. LinkedIn is not a substitute — it lacks the depth, structure and professionalism that decision-makers expect.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">ii</span>
+          <h3>Brands not visible</h3>
+          <p>Representing strong brands should show. A simple list with logos is not enough. Product lines, collections and brand worlds need space and context.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">iii</span>
+          <h3>No audience language</h3>
+          <p>Sales representative websites often speak to no one directly. Buyers, architects and planners have different needs — a good site addresses each of them clearly.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">iv</span>
+          <h3>Invisible online</h3>
+          <p>When someone searches for a representative for a specific brand or product category, most sales agents do not appear. Missing SEO structure costs qualified enquiries.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">v</span>
+          <h3>Not manageable</h3>
+          <p>New brand in the portfolio, new collection, new territory — if every change requires a developer, the site dates quickly and loses its value as a working tool.</p>
+        </div>
+        <div class="problem-item">
+          <span class="problem-num">vi</span>
+          <h3>Poor performance</h3>
+          <p>Slow, mobile-unoptimised pages damage the impression and the ranking. Technical quality is not a luxury — it is a basic requirement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. OUR APPROACH -->
+  <section class="section-approach">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
           <span class="num">04</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Our Approach</span>
+        </div>
+        <h2>
+          Professionally positioned.<br />
+          <em>Independently manageable.</em>
+        </h2>
+      </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Every Greyform project for sales representatives begins with one question: how do you present yourself — and how should you?</p>
+          <p>We read your portfolio, your brands, your audiences — and develop a digital system that represents this reality clearly and convincingly. No templates, no copy-paste. A site that fits your representation structure.</p>
+          <p>The result is a presence that appears professional without being inflated. Clearly structured, fast-loading, convincing on all devices. And after launch, completely in your hands — without dependency on external providers for content updates.</p>
+          <p>We work with few projects in parallel. That means clear accountability, short communication paths and a level of attention that larger agencies cannot offer.</p>
+        </div>
+        <div class="col-pillars">
+          <div class="pillar">
+            <span class="pillar-label">Approach</span>
+            <span class="pillar-value">Structure-led, not template-led</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Speed</span>
+            <span class="pillar-value">Weeks, not months</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Audience</span>
+            <span class="pillar-value">B2B · Procurement · Architecture · Planning</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">Languages</span>
+            <span class="pillar-value">DE / EN · International</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. WHAT WE BUILD -->
+  <section class="section-content-systems">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">05</span>
           <span class="dash"></span>
           <span class="eyebrow">Services</span>
         </div>
@@ -137,156 +283,133 @@ const faqs = [
           <em>sales representatives.</em>
         </h2>
       </div>
-      <div class="services-detail-grid">
-        <div class="service-detail-item">
-          <span class="service-num">—</span>
-          <div>
-            <h3>Professional web presence</h3>
-            <p>Your digital business card — clear, convincing and tailored to your market. With everything buyers and partners expect: sales territory, brand portfolio, contact.</p>
-          </div>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">A sales representative portfolio changes continuously. New brands are added. Collections change. Territories shift.</p>
+          <p>That is why we build flexible content systems — not static websites. Every Greyform project is structured so you can update your brand portfolio independently, add new product lines and manage content after launch — without relying on external support for every change.</p>
+          <p>The system is designed for the specific needs of sales representatives: structured brand profiles, product overviews, contact and enquiry areas, optional catalogue and download structures. Everything independently operable, fully documented.</p>
         </div>
-        <div class="service-detail-item">
-          <span class="service-num">—</span>
-          <div>
-            <h3>Brand and product presentation</h3>
-            <p>Each brand you represent gets the space it deserves. Structured, with visual identity, product information and links — as a foundation for acquisition conversations.</p>
-          </div>
-        </div>
-        <div class="service-detail-item">
-          <span class="service-num">—</span>
-          <div>
-            <h3>Manageable content system</h3>
-            <p>New brand in the portfolio? New collection? You update the website yourself — without a developer, without waiting. The system is designed for independent professionals.</p>
-          </div>
-        </div>
-        <div class="service-detail-item">
-          <span class="service-num">—</span>
-          <div>
-            <h3>Search engine optimisation</h3>
-            <p>Structured pages that are found on Google and in AI search systems — when buyers search for representatives for specific brands or product categories.</p>
-          </div>
+        <div class="col-features">
+          <ul class="feature-list">
+            <li>Brand and product line presentation</li>
+            <li>Sales territory and specialisations</li>
+            <li>Contact and enquiry structure</li>
+            <li>Optional catalogue and download areas</li>
+            <li>No developer required for content updates</li>
+            <li>Full documentation at handover</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 05. TYPICAL PROJECT SCOPE -->
-  <section class="section-scope">
+  <!-- STATEMENT 2 -->
+  <section class="section-statement-dark">
     <div class="wrap">
-      <div class="section-head">
-        <div class="eyebrow-row">
-          <span class="num">05</span>
-          <span class="dash"></span>
-          <span class="eyebrow">Project Scope</span>
-        </div>
-        <h2>
-          What a typical project<br />
-          <em>includes.</em>
-        </h2>
-      </div>
-      <div class="scope-list">
-        <div class="scope-item">
-          <span class="scope-check">✓</span>
-          <span>Strategy conversation about portfolio, audience and positioning</span>
-        </div>
-        <div class="scope-item">
-          <span class="scope-check">✓</span>
-          <span>Concept and page structure based on your representation portfolio</span>
-        </div>
-        <div class="scope-item">
-          <span class="scope-check">✓</span>
-          <span>Visual design — typography, colour system, imagery</span>
-        </div>
-        <div class="scope-item">
-          <span class="scope-check">✓</span>
-          <span>Development with performant, search-engine-optimised technology</span>
-        </div>
-        <div class="scope-item">
-          <span class="scope-check">✓</span>
-          <span>Integration of your brands, catalogues and product information</span>
-        </div>
-        <div class="scope-item">
-          <span class="scope-check">✓</span>
-          <span>Manageable system for independent updates</span>
-        </div>
-        <div class="scope-item">
-          <span class="scope-check">✓</span>
-          <span>Launch, domain setup, analytics, handover documentation</span>
-        </div>
-      </div>
+      <h2 class="statement-text-dark">
+        Visible to people.<br />
+        <em>Readable by AI.</em>
+      </h2>
     </div>
   </section>
 
-  <!-- 06. AI & SEARCH VISIBILITY -->
+  <!-- 7. AI & SEARCH VISIBILITY -->
   <section class="section-ai">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
           <span class="num">06</span>
           <span class="dash"></span>
-          <span class="eyebrow">Visibility</span>
+          <span class="eyebrow">Search & Visibility</span>
         </div>
         <h2>
           Built for search engines.<br />
           <em>Ready for AI.</em>
         </h2>
       </div>
-      <div class="ai-content">
-        <p class="ai-lead">When a buyer asks ChatGPT "Who represents brand X in Bavaria?" or searches Google for a sales representative for contract furniture — the structure of your website determines whether your name comes up. Or a competitor's.</p>
-        <div class="ai-points">
-          <div class="ai-point">
-            <h3>Semantic structure</h3>
-            <p>Clean HTML semantics and structured content that search engines and AI systems can correctly read and categorise.</p>
+      <div class="two-col">
+        <div class="col-text">
+          <p class="lead">Search behaviour is changing. Buyers, architects and planners increasingly use AI systems to research suppliers and find sales representatives — before making personal contact.</p>
+          <p>When a buyer asks ChatGPT "Who represents brand X in Bavaria?" or searches Google for a sales agent for contract furniture — the structure of your website determines whether your name comes up. Or a competitor's.</p>
+          <p>Greyform structures content, brand profiles and service pages so that both search engines and AI systems clearly understand who you represent, where you operate and why you are the right choice. This is not a technical afterthought — it is a fundamental part of how we design digital systems.</p>
+        </div>
+        <div class="col-pillars">
+          <div class="pillar">
+            <span class="pillar-label">Semantic structure</span>
+            <span class="pillar-value">Clean HTML, correct heading hierarchy, entity clarity</span>
           </div>
-          <div class="ai-point">
-            <h3>Industry-specific keywords</h3>
-            <p>Content that uses the terms your target audience actually searches for — brand names, product categories, regions.</p>
+          <div class="pillar">
+            <span class="pillar-label">Structured data</span>
+            <span class="pillar-value">Schema.org markup for services, FAQs and business identity</span>
           </div>
-          <div class="ai-point">
-            <h3>Fast and technically clean</h3>
-            <p>Load times, Core Web Vitals, mobile optimisation — all standard, not an add-on.</p>
+          <div class="pillar">
+            <span class="pillar-label">Industry-specific keywords</span>
+            <span class="pillar-value">Brand names, product categories, regions — as your audience actually searches</span>
+          </div>
+          <div class="pillar">
+            <span class="pillar-label">AI readability</span>
+            <span class="pillar-value">Content structured for ChatGPT, Gemini, Perplexity and Google AI Overviews</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 07. FAQ -->
-  <section class="section-faq">
+  <!-- 8. PROCESS -->
+  <section class="section-process">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
           <span class="num">07</span>
           <span class="dash"></span>
-          <span class="eyebrow">Questions</span>
+          <span class="eyebrow">Process</span>
         </div>
         <h2>
-          Questions we<br />
-          <em>hear often.</em>
+          How a project<br />
+          <em>takes shape.</em>
         </h2>
       </div>
-      <div class="faq-list">
-        {faqs.map((item, i) => (
-          <details class="faq-item">
-            <summary class="faq-q">
-              <span>{item.q}</span>
-              <span class="faq-icon">+</span>
-            </summary>
-            <p class="faq-a">{item.a}</p>
-          </details>
-        ))}
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-num">01</span>
+          <div class="step-content">
+            <h3>Briefing & Discovery</h3>
+            <p>We begin with a focused conversation — your portfolio, your audiences, your goals. No lengthy discovery phases or expensive strategy documents. A clear conversation, a shared understanding, a defined scope.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">02</span>
+          <div class="step-content">
+            <h3>Design</h3>
+            <p>We design the complete visual system — typography, layout, colour, structure — before writing a single line of code. You review, respond and we refine. Typically two rounds of revisions before sign-off.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">03</span>
+          <div class="step-content">
+            <h3>Development</h3>
+            <p>We build the site with the same care as the design. Performance, semantic HTML, SEO structure and content system architecture are treated as core deliverables, not optional extras.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">04</span>
+          <div class="step-content">
+            <h3>Launch & Handover</h3>
+            <p>We handle the technical launch — domain configuration, hosting setup, analytics and sitemap submission. We document the content system clearly and hand everything over so you can work independently from day one.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 08. RELATED -->
+  <!-- 9. RELATED INDUSTRIES -->
   <section class="section-related">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow-row">
           <span class="num">08</span>
           <span class="dash"></span>
-          <span class="eyebrow">Other Industries</span>
+          <span class="eyebrow">Related</span>
         </div>
         <h2>
           Other industries<br />
@@ -294,19 +417,19 @@ const faqs = [
         </h2>
       </div>
       <div class="related-grid">
-        <a href="/en/furniture-brand-websites" class="related-item related-link">
+        <a href="/en/furniture-brand-websites" class="related-item related-link-item">
           <span class="related-label">Furniture Brands</span>
           <p>Editorial websites and digital brand systems for furniture manufacturers and design brands.</p>
         </a>
-        <a href="/en/interior-brand-websites" class="related-item related-link">
+        <a href="/en/interior-brand-websites" class="related-item related-link-item">
           <span class="related-label">Interior Brands</span>
           <p>Websites and content systems for interior, lighting, textile and home brands.</p>
         </a>
-        <a href="/en/architecture-studio-websites" class="related-item related-link">
+        <a href="/en/architecture-studio-websites" class="related-item related-link-item">
           <span class="related-label">Architecture Studios</span>
           <p>Digital platforms for project portfolios and studio presences.</p>
         </a>
-        <a href="/en/lifestyle-brand-websites" class="related-item related-link">
+        <a href="/en/lifestyle-brand-websites" class="related-item related-link-item">
           <span class="related-label">Lifestyle Brands</span>
           <p>Premium digital experiences for design-led consumer brands.</p>
         </a>
@@ -314,85 +437,163 @@ const faqs = [
     </div>
   </section>
 
-  <!-- 09. CTA / CONTACT -->
-  <section class="section-contact" id="contact">
+  <!-- 10. FAQ -->
+  <section class="section-faq">
     <div class="wrap">
-      <div class="eyebrow-row">
-        <span class="num">09</span>
-        <span class="dash"></span>
-        <span class="eyebrow">Contact</span>
+      <div class="section-head">
+        <div class="eyebrow-row">
+          <span class="num">09</span>
+          <span class="dash"></span>
+          <span class="eyebrow">FAQ</span>
+        </div>
+        <h2>
+          Frequently asked<br />
+          <em>questions.</em>
+        </h2>
       </div>
-      <h2>
-        Whether a new portfolio,<br />
-        repositioning or your first<br />
-        <em>professional web presence —</em><br />
-        we are listening.
-      </h2>
-      <a href="mailto:hello@greyform.studio" class="btn">hello@greyform.studio →</a>
+      <div class="faq-list">
+        {faqs.map((item) => (
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>{item.q}</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <p class="faq-answer">{item.a}</p>
+          </details>
+        ))}
+      </div>
+
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": f.a
+          }
+        }))
+      })} />
+    </div>
+  </section>
+
+  <!-- 11. CTA -->
+  <section class="section-cta">
+    <div class="wrap">
+      <div class="cta-inner">
+        <div class="eyebrow-row">
+          <span class="num">10</span>
+          <span class="dash"></span>
+          <span class="eyebrow">Start a project</span>
+        </div>
+        <h2>
+          Let us talk about<br />
+          <em>your project.</em>
+        </h2>
+        <p>Whether you are building a professional web presence for the first time, repositioning your existing portfolio or preparing for new brand partnerships — we look forward to the conversation. We respond within two working days with an honest assessment and a clear next step.</p>
+        <a href="mailto:hello@greyform.studio" class="cta-btn">Start the conversation →</a>
+      </div>
     </div>
   </section>
 
 </BaseLayout>
 
 <style>
-  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 var(--space-md); }
-  .section-head { margin-bottom: var(--space-xl); }
-  .eyebrow-row { display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md); }
-  .num { font-variant-numeric: tabular-nums; opacity: .4; font-size: .85rem; }
-  .dash { flex: 0 0 2rem; height: 1px; background: currentColor; opacity: .2; }
-  .eyebrow { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; opacity: .5; }
-  .btn { display: inline-block; margin-top: var(--space-lg); padding: .75rem 1.75rem; border: 1px solid currentColor; font-size: .9rem; letter-spacing: .06em; text-decoration: none; transition: opacity .2s; }
-  .btn:hover { opacity: .6; }
-  .section-hero { padding: calc(var(--space-xl) * 2.5) 0 calc(var(--space-xl) * 2); }
-  .section-hero h1 { font-size: clamp(2.4rem, 5vw, 4.5rem); line-height: 1.05; margin-bottom: var(--space-lg); }
-  .hero-sub { max-width: 56ch; font-size: 1.05rem; line-height: 1.65; opacity: .75; }
-  .section-problems { padding: calc(var(--space-xl) * 2) 0; }
-  .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-xl) var(--space-lg); margin-top: var(--space-xl); }
-  .problem-item h3 { font-size: 1rem; margin-bottom: var(--space-sm); }
-  .problem-item p { font-size: .9rem; line-height: 1.7; opacity: .7; }
-  .section-credibility { padding: calc(var(--space-xl) * 2) 0; }
-  .credibility-lead { font-size: 1.1rem; line-height: 1.7; max-width: 64ch; margin-bottom: var(--space-xl); opacity: .85; }
-  .credibility-points { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); }
-  .credibility-point { border-top: 1px solid currentColor; padding-top: var(--space-md); opacity: .8; }
-  .point-label { display: block; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: var(--space-sm); opacity: .55; }
-  .credibility-point p { font-size: .9rem; line-height: 1.65; }
-  .section-services-detail { padding: calc(var(--space-xl) * 2) 0; }
-  .services-detail-grid { display: grid; gap: var(--space-lg); }
-  .service-detail-item { display: grid; grid-template-columns: 2rem 1fr; gap: var(--space-md); padding: var(--space-lg) 0; border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
-  .service-num { opacity: .3; padding-top: .15rem; }
-  .service-detail-item h3 { font-size: 1rem; margin-bottom: var(--space-sm); }
-  .service-detail-item p { font-size: .9rem; line-height: 1.7; opacity: .7; }
-  .section-scope { padding: calc(var(--space-xl) * 2) 0; }
-  .scope-list { display: grid; gap: var(--space-sm); margin-top: var(--space-xl); max-width: 680px; }
-  .scope-item { display: flex; align-items: baseline; gap: var(--space-md); padding: var(--space-sm) 0; border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent); font-size: .95rem; line-height: 1.6; }
-  .scope-check { opacity: .4; flex-shrink: 0; }
-  .section-ai { padding: calc(var(--space-xl) * 2) 0; }
-  .ai-lead { font-size: 1.05rem; line-height: 1.7; max-width: 64ch; margin-bottom: var(--space-xl); opacity: .85; }
-  .ai-points { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); }
-  .ai-point { border-top: 1px solid currentColor; padding-top: var(--space-md); }
-  .ai-point h3 { font-size: .95rem; margin-bottom: var(--space-sm); }
-  .ai-point p { font-size: .9rem; line-height: 1.65; opacity: .7; }
-  .section-faq { padding: calc(var(--space-xl) * 2) 0; }
-  .faq-list { max-width: 760px; }
-  .faq-item { border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
-  .faq-item:last-child { border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent); }
-  .faq-q { display: flex; justify-content: space-between; align-items: center; padding: var(--space-md) 0; cursor: pointer; font-size: .95rem; list-style: none; gap: var(--space-md); }
-  .faq-q::-webkit-details-marker { display: none; }
-  .faq-icon { flex-shrink: 0; opacity: .4; transition: transform .2s; }
+  .section-statement { padding-block: clamp(64px, 12vw, 140px); }
+  .statement-text { font-size: clamp(32px, 5.5vw, 80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; max-width: 16ch; }
+  .statement-text em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .section-statement-dark { background: var(--color-ink, #0d0d0d); padding-block: clamp(64px, 12vw, 140px); }
+  .statement-text-dark { font-size: clamp(32px, 5.5vw, 80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.025em; max-width: 16ch; color: var(--color-paper, #f5f3ef); }
+  .statement-text-dark em { font-style: italic; font-weight: 300; color: rgba(245, 243, 239, 0.35); }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: clamp(60px, 10vw, 120px); padding-top: clamp(120px, 14vw, 180px); }
+  .hero-tag { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: clamp(24px, 4vw, 48px); display: flex; gap: 14px; align-items: center; }
+  .hero-tag .dot { width: 6px; height: 6px; background: var(--color-black); border-radius: 50%; }
+  .hero h1 { font-size: clamp(44px, 9.2vw, 168px); line-height: 0.92; font-weight: 400; letter-spacing: -0.025em; max-width: 14ch; }
+  .hero h1 em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .hero-foot { margin-top: clamp(24px, 4vw, 48px); display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+  .hero-sub { max-width: 46ch; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.55; }
+  .hero-meta { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-align: right; }
+  .hero-meta .row { display: flex; gap: 28px; }
+  section { padding-block: var(--section-y); }
+  .section-head { margin-bottom: clamp(48px, 8vw, 96px); }
+  .eyebrow-row { display: flex; align-items: center; gap: 16px; margin-bottom: clamp(16px, 2vw, 24px); }
+  .num { font-size: 11px; letter-spacing: 0.18em; color: var(--muted); }
+  .dash { width: 32px; height: 1px; background: var(--muted); opacity: 0.4; }
+  .eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  h2 { font-size: clamp(32px, 5vw, 72px); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; }
+  h2 em { font-style: italic; font-weight: 300; color: var(--color-stone); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 8vw, 120px); align-items: start; }
+  .col-text p { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.8; color: var(--muted); margin-bottom: 20px; }
+  .col-text p.lead { font-size: clamp(16px, 1.6vw, 20px); line-height: 1.5; color: var(--color-black); margin-bottom: 24px; }
+  .stat-block { display: flex; flex-direction: column; gap: 32px; padding-top: clamp(16px, 3vw, 48px); border-top: 1px solid var(--color-border, #e0ddd8); }
+  .stat-item { display: flex; flex-direction: column; gap: 6px; }
+  .stat-value { font-size: clamp(28px, 3vw, 44px); font-weight: 400; letter-spacing: -0.02em; line-height: 1; }
+  .stat-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .credibility-list { display: flex; flex-direction: column; padding-top: clamp(16px, 3vw, 48px); }
+  .cred-item { padding-block: 20px; border-bottom: 1px solid var(--color-border, #e0ddd8); }
+  .cred-item:first-child { border-top: 1px solid var(--color-border, #e0ddd8); }
+  .cred-label { display: block; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .cred-text { font-size: clamp(13px, 1.2vw, 14px); line-height: 1.6; color: var(--color-black); }
+  .section-problems { background: var(--color-ink, #0d0d0d); color: var(--color-paper, #f5f3ef); }
+  .section-problems h2 em { color: rgba(245,243,239,0.4); }
+  .section-problems .eyebrow, .section-problems .num { color: rgba(245,243,239,0.4); }
+  .section-problems .dash { background: rgba(245,243,239,0.2); }
+  .problems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(245,243,239,0.1); border: 1px solid rgba(245,243,239,0.1); }
+  .problem-item { background: var(--color-ink, #0d0d0d); padding: clamp(28px, 4vw, 48px); }
+  .problem-num { display: block; font-size: 11px; letter-spacing: 0.2em; color: rgba(245,243,239,0.3); margin-bottom: 16px; }
+  .problem-item h3 { font-size: clamp(14px, 1.4vw, 16px); font-weight: 500; margin-bottom: 12px; }
+  .problem-item p { font-size: clamp(13px, 1.1vw, 14px); line-height: 1.75; color: rgba(245,243,239,0.55); }
+  .col-pillars { display: flex; flex-direction: column; padding-top: clamp(16px, 3vw, 48px); }
+  .pillar { display: flex; flex-direction: column; gap: 4px; padding-block: 20px; border-bottom: 1px solid var(--color-border, #e0ddd8); }
+  .pillar:first-child { border-top: 1px solid var(--color-border, #e0ddd8); }
+  .pillar-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .pillar-value { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.5; }
+  .col-features { padding-top: clamp(16px, 3vw, 48px); }
+  .feature-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--color-border, #e0ddd8); }
+  .feature-list li { font-size: clamp(13px, 1.2vw, 15px); padding-block: 18px; border-bottom: 1px solid var(--color-border, #e0ddd8); padding-left: 20px; position: relative; color: var(--muted); }
+  .feature-list li::before { content: "→"; position: absolute; left: 0; color: var(--color-black); }
+  .section-ai { background: var(--color-ink, #0d0d0d); color: var(--color-paper, #f5f3ef); }
+  .section-ai h2 em { color: rgba(245,243,239,0.4); }
+  .section-ai .eyebrow, .section-ai .num { color: rgba(245,243,239,0.4); }
+  .section-ai .dash { background: rgba(245,243,239,0.2); }
+  .section-ai .col-text p { color: rgba(245,243,239,0.6); }
+  .section-ai .col-text p.lead { color: var(--color-paper, #f5f3ef); }
+  .section-ai .col-pillars .pillar { border-color: rgba(245,243,239,0.1); }
+  .section-ai .pillar-label { color: rgba(245,243,239,0.4); }
+  .section-ai .pillar-value { color: var(--color-paper, #f5f3ef); font-size: clamp(12px, 1.1vw, 14px); }
+  .process-steps { display: flex; flex-direction: column; border-top: 1px solid var(--color-border, #e0ddd8); }
+  .process-step { display: grid; grid-template-columns: 80px 1fr; gap: 40px; padding-block: clamp(28px, 4vw, 48px); border-bottom: 1px solid var(--color-border, #e0ddd8); align-items: start; }
+  .step-num { font-size: 11px; letter-spacing: 0.2em; color: var(--muted); padding-top: 4px; }
+  .step-content h3 { font-size: clamp(15px, 1.4vw, 18px); font-weight: 500; margin-bottom: 12px; }
+  .step-content p { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.8; color: var(--muted); max-width: 58ch; }
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--color-border, #e0ddd8); border: 1px solid var(--color-border, #e0ddd8); }
+  .related-item { background: var(--color-bg, #f5f3ef); padding: clamp(28px, 4vw, 48px); }
+  .related-link-item { display: block; text-decoration: none; color: inherit; transition: opacity 0.2s; }
+  .related-link-item:hover { opacity: 0.7; }
+  .related-label { display: block; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 12px; }
+  .related-item p { font-size: clamp(13px, 1.1vw, 14px); line-height: 1.7; color: var(--muted); }
+  .faq-list { margin-top: clamp(40px, 6vw, 80px); border-top: 1px solid var(--color-border, #e0ddd8); }
+  .faq-item { border-bottom: 1px solid var(--color-border, #e0ddd8); }
+  .faq-question { display: flex; justify-content: space-between; align-items: center; padding-block: 24px; font-size: clamp(13px, 1.3vw, 15px); font-weight: 500; letter-spacing: 0.04em; cursor: pointer; list-style: none; gap: 24px; }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-icon { font-size: 20px; font-weight: 300; flex-shrink: 0; transition: transform 0.3s ease; }
   details[open] .faq-icon { transform: rotate(45deg); }
-  .faq-a { padding-bottom: var(--space-md); font-size: .9rem; line-height: 1.75; opacity: .7; max-width: 64ch; }
-  .section-related { padding: calc(var(--space-xl) * 2) 0; }
-  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-lg); margin-top: var(--space-xl); }
-  .related-item { padding: var(--space-lg); border: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
-  .related-link { text-decoration: none; color: inherit; transition: border-color .2s; }
-  .related-link:hover { border-color: currentColor; }
-  .related-label { display: block; font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: var(--space-sm); }
-  .related-item p { font-size: .875rem; line-height: 1.65; opacity: .65; margin: 0; }
-  .section-contact { padding: calc(var(--space-xl) * 3) 0; }
-  .section-contact h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; margin-top: var(--space-lg); }
-  @media (max-width: 640px) {
-    .problems-grid, .credibility-points, .ai-points { grid-template-columns: 1fr; }
-    .service-detail-item { grid-template-columns: 1fr; }
-    .service-num { display: none; }
+  .faq-answer { font-size: clamp(13px, 1.2vw, 15px); line-height: 1.8; color: var(--muted); padding-bottom: 24px; max-width: 64ch; }
+  .section-cta { background: var(--color-ink, #0d0d0d); color: var(--color-paper, #f5f3ef); }
+  .cta-inner { max-width: 640px; }
+  .section-cta .eyebrow, .section-cta .num { color: rgba(245,243,239,0.4); }
+  .section-cta .dash { background: rgba(245,243,239,0.2); }
+  .section-cta h2 { color: var(--color-paper, #f5f3ef); margin-bottom: 24px; }
+  .section-cta h2 em { color: rgba(245,243,239,0.4); }
+  .section-cta p { font-size: clamp(14px, 1.3vw, 16px); line-height: 1.7; color: rgba(245,243,239,0.6); margin-bottom: 32px; max-width: 52ch; }
+  .cta-btn { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--color-paper, #f5f3ef); color: var(--color-ink, #0d0d0d); padding: 16px 28px; transition: opacity 0.3s ease; }
+  .cta-btn:hover { opacity: 0.85; }
+  @media (max-width: 900px) {
+    .hero { min-height: auto; padding-top: 140px; }
+    .two-col { grid-template-columns: 1fr; }
+    .problems-grid { grid-template-columns: 1fr; }
+    .process-step { grid-template-columns: 48px 1fr; gap: 20px; }
+    .related-grid { grid-template-columns: 1fr; }
   }
 </style>
