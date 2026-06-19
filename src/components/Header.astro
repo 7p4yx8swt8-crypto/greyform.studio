@@ -58,9 +58,19 @@ const expertiseItems = lang === "de"
     <a href={lang === "de" ? "/#contact" : "/en/#contact"}>{t("nav.contact")}</a>
   </div>
 
-  <div class="lang">
+ <div class="lang">
     
       href={dePath}
+      class:list={{ active: lang === "de" }}
+      aria-current={lang === "de" ? "true" : undefined}
+    >DE</a>
+    <span class="sep">/</span>
+    
+      href={enPath}
+      class:list={{ active: lang === "en" }}
+      aria-current={lang === "en" ? "true" : undefined}
+    >EN</a>
+  </div>
       class:list={{ active: lang === "de" }}
       aria-current={lang === "de" ? "true" : undefined}
     >DE</a>
