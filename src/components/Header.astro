@@ -42,7 +42,6 @@ const expertiseItems = lang === "de"
     <a href={lang === "de" ? "/#process" : "/en/#process"}>{t("nav.process")}</a>
     <a href={lang === "de" ? "/#work" : "/en/#work"}>{t("nav.work")}</a>
 
-    <!-- Branchen Dropdown -->
     <div class="nav-dropdown" id="expertiseDropdown">
       <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
         {lang === "de" ? "Branchen" : "Expertise"}
@@ -60,21 +59,17 @@ const expertiseItems = lang === "de"
   </div>
 
   <div class="lang">
-    <a
+    
       href={dePath}
       class:list={{ active: lang === "de" }}
       aria-current={lang === "de" ? "true" : undefined}
-    >
-      DE
-    </a>
+    >DE</a>
     <span class="sep">/</span>
-    <a
+    
       href={enPath}
       class:list={{ active: lang === "en" }}
       aria-current={lang === "en" ? "true" : undefined}
-    >
-      EN
-    </a>
+    >EN</a>
   </div>
 
   <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -171,7 +166,7 @@ const expertiseItems = lang === "de"
     top: calc(100% + 16px);
     left: 50%;
     transform: translateX(-50%);
-    background: var(--color-paper, #f5f3ef);
+    background: var(--color-white);
     border: 1px solid rgba(13, 13, 13, 0.08);
     min-width: 200px;
     padding: 8px 0;
@@ -242,6 +237,8 @@ const expertiseItems = lang === "de"
       position: fixed;
       inset: 0;
       background: var(--color-white);
+      z-index: 150;        /* ← FIX: über Seiteninhalt, unter Burger */
+      overflow-y: auto;    /* ← FIX: falls Inhalt zu lang */
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -303,14 +300,19 @@ const expertiseItems = lang === "de"
   // Mobile menu toggle
   const toggle = document.getElementById("menuToggle");
   const links = document.getElementById("navLinks");
+
   toggle?.addEventListener("click", () => {
+    const opening = !links?.classList.contains("is-open");
     toggle.classList.toggle("is-open");
     links?.classList.toggle("is-open");
+    document.body.style.overflow = opening ? "hidden" : ""; // ← FIX: Scroll-Lock
   });
+
   links?.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
       toggle?.classList.remove("is-open");
       links?.classList.remove("is-open");
+      document.body.style.overflow = ""; // ← FIX: Scroll-Lock aufheben
     })
   );
 
@@ -336,6 +338,7 @@ const expertiseItems = lang === "de"
       trigger?.setAttribute("aria-expanded", "false");
       toggle?.classList.remove("is-open");
       links?.classList.remove("is-open");
+      document.body.style.overflow = ""; // ← FIX: Scroll-Lock aufheben
     })
   );
 </script>
