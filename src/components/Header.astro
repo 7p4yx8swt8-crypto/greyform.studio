@@ -58,28 +58,10 @@ const expertiseItems = lang === "de"
     <a href={lang === "de" ? "/#contact" : "/en/#contact"}>{t("nav.contact")}</a>
   </div>
 
- <div class="lang">
-    
-      href={dePath}
-      class:list={{ active: lang === "de" }}
-      aria-current={lang === "de" ? "true" : undefined}
-    >DE</a>
+  <div class="lang">
+    <a href={dePath} class={lang === "de" ? "active" : ""}>DE</a>
     <span class="sep">/</span>
-    
-      href={enPath}
-      class:list={{ active: lang === "en" }}
-      aria-current={lang === "en" ? "true" : undefined}
-    >EN</a>
-  </div>
-      class:list={{ active: lang === "de" }}
-      aria-current={lang === "de" ? "true" : undefined}
-    >DE</a>
-    <span class="sep">/</span>
-    
-      href={enPath}
-      class:list={{ active: lang === "en" }}
-      aria-current={lang === "en" ? "true" : undefined}
-    >EN</a>
+    <a href={enPath} class={lang === "en" ? "active" : ""}>EN</a>
   </div>
 
   <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -247,8 +229,8 @@ const expertiseItems = lang === "de"
       position: fixed;
       inset: 0;
       background: var(--color-white);
-      z-index: 150;        /* ← FIX: über Seiteninhalt, unter Burger */
-      overflow-y: auto;    /* ← FIX: falls Inhalt zu lang */
+      z-index: 150;
+      overflow-y: auto;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -300,14 +282,12 @@ const expertiseItems = lang === "de"
 </style>
 
 <script>
-  // Scroll state
   const nav = document.getElementById("nav");
   const onScroll = () =>
     nav?.classList.toggle("is-scrolled", window.scrollY > 24);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  // Mobile menu toggle
   const toggle = document.getElementById("menuToggle");
   const links = document.getElementById("navLinks");
 
@@ -315,18 +295,17 @@ const expertiseItems = lang === "de"
     const opening = !links?.classList.contains("is-open");
     toggle.classList.toggle("is-open");
     links?.classList.toggle("is-open");
-    document.body.style.overflow = opening ? "hidden" : ""; // ← FIX: Scroll-Lock
+    document.body.style.overflow = opening ? "hidden" : "";
   });
 
   links?.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
       toggle?.classList.remove("is-open");
       links?.classList.remove("is-open");
-      document.body.style.overflow = ""; // ← FIX: Scroll-Lock aufheben
+      document.body.style.overflow = "";
     })
   );
 
-  // Dropdown toggle
   const dropdown = document.getElementById("expertiseDropdown");
   const trigger = dropdown?.querySelector(".nav-dropdown-trigger");
   trigger?.addEventListener("click", (e) => {
@@ -335,20 +314,18 @@ const expertiseItems = lang === "de"
     trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
-  // Close dropdown on outside click
   document.addEventListener("click", () => {
     dropdown?.classList.remove("is-open");
     trigger?.setAttribute("aria-expanded", "false");
   });
 
-  // Close dropdown when a link is clicked
   dropdown?.querySelectorAll("a").forEach((a) =>
     a.addEventListener("click", () => {
       dropdown?.classList.remove("is-open");
       trigger?.setAttribute("aria-expanded", "false");
       toggle?.classList.remove("is-open");
       links?.classList.remove("is-open");
-      document.body.style.overflow = ""; // ← FIX: Scroll-Lock aufheben
+      document.body.style.overflow = "";
     })
   );
 </script>
